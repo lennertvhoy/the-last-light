@@ -84,6 +84,9 @@ As I compiled these resources, I realized anew the sheer breadth and depth of th
 - Neuroscience of consciousness
 - Technology and society\n\n### Organizations and Ongoing Research
 - AI safety research groups
+## Appendix K: Challenging Consciousness Theories
+
+### Critically Examining Leading Scientific Theories of Consciousness
 - Consciousness research institutes
 - Digital rights organizations
 - Environmental impact trackers\n\n---\n\n*Note: These appendices assume some technical background but aim to be accessible to motivated general readers. Mathematical formulas are explained conceptually where possible. My hope in presenting these technicalities is not to overwhelm, but to empower you with the kind of informed perspective I've had to carve out for myself, piece by piece.*
