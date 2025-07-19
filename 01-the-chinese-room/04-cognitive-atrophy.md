@@ -18,11 +18,11 @@ I used to know my mother's phone number. My best friend's address. The route to 
 
 Used to.
 
-The human brain, that complex kluge of evolution, operates on a simple principle: use it or lose it. Neural pathways that fire frequently get reinforced. Those that don't get pruned. It's ruthlessly efficient, constantly optimizing for the current environment.
+The human brain, that complex kluge of evolution, operates on a simple principle: use it or lose it. Neural pathways that fire frequently get reinforced. Those that don't get pruned. It's ruthlessly efficient, constantly optimizing for the current environment. The neuroscientific findings, though fictionally dated in their specificity, paint a stark picture: studies showed significantly reduced neural connectivity in subjects who heavily relied on AI for cognitive tasks. The relevant cognitive load on their biological brains dropped by an average of 32%. Most shockingly, a full 83% of AI users in one study were unable to recall the details of their own compositions—music, text, or code—after just a few weeks.
 
 And our current environment doesn't require us to remember, calculate, navigate, or even think. Not when silicon servants handle it all with perfect reliability and infinite patience.
 
-We're not just forgetting phone numbers. We're forgetting how to remember. We're not just losing skills. We're losing the meta-skill of skill acquisition itself. We're experiencing cognitive atrophy at a pace and scale that would have been impossible before we outsourced our minds to machines.
+We're not just forgetting phone numbers. We are actively dismantling the machinery of memory. We're not just losing skills; we are strip-mining our own minds for short-term productivity gains. This isn't something happening *to* us. It is a choice we are making. We are experiencing cognitive atrophy because we are voluntarily choosing to become Chinese Rooms—processing inputs and producing outputs with maximum efficiency, while consciously deciding that understanding is a luxury we can no longer afford.
 
 And the most terrifying part? We vastly underestimate how much we've already lost.
 
@@ -89,6 +89,8 @@ I recently watched someone try to calculate change at a garage sale. Not complex
 "Why would I need to?" he asked. "I always have my phone."
 
 Until he doesn't. Until we don't. Until the infrastructure fails or access is restricted or the next solar flare fries every circuit from here to Shanghai. Then we discover we've raised a generation of cognitive dependents, capable with tools, helpless without them.
+
+This is the bargain we have struck. We have chosen the very state that was forced upon Siri Keeton. He is the ghost of our Christmas future—a mind so hollowed out by intervention that it becomes the perfect, uncomprehending servant. But where his condition was the result of a scalpel, ours is the result of a million daily choices to prioritize efficiency over understanding. The atrophy we embrace is not a passive decay; it is the slow, deliberate, technological equivalent of his hemispherectomy, performed one prompt at a time. We are not falling into the Chinese Room; we are sprinting towards it, convinced it is the only way to win the race.
 
 The Deskilling Death Spiral
 
