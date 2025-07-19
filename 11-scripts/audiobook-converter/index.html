@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to Audiobook Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Markdown to Audiobook Converter</h1>
+            <p>Convert your markdown files to high-quality audiobooks using various TTS providers</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <svg class="upload-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <p>Drop your markdown file here or click to browse</p>
+                    <input type="file" id="fileInput" accept=".md,.markdown" style="display: none;">
+                </div>
+                <div id="fileInfo" class="file-info" style="display: none;">
+                    <span class="file-name"></span>
+                    <button class="remove-file" onclick="removeFile()">✕</button>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Settings</h2>
+                
+                <div class="form-group">
+                    <label for="provider">TTS Provider</label>
+                    <select id="provider" onchange="updateProviderSettings()">
+                        <option value="openai">OpenAI TTS</option>
+                        <option value="google">Google Cloud TTS</option>
+                        <option value="azure">Azure Speech Services</option>
+                        <option value="elevenlabs">ElevenLabs</option>
+                        <option value="aws">Amazon Polly</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="apiKey">API Key</label>
+                    <input type="password" id="apiKey" placeholder="Enter your API key">
+                    <small>Your API key is stored locally and never sent to our servers</small>
+                </div>
+
+                <div id="providerSettings">
+                    <!-- Dynamic provider-specific settings will be inserted here -->
+                </div>
+
+                <div class="form-group">
+                    <label for="chunkSize">Text Chunk Size</label>
+                    <input type="number" id="chunkSize" value="4000" min="1000" max="10000">
+                    <small>Characters per chunk (adjust based on provider limits)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="outputFormat">Output Format</label>
+                    <select id="outputFormat">
+                        <option value="mp3">MP3</option>
+                        <option value="wav">WAV</option>
+                        <option value="opus">Opus</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="actions-section">
+                <button id="convertBtn" class="convert-btn" onclick="startConversion()" disabled>
+                    <span class="btn-text">Convert to Audiobook</span>
+                    <div class="spinner" style="display: none;"></div>
+                </button>
+
+                <div id="progressContainer" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">Processing...</p>
+                </div>
+
+                <div id="downloadSection" class="download-section" style="display: none;">
+                    <h3>🎉 Conversion Complete!</h3>
+                    <button class="download-btn" onclick="downloadAudiobook()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Audiobook
+                    </button>
+                </div>
+            </section>
+
+            <section class="logs-section">
+                <h3>Conversion Log</h3>
+                <div class="log-container" id="logContainer">
+                    <p class="log-entry">Ready to convert your markdown to audiobook...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/providers.js"></script>
+    <script src="js/converter.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+        // Ensure functions are available globally
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('Scripts loaded. convertToAudiobook available:', typeof convertToAudiobook);
+        });
+    </script>
+</body>
+</html>

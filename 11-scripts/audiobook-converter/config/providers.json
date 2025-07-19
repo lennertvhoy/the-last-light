@@ -1,0 +1,95 @@
+{
+    "providers": {
+        "openai": {
+            "name": "OpenAI TTS",
+            "endpoint": "https://api.openai.com/v1/audio/speech",
+            "documentation": "https://platform.openai.com/docs/guides/text-to-speech",
+            "limits": {
+                "maxChunkSize": 4096,
+                "rateLimit": "50 requests/min",
+                "formats": ["mp3", "opus", "aac", "flac"]
+            },
+            "pricing": {
+                "tts-1": "$0.015 per 1K characters",
+                "tts-1-hd": "$0.030 per 1K characters"
+            }
+        },
+        "google": {
+            "name": "Google Cloud Text-to-Speech",
+            "endpoint": "https://texttospeech.googleapis.com/v1/text:synthesize",
+            "documentation": "https://cloud.google.com/text-to-speech/docs",
+            "limits": {
+                "maxChunkSize": 5000,
+                "rateLimit": "300 requests/min",
+                "formats": ["mp3", "wav", "ogg"]
+            },
+            "pricing": {
+                "standard": "$4.00 per 1M characters",
+                "wavenet": "$16.00 per 1M characters",
+                "neural2": "$16.00 per 1M characters"
+            }
+        },
+        "azure": {
+            "name": "Azure Speech Services",
+            "endpoint": "https://{region}.tts.speech.microsoft.com/cognitiveservices/v1",
+            "documentation": "https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/",
+            "limits": {
+                "maxChunkSize": 5000,
+                "rateLimit": "20 requests/sec",
+                "formats": ["mp3", "wav", "ogg", "opus"]
+            },
+            "pricing": {
+                "standard": "$4.00 per 1M characters",
+                "neural": "$16.00 per 1M characters"
+            }
+        },
+        "elevenlabs": {
+            "name": "ElevenLabs",
+            "endpoint": "https://api.elevenlabs.io/v1/text-to-speech",
+            "documentation": "https://docs.elevenlabs.io/api-reference/text-to-speech",
+            "limits": {
+                "maxChunkSize": 5000,
+                "rateLimit": "Varies by plan",
+                "formats": ["mp3", "wav"]
+            },
+            "pricing": {
+                "starter": "$5/month for 30K characters",
+                "creator": "$22/month for 100K characters",
+                "pro": "$99/month for 500K characters"
+            }
+        },
+        "aws": {
+            "name": "Amazon Polly",
+            "endpoint": "https://polly.{region}.amazonaws.com",
+            "documentation": "https://docs.aws.amazon.com/polly/",
+            "limits": {
+                "maxChunkSize": 3000,
+                "rateLimit": "80 requests/sec",
+                "formats": ["mp3", "ogg", "pcm"]
+            },
+            "pricing": {
+                "standard": "$4.00 per 1M characters",
+                "neural": "$16.00 per 1M characters"
+            }
+        }
+    },
+    "voices": {
+        "openai": {
+            "alloy": "Neutral and balanced",
+            "echo": "Warm and engaging",
+            "fable": "Expressive and dynamic",
+            "onyx": "Deep and authoritative",
+            "nova": "Friendly and conversational",
+            "shimmer": "Soft and gentle"
+        },
+        "google": {
+            "wavenet": "Premium natural-sounding voices",
+            "neural2": "Latest generation neural voices",
+            "standard": "Basic text-to-speech voices"
+        },
+        "azure": {
+            "neural": "High-quality neural voices",
+            "standard": "Traditional TTS voices"
+        }
+    }
+}
