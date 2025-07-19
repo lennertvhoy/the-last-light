@@ -1,77 +1,37 @@
-# Appendix F: Algorithmic Bias Technical Deep Dive
-
-## Introduction
-
-Algorithmic bias isn't a bug—it's a feature of how machine learning systems learn from biased data, optimize biased objectives, and operate in biased contexts. This appendix provides technical detail on how bias emerges, amplifies, and resists correction.
-
-## 1. Mathematical Foundations of Bias
-
-### Formal Definition
-
-**Statistical Parity** (Demographic Parity):
+# Appendix F: Algorithmic Bias Technical Deep Dive\n\n## Introduction\n\nAlgorithmic bias isn't a bug—it's a feature of how machine learning systems learn from biased data, optimize biased objectives, and operate in biased contexts. This appendix provides technical detail on how bias emerges, amplifies, and resists correction.\n\n## 1. Mathematical Foundations of Bias\n\n### Formal Definition\n\n**Statistical Parity** (Demographic Parity):
 ```
 P(Ŷ = 1 | A = 0) = P(Ŷ = 1 | A = 1)
 ```
-Where Ŷ is the prediction and A is the protected attribute.
-
-**Equalized Odds**:
+Where Ŷ is the prediction and A is the protected attribute.\n\n**Equalized Odds**:
 ```
 P(Ŷ = 1 | Y = y, A = 0) = P(Ŷ = 1 | Y = y, A = 1) ∀y ∈ {0,1}
-```
-
-**Calibration**:
+```\n\n**Calibration**:
 ```
 P(Y = 1 | Ŷ = p, A = a) = p ∀a,p
-```
-
-### The Impossibility Theorem
-
-**Kleinberg et al. (2016)**: Cannot simultaneously satisfy:
+```\n\n### The Impossibility Theorem\n\n**Kleinberg et al. (2016)**: Cannot simultaneously satisfy:
 1. Calibration
 2. Balance for positive class
-3. Balance for negative class
-
-Except in trivial cases. This means perfect fairness is mathematically impossible.
-
-### Bias Amplification
-
-**Amplification Factor**:
+3. Balance for negative class\n\nExcept in trivial cases. This means perfect fairness is mathematically impossible.\n\n### Bias Amplification\n\n**Amplification Factor**:
 ```
 AF = (P(Ŷ = 1 | A = 1) / P(Ŷ = 1 | A = 0)) / (P(Y = 1 | A = 1) / P(Y = 1 | A = 0))
-```
-
-Studies show AF > 1.5 is common, meaning ML amplifies existing biases.
-
-## 2. Sources of Algorithmic Bias
-
-### Historical Bias in Training Data
-
-**Example: Hiring Algorithms**
-
-Amazon's 2018 hiring tool:
+```\n\nStudies show AF > 1.5 is common, meaning ML amplifies existing biases.\n\n## 2. Sources of Algorithmic Bias\n\n### Historical Bias in Training Data\n\n**Example: Hiring Algorithms**\n\nAmazon's 2018 hiring tool:
 ```python
 # Simplified representation
-def extract_features(resume):
+def extract*features(resume):
     features = {
-        'years_experience': extract_years(resume),
-        'education_level': extract_education(resume),
-        'previous_companies': extract_companies(resume),
-        'skills': extract_skills(resume),
+        'years*experience': extract*years(resume),
+        'education*level': extract*education(resume),
+        'previous*companies': extract*companies(resume),
+        'skills': extract*skills(resume),
         # Problem: gendered correlations
-        'womens_sports': count_mentions(['womens', 'female']),
-        'name_embedding': embed_name(extract_name(resume))
+        'womens*sports': count*mentions(['womens', 'female']),
+        'name*embedding': embed*name(extract*name(resume))
     }
     return features
-```
-
-**Data Statistics**:
+```\n\n**Data Statistics**:
 - Training set: 90% male hires (historical)
 - Model learns: male-correlated features → success
-- Result: Penalizes "women's chess club" vs "chess club"
-
-### Representation Bias
-
-**Facial Recognition Error Rates**:
+- Result: Penalizes "women's chess club" vs "chess club"\n\n### Representation Bias\n\n**Facial Recognition Error Rates**:
 ```
 Dataset Composition:
 White Male: 45%
@@ -79,56 +39,32 @@ White Female: 35%
 Black Male: 10%
 Black Female: 5%
 Asian Male: 3%
-Asian Female: 2%
-
-Error Rates:
+Asian Female: 2%\n\nError Rates:
 White Male: 0.8%
 White Female: 7.1%
 Black Male: 12.9%
 Black Female: 34.7%
+```\n\n**Mathematical Relationship**:
 ```
-
-**Mathematical Relationship**:
+Error*Rate ∝ 1 / sqrt(Training*Samples)
+```\n\n### Measurement Bias\n\n**Healthcare Algorithm (Obermeyer et al., 2019)**:\n\nAlgorithm used healthcare costs as proxy for health needs:
 ```
-Error_Rate ∝ 1 / sqrt(Training_Samples)
-```
-
-### Measurement Bias
-
-**Healthcare Algorithm (Obermeyer et al., 2019)**:
-
-Algorithm used healthcare costs as proxy for health needs:
-```
-Health_Need_Proxy = Total_Healthcare_Costs
-```
-
-But:
+Health*Need*Proxy = Total*Healthcare*Costs
+```\n\nBut:
 - Black patients: $1,800 less annual healthcare spending
 - Same illness severity
-- Due to access barriers, not health
-
-Result: Algorithm assigns Black patients 50% lower risk scores.
-
-### Aggregation Bias
-
-**Single Model Problem**:
+- Due to access barriers, not health\n\nResult: Algorithm assigns Black patients 50% lower risk scores.\n\n### Aggregation Bias\n\n**Single Model Problem**:
 ```python
 # One model for all groups
-model = train_model(all_data)
-
-# Performance varies by subgroup
-for group in demographic_groups:
+model = train*model(all*data)\n\n# Performance varies by subgroup
+for group in demographic*groups:
     subset = data[data.group == group]
     performance[group] = evaluate(model, subset)
     
 # Typical result:
 # Majority group: 95% accuracy
 # Minority group: 75% accuracy
-```
-
-### Feedback Loops
-
-**Predictive Policing Example**:
+```\n\n### Feedback Loops\n\n**Predictive Policing Example**:
 ```
 1. Historical arrests (biased by over-policing)
    ↓
@@ -141,121 +77,73 @@ for group in demographic_groups:
 5. Confirms model predictions (self-fulfilling)
    ↓
 6. Reinforces bias in next training cycle
+```\n\n**Mathematical Model**:
 ```
-
-**Mathematical Model**:
-```
-Bias(t+1) = Bias(t) × (1 + feedback_strength)
-```
-
-Exponential growth without intervention.
-
-## 3. Redundant Encodings
-
-### The Whack-a-Mole Problem
-
-Removing protected attributes doesn't eliminate bias:
-
-**Zip Code → Race Proxy**:
+Bias(t+1) = Bias(t) × (1 + feedback*strength)
+```\n\nExponential growth without intervention.\n\n## 3. Redundant Encodings\n\n### The Whack-a-Mole Problem\n\nRemoving protected attributes doesn't eliminate bias:\n\n**Zip Code → Race Proxy**:
 ```python
 # Correlation analysis
-correlation(zip_code, race) = 0.82
-correlation(zip_code, income) = 0.74
-correlation(income, race) = 0.61
-
-# Even without race variable:
-model_without_race still achieves 85% accuracy 
+correlation(zip*code, race) = 0.82
+correlation(zip*code, income) = 0.74
+correlation(income, race) = 0.61\n\n# Even without race variable:
+model*without*race still achieves 85% accuracy 
 at predicting race from other features
-```
-
-### Common Proxies
-
-**Name → Gender/Ethnicity**:
+```\n\n### Common Proxies\n\n**Name → Gender/Ethnicity**:
 ```python
-def name_bias_analysis(name):
+def name*bias*analysis(name):
     # Common patterns
     if name.endswith('sha') or name.endswith('ika'):
-        implied_gender = 'female'
-        implied_ethnicity_prob = {'african_american': 0.7}
+        implied*gender = 'female'
+        implied*ethnicity*prob = {'african*american': 0.7}
     
     # ML models learn these automatically
-    name_embedding = word2vec[name]
-    gender_vector = word2vec['man'] - word2vec['woman']
-    gender_score = cosine_similarity(name_embedding, gender_vector)
+    name*embedding = word2vec[name]
+    gender*vector = word2vec['man'] - word2vec['woman']
+    gender*score = cosine*similarity(name*embedding, gender*vector)
+```\n\n**Education → Socioeconomic Status**:
 ```
-
-**Education → Socioeconomic Status**:
-```
-P(High_SES | Ivy_League) = 0.73
-P(Low_SES | Community_College) = 0.68
-```
-
-### Network Effects
-
-**LinkedIn Paradox**:
+P(High*SES | Ivy*League) = 0.73
+P(Low*SES | Community*College) = 0.68
+```\n\n### Network Effects\n\n**LinkedIn Paradox**:
 ```python
 # Recommendation algorithm
-def recommend_candidates(job):
-    current_employees = get_employees(job.company)
-    networks = get_networks(current_employees)
+def recommend*candidates(job):
+    current*employees = get*employees(job.company)
+    networks = get*networks(current*employees)
     
     # Homophily: similar people connect
     # Result: recommends demographically similar candidates
-    candidates = rank_by_network_similarity(networks)
+    candidates = rank*by*network*similarity(networks)
     return candidates
-```
-
-## 4. Real-World Case Studies
-
-### COMPAS Recidivism Prediction
-
-**Algorithm Claims**: Race-neutral risk assessment
-
-**ProPublica Analysis (2016)**:
+```\n\n## 4. Real-World Case Studies\n\n### COMPAS Recidivism Prediction\n\n**Algorithm Claims**: Race-neutral risk assessment\n\n**ProPublica Analysis (2016)**:
 ```
 False Positive Rates (labeled high-risk but didn't reoffend):
 Black defendants: 44.9%
-White defendants: 23.5%
-
-False Negative Rates (labeled low-risk but did reoffend):
+White defendants: 23.5%\n\nFalse Negative Rates (labeled low-risk but did reoffend):
 Black defendants: 28.0%
 White defendants: 47.7%
-```
-
-**Technical Issue**: Optimizing for overall accuracy while groups have different base rates.
-
-### Healthcare Allocation
-
-**Optum Algorithm** (affects 200 million Americans):
-
-```python
+```\n\n**Technical Issue**: Optimizing for overall accuracy while groups have different base rates.\n\n### Healthcare Allocation\n\n**Optum Algorithm** (affects 200 million Americans):\n\n```python
 # Simplified logic
-def assign_care_management(patient):
+def assign*care*management(patient):
     # Uses cost as proxy for need
-    predicted_cost = model.predict(patient.features)
+    predicted*cost = model.predict(patient.features)
     
-    if predicted_cost > threshold:
-        return "extra_care"
+    if predicted*cost > threshold:
+        return "extra*care"
     else:
-        return "standard_care"
-
-# Result: 
+        return "standard*care"\n\n# Result: 
 # Black patients need to be sicker to receive same care
 # At same risk score:
 # Black patients: 26.3% have chronic conditions
 # White patients: 17.7% have chronic conditions
-```
-
-### Resume Screening
-
-**HireVue's Video Analysis**:
+```\n\n### Resume Screening\n\n**HireVue's Video Analysis**:
 ```python
-def analyze_candidate_video(video):
+def analyze*candidate*video(video):
     features = {
-        'facial_expressions': extract_micro_expressions(video),
-        'voice_tone': analyze_prosody(video.audio),
-        'word_choice': nlp_analysis(video.transcript),
-        'eye_contact': measure_gaze_direction(video)
+        'facial*expressions': extract*micro*expressions(video),
+        'voice*tone': analyze*prosody(video.audio),
+        'word*choice': nlp*analysis(video.transcript),
+        'eye*contact': measure*gaze*direction(video)
     }
     
     # Problems:
@@ -265,382 +153,260 @@ def analyze_candidate_video(video):
     
     score = model.predict(features)
     return score
-```
-
-## 5. Technical Mitigation Strategies
-
-### Pre-Processing Approaches
-
-**Reweighting**:
+```\n\n## 5. Technical Mitigation Strategies\n\n### Pre-Processing Approaches\n\n**Reweighting**:
 ```python
-def reweight_data(X, y, sensitive_attr):
+def reweight*data(X, y, sensitive*attr):
     # Calculate weights to balance outcomes
-    for group in unique(sensitive_attr):
+    for group in unique(sensitive*attr):
         for outcome in [0, 1]:
-            mask = (sensitive_attr == group) & (y == outcome)
-            n_group_outcome = sum(mask)
-            n_total = len(y)
+            mask = (sensitive*attr == group) & (y == outcome)
+            n*group*outcome = sum(mask)
+            n*total = len(y)
             
             # Weight inversely proportional to frequency
-            weight[mask] = n_total / (n_groups * n_outcomes * n_group_outcome)
+            weight[mask] = n*total / (n*groups * n*outcomes * n*group*outcome)
     
     return weight
-```
-
-**Synthetic Data Generation**:
+```\n\n**Synthetic Data Generation**:
 ```python
-def generate_fair_synthetic_data(real_data):
+def generate*fair*synthetic*data(real*data):
     # Learn distribution without protected attributes
     generator = VAE()
-    generator.fit(remove_protected_attrs(real_data))
+    generator.fit(remove*protected*attrs(real*data))
     
     # Generate balanced synthetic data
     synthetic = []
-    for group in demographic_groups:
-        n_samples = len(real_data) // len(demographic_groups)
-        samples = generator.sample(n_samples)
+    for group in demographic*groups:
+        n*samples = len(real*data) // len(demographic*groups)
+        samples = generator.sample(n*samples)
         samples['group'] = group
         synthetic.append(samples)
     
     return concat(synthetic)
-```
-
-### In-Processing Approaches
-
-**Fairness Constraints**:
+```\n\n### In-Processing Approaches\n\n**Fairness Constraints**:
 ```python
-def fair_svm_objective(w, X, y, sensitive_attr, lambda_fairness):
+def fair*svm*objective(w, X, y, sensitive*attr, lambda*fairness):
     # Standard SVM loss
-    hinge_loss = sum(max(0, 1 - y * (X @ w)))
+    hinge*loss = sum(max(0, 1 - y * (X @ w)))
     
     # Fairness constraint
-    group_0_pred = X[sensitive_attr == 0] @ w
-    group_1_pred = X[sensitive_attr == 1] @ w
-    fairness_loss = (mean(group_0_pred) - mean(group_1_pred))**2
+    group*0*pred = X[sensitive*attr == 0] @ w
+    group*1*pred = X[sensitive*attr == 1] @ w
+    fairness*loss = (mean(group*0*pred) - mean(group*1*pred))**2
     
     # Combined objective
-    return hinge_loss + lambda_fairness * fairness_loss
-```
-
-**Adversarial Debiasing**:
+    return hinge*loss + lambda*fairness * fairness*loss
+```\n\n**Adversarial Debiasing**:
 ```python
 class AdversarialDebiasing(nn.Module):
-    def __init__(self):
+    def _*init**(self):
         self.predictor = Predictor()
         self.adversary = Adversary()
     
     def forward(self, X):
         pred = self.predictor(X)
         # Adversary tries to predict protected attribute
-        protected_pred = self.adversary(self.predictor.embeddings)
-        return pred, protected_pred
+        protected*pred = self.adversary(self.predictor.embeddings)
+        return pred, protected*pred
     
-    def loss(self, pred, y, protected_pred, protected_attr):
-        pred_loss = cross_entropy(pred, y)
+    def loss(self, pred, y, protected*pred, protected*attr):
+        pred*loss = cross*entropy(pred, y)
         # Maximize adversary loss (fool it)
-        adv_loss = -cross_entropy(protected_pred, protected_attr)
-        return pred_loss + lambda * adv_loss
-```
-
-### Post-Processing Approaches
-
-**Threshold Optimization**:
+        adv*loss = -cross*entropy(protected*pred, protected*attr)
+        return pred*loss + lambda * adv*loss
+```\n\n### Post-Processing Approaches\n\n**Threshold Optimization**:
 ```python
-def find_fair_thresholds(scores, labels, groups):
+def find*fair*thresholds(scores, labels, groups):
     thresholds = {}
     
     for group in unique(groups):
-        group_mask = groups == group
-        group_scores = scores[group_mask]
-        group_labels = labels[group_mask]
+        group*mask = groups == group
+        group*scores = scores[group*mask]
+        group*labels = labels[group*mask]
         
         # Find threshold achieving target FPR
-        target_fpr = 0.1
-        thresholds[group] = find_threshold_for_fpr(
-            group_scores, group_labels, target_fpr
+        target*fpr = 0.1
+        thresholds[group] = find*threshold*for*fpr(
+            group*scores, group*labels, target*fpr
         )
     
-    return thresholds
-
-def fair_predict(scores, groups, thresholds):
-    predictions = zeros_like(scores)
+    return thresholds\n\ndef fair*predict(scores, groups, thresholds):
+    predictions = zeros*like(scores)
     for group in unique(groups):
         mask = groups == group
         predictions[mask] = scores[mask] > thresholds[group]
     return predictions
+```\n\n## 6. Why Debiasing Often Fails\n\n### The Accuracy-Fairness Trade-off\n\n**Pareto Frontier**:
 ```
-
-## 6. Why Debiasing Often Fails
-
-### The Accuracy-Fairness Trade-off
-
-**Pareto Frontier**:
-```
-Max accuracy achievable = f(fairness_level)
-
-Typical results:
+Max accuracy achievable = f(fairness*level)\n\nTypical results:
 0% fairness constraint → 95% accuracy
 50% fairness → 92% accuracy  
 90% fairness → 85% accuracy
 100% fairness → 75% accuracy (random baseline)
-```
-
-### Context Shift
-
-**Training vs. Deployment**:
+```\n\n### Context Shift\n\n**Training vs. Deployment**:
 ```python
 # Training distribution
-P_train(X, Y, A) = Historical data from 2010-2020
-
-# Deployment distribution  
-P_deploy(X, Y, A) = Current data from 2024
-
-# Fairness guarantees assume:
-P_train = P_deploy
-
-# Reality:
-KL_divergence(P_train || P_deploy) > 0.5
-```
-
-### Intersectionality
-
-**Multiple Protected Attributes**:
+P*train(X, Y, A) = Historical data from 2010-2020\n\n# Deployment distribution  
+P*deploy(X, Y, A) = Current data from 2024\n\n# Fairness guarantees assume:
+P*train = P*deploy\n\n# Reality:
+KL*divergence(P*train || P*deploy) > 0.5
+```\n\n### Intersectionality\n\n**Multiple Protected Attributes**:
 ```
 Fairness for gender: ✓
 Fairness for race: ✓
-Fairness for (gender, race) combinations: ✗
-
-Example:
+Fairness for (gender, race) combinations: ✗\n\nExample:
 White women: 85% acceptance
 Black women: 45% acceptance
 Black men: 65% acceptance
 White men: 80% acceptance
-```
-
-Single-attribute debiasing misses intersectional discrimination.
-
-### Gaming and Adaptation
-
-**Strategic Behavior**:
+```\n\nSingle-attribute debiasing misses intersectional discrimination.\n\n### Gaming and Adaptation\n\n**Strategic Behavior**:
 ```python
 # Original feature importance
-feature_importance = {
+feature*importance = {
     'GPA': 0.4,
-    'test_score': 0.3,
+    'test*score': 0.3,
     'extracurriculars': 0.2,
     'essay': 0.1
-}
-
-# After public disclosure
+}\n\n# After public disclosure
 # Applicants game high-weight features
 # Model performance degrades
 # Bias returns through new channels
-```
-
-## 7. Measurement and Auditing
-
-### Bias Metrics Zoo
-
-```python
-def calculate_all_fairness_metrics(y_true, y_pred, sensitive_attr):
+```\n\n## 7. Measurement and Auditing\n\n### Bias Metrics Zoo\n\n```python
+def calculate*all*fairness*metrics(y*true, y*pred, sensitive*attr):
     metrics = {}
     
     # Statistical Parity Difference
     metrics['SPD'] = abs(
-        mean(y_pred[sensitive_attr == 1]) - 
-        mean(y_pred[sensitive_attr == 0])
+        mean(y*pred[sensitive*attr == 1]) - 
+        mean(y*pred[sensitive*attr == 0])
     )
     
     # Equal Opportunity Difference
-    mask_pos = y_true == 1
+    mask*pos = y*true == 1
     metrics['EOD'] = abs(
-        mean(y_pred[mask_pos & (sensitive_attr == 1)]) -
-        mean(y_pred[mask_pos & (sensitive_attr == 0)])
+        mean(y*pred[mask*pos & (sensitive*attr == 1)]) -
+        mean(y*pred[mask*pos & (sensitive*attr == 0)])
     )
     
     # Average Odds Difference
     metrics['AOD'] = mean([
         metrics['EOD'],
-        abs(mean(y_pred[~mask_pos & (sensitive_attr == 1)]) -
-            mean(y_pred[~mask_pos & (sensitive_attr == 0)]))
+        abs(mean(y*pred[~mask*pos & (sensitive*attr == 1)]) -
+            mean(y*pred[~mask*pos & (sensitive*attr == 0)]))
     ])
     
     # Disparate Impact
     metrics['DI'] = (
-        mean(y_pred[sensitive_attr == 1]) /
-        mean(y_pred[sensitive_attr == 0])
+        mean(y*pred[sensitive*attr == 1]) /
+        mean(y*pred[sensitive*attr == 0])
     )
     
     return metrics
-```
-
-### Auditing Framework
-
-```python
+```\n\n### Auditing Framework\n\n```python
 class BiasAuditor:
-    def __init__(self, model, test_data, sensitive_attrs):
+    def **init**(self, model, test*data, sensitive*attrs):
         self.model = model
-        self.test_data = test_data
-        self.sensitive_attrs = sensitive_attrs
+        self.test*data = test*data
+        self.sensitive*attrs = sensitive*attrs
     
     def audit(self):
         results = {}
         
         # Overall performance
-        y_pred = self.model.predict(self.test_data.X)
-        results['overall_accuracy'] = accuracy(
-            self.test_data.y, y_pred
+        y*pred = self.model.predict(self.test*data.X)
+        results['overall*accuracy'] = accuracy(
+            self.test*data.y, y*pred
         )
         
         # Per-group performance
-        for attr in self.sensitive_attrs:
+        for attr in self.sensitive*attrs:
             results[attr] = {}
-            for value in unique(self.test_data[attr]):
-                mask = self.test_data[attr] == value
+            for value in unique(self.test*data[attr]):
+                mask = self.test*data[attr] == value
                 results[attr][value] = {
                     'accuracy': accuracy(
-                        self.test_data.y[mask], 
-                        y_pred[mask]
+                        self.test*data.y[mask], 
+                        y*pred[mask]
                     ),
-                    'n_samples': sum(mask)
+                    'n*samples': sum(mask)
                 }
         
         # Fairness metrics
-        results['fairness'] = calculate_all_fairness_metrics(
-            self.test_data.y, y_pred, self.sensitive_attrs
+        results['fairness'] = calculate*all*fairness*metrics(
+            self.test*data.y, y*pred, self.sensitive*attrs
         )
         
         # Intersectional analysis
-        results['intersectional'] = self.intersectional_audit()
+        results['intersectional'] = self.intersectional*audit()
         
         return results
+```\n\n## 8. Legal and Regulatory Landscape\n\n### Disparate Impact Standard\n\n**80% Rule (EEOC)**:
 ```
-
-## 8. Legal and Regulatory Landscape
-
-### Disparate Impact Standard
-
-**80% Rule (EEOC)**:
-```
-Selection_Rate_Minority / Selection_Rate_Majority ≥ 0.8
-```
-
-**Technical Challenge**: Which groups to compare?
-
-### GDPR Article 22
-
-**Prohibition on automated decision-making**:
+Selection*Rate*Minority / Selection*Rate*Majority ≥ 0.8
+```\n\n**Technical Challenge**: Which groups to compare?\n\n### GDPR Article 22\n\n**Prohibition on automated decision-making**:
 - Right to human intervention
 - Right to explanation
-- Special protections for sensitive data
-
-**Technical Implications**:
+- Special protections for sensitive data\n\n**Technical Implications**:
 - Must provide meaningful explanations
 - Cannot use certain protected attributes
-- Must implement human oversight
-
-### Proposed EU AI Act
-
-**High-Risk AI Systems** (includes hiring, credit, justice):
+- Must implement human oversight\n\n### Proposed EU AI Act\n\n**High-Risk AI Systems** (includes hiring, credit, justice):
 - Mandatory bias testing
 - Ongoing monitoring requirements
 - Documentation standards
-- Human oversight obligations
-
-## 9. Future Directions
-
-### Causal Fairness
-
-**Moving beyond correlation**:
+- Human oversight obligations\n\n## 9. Future Directions\n\n### Causal Fairness\n\n**Moving beyond correlation**:
 ```
 Traditional: P(Y|A) = P(Y|A')
 Causal: P(Y|do(A)) = P(Y|do(A'))
-```
-
-**Causal Graphs**:
+```\n\n**Causal Graphs**:
 ```
 A → X → Y (indirect discrimination)
 A → Y (direct discrimination)
 U → A, U → Y (confounding)
+```\n\n### Multi-stakeholder Fairness\n\n**Optimization across groups**:
 ```
-
-### Multi-stakeholder Fairness
-
-**Optimization across groups**:
-```
-maximize Σ_i w_i * utility_i(policy)
-subject to fairness_constraints
-```
-
-Challenge: Whose weights count?
-
-### Federated Fair Learning
-
-**Training without centralized data**:
+maximize Σ*i w*i * utility*i(policy)
+subject to fairness*constraints
+```\n\nChallenge: Whose weights count?\n\n### Federated Fair Learning\n\n**Training without centralized data**:
 ```python
-def federated_fair_training(clients):
-    global_model = initialize_model()
+def federated*fair*training(clients):
+    global*model = initialize*model()
     
-    for round in range(n_rounds):
-        client_updates = []
+    for round in range(n*rounds):
+        client*updates = []
         
         for client in clients:
             # Local training with fairness constraints
-            local_model = copy(global_model)
-            local_model.train(
+            local*model = copy(global*model)
+            local*model.train(
                 client.data, 
-                fairness_constraint=client.fairness_requirement
+                fairness*constraint=client.fairness*requirement
             )
-            client_updates.append(local_model - global_model)
+            client*updates.append(local*model - global*model)
         
         # Aggregate with fairness preservation
-        global_model += weighted_average(
-            client_updates, 
-            weights=client_sizes
+        global*model += weighted*average(
+            client*updates, 
+            weights=client*sizes
         )
     
-    return global_model
-```
-
-## 10. Recommendations
-
-### For Practitioners
-
-1. **Assume Bias Exists**: Test for it, don't hope
+    return global*model
+```\n\n## 10. Recommendations\n\n### For Practitioners\n\n1. **Assume Bias Exists**: Test for it, don't hope
 2. **Multiple Metrics**: No single fairness metric suffices
 3. **Continuous Monitoring**: Bias evolves with data
 4. **Stakeholder Involvement**: Include affected communities
-5. **Document Everything**: Decisions, trade-offs, limitations
-
-### For Organizations
-
-1. **Bias Impact Assessments**: Before deployment
+5. **Document Everything**: Decisions, trade-offs, limitations\n\n### For Organizations\n\n1. **Bias Impact Assessments**: Before deployment
 2. **Red Team Exercises**: Adversarial bias testing
 3. **Diverse Teams**: Reduce blind spots
 4. **External Audits**: Independent verification
-5. **Remediation Processes**: Fix problems found
-
-### For Policymakers
-
-1. **Technical Standards**: Require specific testing
+5. **Remediation Processes**: Fix problems found\n\n### For Policymakers\n\n1. **Technical Standards**: Require specific testing
 2. **Liability Frameworks**: Clear responsibility
 3. **Audit Requirements**: Regular external review
 4. **Public Registries**: Transparency in high-stakes AI
-5. **Research Funding**: Bias detection and mitigation
-
-## Conclusion
-
-Algorithmic bias is not a simple technical problem with a technical solution. It's a sociotechnical challenge requiring:
+5. **Research Funding**: Bias detection and mitigation\n\n## Conclusion\n\nAlgorithmic bias is not a simple technical problem with a technical solution. It's a sociotechnical challenge requiring:
 - Mathematical innovation
 - Social awareness
 - Regulatory frameworks
-- Continuous vigilance
-
-The tools exist to reduce bias, but perfect fairness is mathematically impossible and socially contested. The goal isn't perfection but continuous improvement and accountability.
-
-## References
-
-1. Barocas, S. et al. (2019). "Fairness and Machine Learning: Limitations and Opportunities"
+- Continuous vigilance\n\nThe tools exist to reduce bias, but perfect fairness is mathematically impossible and socially contested. The goal isn't perfection but continuous improvement and accountability.\n\n## References\n\n1. Barocas, S. et al. (2019). "Fairness and Machine Learning: Limitations and Opportunities"
 2. Obermeyer, Z. et al. (2019). "Dissecting racial bias in healthcare algorithm"
 3. Kleinberg, J. et al. (2016). "Inherent Trade-Offs in Algorithmic Fairness"
 4. Caliskan, A. et al. (2017). "Semantics derived from language corpora contain human-like biases"

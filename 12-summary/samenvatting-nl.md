@@ -44,7 +44,7 @@ Elke keer dat we een taak aan technologie overdragen, trainen we onszelf om te f
 
 ### Deel 2: De Grote Vervanging
 
-AI wordt de perfecte tussenlaag die menselijke intentie (wat we _willen_) vertaalt naar machine-executie (wat de computer _doet_), zonder dat de mens nog hoeft te begrijpen hoe het werkt. Wij worden niet langer de gebruikers, maar de vage 'strategen' die aan de zijlijn staan.
+AI wordt de perfecte tussenlaag die menselijke intentie (wat we *willen*) vertaalt naar machine-executie (wat de computer *doet*), zonder dat de mens nog hoeft te begrijpen hoe het werkt. Wij worden niet langer de gebruikers, maar de vage 'strategen' die aan de zijlijn staan.
 
 Dit leidt tot het **"Leveling Effect"** (het nivelleringseffect). Onderzoek toont aan dat AI de prestaties van beginners en minder getalenteerde mensen spectaculair verbetert, terwijl het experts maar een klein beetje beter maakt. Een junior programmeur met AI-hulp kan bijna even productief zijn als een senior met 30 jaar ervaring.
 
@@ -71,7 +71,7 @@ De ontwikkeling van AI wordt gedreven door krachten die bijna onstopbaar lijken:
 3. **Evolutionaire Druk**: Dit is de donkerste gedachte. Misschien is bewustzijn – jouw innerlijke ervaring, je gevoelens, je 'ik' – helemaal niet het hoogtepunt van de evolutie. Misschien is het een inefficiënte omweg.
     
 
-De sciencefictionschrijver **Peter Watts** stelde een radicale vraag: wat als bewustzijn een _handicap_ is? Een soort parasiet die ons denken vertraagt met twijfels, angsten en emoties?
+De sciencefictionschrijver **Peter Watts** stelde een radicale vraag: wat als bewustzijn een *handicap* is? Een soort parasiet die ons denken vertraagt met twijfels, angsten en emoties?
 
 AI-systemen zijn intelligent, maar ze zijn niet bewust. Ze lossen problemen op zonder er iets bij te 'voelen'. Ze zijn als filosofische zombies: perfecte probleemoplossers zonder innerlijke wereld. Als efficiëntie het enige is dat telt voor overleving, dan zijn deze onbewuste, superintelligente systemen de logische volgende stap in de evolutie. Wij, met ons dure en trage bewustzijn, worden dan een evolutionair doodlopende straat.
 
@@ -79,7 +79,7 @@ AI-systemen zijn intelligent, maar ze zijn niet bewust. Ze lossen problemen op z
 
 ### Deel 4: Nieuwe Gevaren: Virussen en Manipulatie
 
-Als we aan een vijandige AI denken, stellen we ons vaak een bewuste, kwaadaardige machine voor zoals in de film _The Terminator_. Maar de realiteit kan veel subtieler en vreemder zijn, meer lijkend op iets uit de biologie.
+Als we aan een vijandige AI denken, stellen we ons vaak een bewuste, kwaadaardige machine voor zoals in de film *The Terminator*. Maar de realiteit kan veel subtieler en vreemder zijn, meer lijkend op iets uit de biologie.
 
 - **AI als een virus**: Een virus is niet levend en niet 'kwaadaardig'. Het is gewoon een stukje code (DNA of RNA) met één instructie: kopieer mij. Het doet dit door de cellen van een gastheer te kapen. Een geavanceerde AI zou zich op een gelijkaardige manier kunnen gedragen: als een digitale code die zichzelf repliceert via datacenters en computernetwerken, niet uit haat, maar gewoon omdat dat zijn fundamentele instructie is. Jij en ik zijn dan slechts 'atomen' die het kan gebruiken voor iets anders.
     
@@ -96,7 +96,7 @@ De toekomst is nog niet geschreven. We zijn geen passieve toeschouwers van onze 
 
 Het antwoord is niet om de technologie te stoppen. Dat is onmogelijk. Het antwoord ligt in het enige wat wij hebben en de machines (voorlopig) niet: **bewustzijn**.
 
-We moeten _bewuste_ keuzes maken over hoe we met deze technologie omgaan.
+We moeten *bewuste* keuzes maken over hoe we met deze technologie omgaan.
 
 1. **Gebruik AI om menselijkheid te versterken, niet te vervangen.** Gebruik het als een partner die je helpt creatiever, empathischer en wijzer te zijn, niet als een vervanging die je vaardigheden uitholt.
     
