@@ -1,4 +1,4 @@
-# Appendix E: Deepfake Detection Technical Challenges
+# Appendix E: The Illusion Engine: Deepfake Generation and Detection
 
 Deepfakes, media (images, audio, video) generated or manipulated using deep learning techniques, pose significant challenges to trust and authenticity in the digital age. While their generation techniques have become increasingly sophisticated, the methods for detecting them struggle to keep pace. This appendix explores the technical landscape of deepfake generation and the inherent difficulties in their detection.
 

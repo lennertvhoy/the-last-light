@@ -6,7 +6,7 @@
 # Define the output directory and filename
 OUTPUT_DIR="./_build"
 OUTPUT_FILE="$OUTPUT_DIR/The-Last-Light_Combined.md"
-PROJECT_ROOT=".."
+PROJECT_ROOT="."
 
 # Ensure the output directory exists
 mkdir -p "$OUTPUT_DIR"
@@ -28,7 +28,7 @@ find "$PROJECT_ROOT" -maxdepth 1 -type d -name "[0-9][0-9]-*" | sort | grep -vE 
         
         # Add a clean separator and the file content
         echo $'\n\n---\n' >> "$OUTPUT_FILE"
-        cat "$file" >> "$OUTPUT_FILE"
+        sed 's/\\n/\n/g; s/\\r/\r/g' "$file" >> "$OUTPUT_FILE"
     done
 done
 

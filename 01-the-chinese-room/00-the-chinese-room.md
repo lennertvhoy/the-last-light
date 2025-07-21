@@ -1,4 +1,4 @@
-# Part One: The Chinese Room We All Inhabit
+# The Chinese Room We All Inhabit
 
 "I had no native instincts. Everything I did, I did by the book."
 — Siri Keeton, Blindsight

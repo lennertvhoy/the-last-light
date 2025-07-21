@@ -1,4 +1,4 @@
-# Appendix H: Economic Models of AI Displacement
+# Appendix H: The Automated Economy: Models of Displacement and Transformation
 
 The advent of advanced Artificial Intelligence and automation raises profound questions about the future of labor, economic distribution, and societal structure. Economic models attempt to predict and understand the impact of AI-driven displacement, offering frameworks to analyze potential outcomes ranging from widespread job losses to new forms of prosperity. This appendix explores key economic theories and transition scenarios related to AI's impact on the workforce.
 

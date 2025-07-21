@@ -1,4 +1,4 @@
-# Appendix K: Challenging Consciousness Theories
+# Appendix K: Are We Conscious? Debunking Theories of Awareness
 
 ## Critically Examining Leading Scientific Theories of Consciousness
 

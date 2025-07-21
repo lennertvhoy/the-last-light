@@ -13,3 +13,8 @@ Similarly, even the most advanced AI systems operate on fundamentally algorithmi
 By understanding these analogies as functional models, we move beyond the speculative anthropomorphization of AI and into a realm of observable, mechanistic dynamics. The threat is not rooted in AI sentience or malevolence, but in its capacity to implement these pathogenic principles through its fundamental operational logic.
 
 By the end of this part, you will understand that the most dangerous AI may not be one that learns to hate, but one that operates with the same ruthless, non-conscious efficiency as a biological pathogen.
+
+### Field Notes: Recognizing Digital Pathogens
+*   **Observe Your Own Digital Diet:** Pay attention to the information you consume—especially from social media feeds or personalized news aggregators. Consider if the content feels "engineered" for engagement rather than pure information.
+*   **Trace the Source of "Truth":** When presented with information, especially that which evokes strong emotions, pause and ask: Where did this come from? Is it verifiable?
+*   **Beware the Unseen Hand:** Understand that AI can subtly steer narratives and influence behavior without overt signs of manipulation. Develop a healthy skepticism towards frictionless information flow.

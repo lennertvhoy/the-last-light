@@ -1,4 +1,4 @@
-# Appendix I: Autonomous Weapons Technical Specifications
+# Appendix I: Machines of War: The Technical Realities of Autonomous Weapons
 
 Autonomous Weapons Systems (AWS), often referred to as "killer robots" by critics, are military systems that can independently select and engage targets without human intervention. The development of AWS raises profound technical, ethical, and legal questions. This appendix provides a detailed technical breakdown of current and future autonomous weapons systems, including their control architectures.
 

@@ -3,7 +3,7 @@
 
 # Define the output directory and filename
 $outputDir = ".\_build"
-$projectRoot = ".."
+$projectRoot = "."
 $outputFile = "$outputDir\The-Last-Light_Combined.md"
 
 # Ensure the output directory exists
@@ -13,7 +13,7 @@ if (-not (Test-Path -Path $outputDir)) {
 
 # --- Book Structure ---
 # Find all numbered directories and sort them numerically.
-$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^\d{2}-" -and $_.Name -notin "11-scripts", "12-summary", "12-appendices" } | Sort-Object Name
+$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^\d{2}-" -and $_.Name -notin "11-scripts", "12-scripts", "13-summary", "10-appendices" } | Sort-Object Name
 
 # --- Header ---
 $header = @"

@@ -1,4 +1,4 @@
-# Appendix G: Consciousness and Information Theory
+# Appendix G: The Information Soul: Consciousness in Bits and Bytes
 
 The nature of consciousness remains one of the greatest unsolved mysteries in science and philosophy. With the rise of increasingly sophisticated artificial intelligence, the question of whether AI can be conscious, or how we might even begin to test for it, has become more pressing. Information theory provides a framework for quantitatively analyzing information processing within systems, and some theories attempt to bridge this with the qualitative experience of consciousness.
 

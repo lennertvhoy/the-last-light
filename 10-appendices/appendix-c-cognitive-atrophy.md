@@ -1,4 +1,4 @@
-# Appendix C: Measuring Cognitive Atrophy
+# Appendix C: The Fading Mind: Quantifying Cognitive Atrophy
 
 The increasing reliance on artificial intelligence and automation raises concerns about potential **cognitive atrophy** in humans – a decline in cognitive abilities due to reduced need for their exercise. This appendix explores methods for measuring and understanding this phenomenon from a technical and neuroscience perspective.
 

@@ -1,4 +1,4 @@
-# Appendix F: Algorithmic Bias Technical Deep Dive
+# Appendix F: The Inherited Stain: Unpacking Algorithmic Bias
 
 Algorithmic bias refers to systematic and repeatable errors in a computer system that create unfair outcomes, such as disadvantaging particular groups of people. This bias isn't necessarily intentional but arises from the way AI systems are designed, trained, and deployed. This appendix delves into the technical sources of algorithmic bias and explores various mitigation strategies.
 

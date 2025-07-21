@@ -1,4 +1,4 @@
-# Appendix J: Recommended Technical Resources
+# Appendix J: Beyond the Book: Essential AI Research and Learning
 
 As the fields of Artificial Intelligence, cognitive science, economics, and ethics rapidly evolve, staying informed requires access to high-quality, reliable resources. This appendix provides a curated list of technical resources—including key papers, online courses, and research organizations—that offer deeper insights into the complex topics discussed throughout this book.
 

@@ -8,7 +8,7 @@
 - The "stochastic parrot" debate
 - Hallucination mechanisms and why they're inevitable
 - Context window limitations
-- Lack of persistent memory or true learning during inference\n\n## Appendix B: The Mathematics of the Alignment Problem\n\n### Goal Misspecification
+- Lack of persistent memory or true learning during inference\n\n## Appendix B: Bridging the Intention Gap: The AI Alignment Challenge\n\n### Goal Misspecification
 - Formal definition of reward functions
 - Goodhart's Law: "When a measure becomes a target, it ceases to be a good measure"
 - Mesa-optimization and inner alignment
@@ -16,7 +16,7 @@
 - Constitutional AI and value learning
 - Interpretability research and mechanistic understanding
 - Adversarial training and red teaming
-- Scalable oversight and recursive reward modeling\n\n## Appendix C: Measuring Cognitive Atrophy\n\n### Neuroscience Methods
+- Scalable oversight and recursive reward modeling\n\n## Appendix C: The Fading Mind: Quantifying Cognitive Atrophy\n\n### Neuroscience Methods
 - fMRI and neural activation patterns
 - Gray matter density measurements
 - Longitudinal studies on skill retention
@@ -32,7 +32,7 @@
 - Regional electricity grid composition
 - Water consumption for cooling (liters per query)
 - Hardware lifecycle assessment
-- Comparison with other industries\n\n## Appendix E: Deepfake Detection Technical Challenges\n\n### Generation Techniques
+- Comparison with other industries\n\n## Appendix E: The Illusion Engine: Deepfake Generation and Detection\n\n### Generation Techniques
 - Generative Adversarial Networks (GANs)
 - Diffusion models
 - Voice synthesis and cloning methods
@@ -40,7 +40,7 @@
 - Frequency analysis and compression artifacts
 - Temporal inconsistencies
 - Biometric incongruities
-- Why detection is a losing arms race\n\n## Appendix F: Algorithmic Bias Technical Deep Dive\n\n### Sources of Bias
+- Why detection is a losing arms race\n\n## Appendix F: The Inherited Stain: Unpacking Algorithmic Bias\n\n### Sources of Bias
 - Training data representation
 - Label bias and annotation problems
 - Feedback loops and bias amplification
@@ -48,7 +48,7 @@
 - Pre-processing: data augmentation and re-weighting
 - In-processing: fairness constraints in optimization
 - Post-processing: threshold optimization
-- Why debiasing often fails\n\n## Appendix G: Consciousness and Information Theory\n\n### Integrated Information Theory (IIT)
+- Why debiasing often fails\n\n## Appendix G: The Information Soul: Consciousness in Bits and Bytes\n\n### Integrated Information Theory (IIT)
 - Phi (Φ) as a measure of consciousness
 - The hard problem of consciousness in computational terms
 - Why IIT suggests some systems might be conscious\n\n### Global Workspace Theory (GWT)
@@ -57,7 +57,7 @@
 - Computational implementations of GWT\n\n### The Measurement Problem
 - Why we can't definitively test for consciousness in AI
 - The philosophical zombie argument in technical terms
-- Behavioral vs. subjective measures\n\n## Appendix H: Economic Models of AI Displacement\n\n### Labor Economics
+- Behavioral vs. subjective measures\n\n## Appendix H: The Automated Economy: Models of Displacement and Transformation\n\n### Labor Economics
 - Skill-biased technological change
 - The race between education and technology
 - Complementarity vs. substitution in human-AI teams
@@ -65,7 +65,7 @@
 - Gradual displacement timelines
 - Sectoral analysis of vulnerability
 - Universal Basic Income economic models
-- Reskilling feasibility studies\n\n## Appendix I: Autonomous Weapons Technical Specifications\n\n### Current Systems
+- Reskilling feasibility studies\n\n## Appendix I: Machines of War: The Technical Realities of Autonomous Weapons\n\n### Current Systems
 - Loitering munitions and their autonomy levels
 - Defensive systems (CIWS, Iron Dome)
 - Swarm coordination algorithms
@@ -73,7 +73,7 @@
 - Human-on-the-loop vs. human-in-the-loop
 - Engagement decision trees
 - Fail-safe mechanisms and their limitations
-- Communication vulnerabilities\n\n## Appendix J: Recommended Technical Resources
+- Communication vulnerabilities\n\n## Appendix J: Beyond the Book: Essential AI Research and Learning
 As I compiled these resources, I realized anew the sheer breadth and depth of the work being done in these fields—a testament to efforts both inspiring and, at times, profoundly disquieting.\n\n### Papers and Research
 - Key papers on AI safety and alignment
 - Consciousness studies literature
@@ -84,7 +84,7 @@ As I compiled these resources, I realized anew the sheer breadth and depth of th
 - Neuroscience of consciousness
 - Technology and society\n\n### Organizations and Ongoing Research
 - AI safety research groups
-## Appendix K: Challenging Consciousness Theories
+## Appendix K: Are We Conscious? Debunking Theories of Awareness
 
 ### Critically Examining Leading Scientific Theories of Consciousness
 - Consciousness research institutes

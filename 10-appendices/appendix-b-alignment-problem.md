@@ -1,4 +1,4 @@
-# Appendix B: The AI Alignment Problem
+# Appendix B: Bridging the Intention Gap: The AI Alignment Challenge
 
 The rapid advancements in artificial intelligence bring forth a critical challenge: ensuring that highly capable AI systems operate in a manner consistent with human values and intentions. This is known as the **AI alignment problem**, and it encompasses two primary facets: Outer Alignment and Inner Alignment.
 
