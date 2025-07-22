@@ -13,7 +13,7 @@ if (-not (Test-Path -Path $outputDir)) {
 
 # --- Book Structure ---
 # Find all numbered directories and sort them numerically.
-$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^\d{2}-" -and $_.Name -notin "11-scripts", "12-scripts", "13-summary", "10-appendices" } | Sort-Object Name
+$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^Part-\d{2}-" -and $_.Name -notlike "*Scripts*" } | Sort-Object Name
 
 # --- Header ---
 $header = @"

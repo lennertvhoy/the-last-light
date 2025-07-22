@@ -22,21 +22,102 @@ This repository contains the manuscript for "The Last Light" organized into logi
 
 ```
 .
-├── 00-introduction/              # The book's introduction and foundational thesis.
-├── 01-the-chinese-room/          # Chapters exploring AI, consciousness, and the "Chinese Room" thought experiment, including concepts like the leveling effect and cognitive atrophy.
-├── 02-layer-8-singularity/       # Chapters on the societal-scale impacts and inversion of human/machine roles.
-├── 03-the-digital-pathogen/      # Chapters on information warfare, cognitive security, and AI as a "digital pathogen."
-├── 04-vampires-and-bicamerals/   # Chapters connecting vampiric predation to cognitive science and the bicameral mind theory.
-├── 05-weaponized-consciousness/  # Chapters on the strategic value and misuse of self-awareness.
-├── 06-the-oppenheimer-moment/    # Chapters addressing the ethical and existential risks of AI.
-├── 07-echopraxia/                # Chapters exploring the biological path to post-humanism and digital physics.
-├── 08-the-dead-end/              # Chapters on civilizational collapse scenarios.
-├── 09-or-a-new-beginning/        # A look at potential positive futures and transformations.
-├── 10-appendices/                # Supplementary material, glossaries, and in-depth discussions on various topics.
-├── 11-practices-for-a-conscious-mind/ # Practices and insights for maintaining consciousness in an AI-driven world.
-├── 12-scripts/                   # Utility scripts for compiling the book and other project management tasks.
-├── 13-summary/                   # Placeholder for book summaries or synopses.
-└── README.md                     # This comprehensive project overview.
+├── Part-00-Introduction/
+│   └── 0.0-Introduction.md
+├── Part-01-The-Chinese-Room/
+│   ├── 1.0-The-Chinese-Room-We-All-Inhabit.md
+│   ├── 1.1-The-Broken-Man.md
+│   ├── 1.2-We-All-Live-in-the-Chinese-Room.md
+│   ├── 1.3-The-Leveling-Effect.md
+│   └── 1.4-Cognitive-Atrophy.md
+├── Part-02-Layer-8-Singularity/
+│   ├── 2.0-Layer-8-Singularity.md
+│   └── 2.1-When-Humans-Become-the-Bug.md
+├── Part-03-The-Successors/
+│   ├── 3.0-The-Successors.md
+│   ├── 3.1-The-Predators-Gaze.md
+│   ├── 3.2-The-Bicameral-Mind-Revisited.md
+│   ├── 3.3-The-Scramblers.md
+│   ├── 3.4-Echopraxia.md
+│   ├── 3.5-The-Bicameral-Solution.md
+│   ├── 3.6-The-Cosmic-Static.md
+│   └── 3.7-The-Determinism.md
+├── Part-04-Weaponized-Consciousness/
+│   ├── 4.0-Weaponized-Consciousness.md
+│   ├── 4.1-The-Vampires-Glitch.md
+│   ├── 4.2-The-Persuasion-Engine.md
+│   └── 4.3-The-Empathy-Trap.md
+├── Part-05-The-Oppenheimer-Moment/
+│   ├── 5.0-The-Oppenheimer-Moment.md
+│   ├── 5.1-A-Few-People-Laughed-A-Few-People-Cried.md
+│   └── 5.2-I-Am-Become-Death.md
+├── Part-06-The-Dead-End/
+│   ├── 6.0-The-Dead-End.md
+│   ├── 6.1-The-Choice-Point.md
+│   ├── 6.2-The-Obsolescence-Engine.md
+│   ├── 6.3-AI-Feudalism-The-New-Digital-Divide.md
+│   └── 6.4-The-Inflection-Point.md
+├── Part-07-A-New-Beginning/
+│   ├── 7.0-A-New-Beginning.md
+│   ├── 7.1-How-I-Learned-to-Love-the-Bomb.md
+│   ├── 7.2-Cognitive-Homesteading.md
+│   ├── 7.3-Economic-Models-for-a-Conscious-Humanity.md
+│   ├── 7.4-The-Centaurs-Enduring-Stand.md
+│   └── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
+├── Part-08-The-Digital-Pathogen/
+│   ├── 8.0-The-Digital-Pathogen.md
+│   ├── 8.1-AI-as-Virus.md
+│   ├── 8.2-AI-as-Prion.md
+│   └── 8.3-AI-as-Self-Replicating-RNA.md
+├── Part-09-Appendices/
+│   ├── 9.0-Appendices.md
+│   ├── 9.1-Appendix-A-How-LLMs-Work.md
+│   ├── 9.10-Appendix-J-Recommended-Resources.md
+│   ├── 9.11-Appendix-K-Challenging-Consciousness-Theories.md
+│   ├── 9.12-Appendix-L-AI-Skepticism.md
+│   ├── 9.13-Appendix-M-AI-Winters.md
+│   ├── 9.14-Glossary.md
+│   ├── 9.2-Appendix-B-Alignment-Problem.md
+│   ├── 9.3-Appendix-C-Cognitive-Atrophy.md
+│   ├── 9.4-Appendix-D-Environmental-Impact.md
+│   ├── 9.5-Appendix-E-Deepfakes.md
+│   ├── 9.6-Appendix-F-Algorithmic-Bias.md
+│   ├── 9.7-Appendix-G-Consciousness-Information.md
+│   ├── 9.8-Appendix-H-Economic-Models.md
+│   ├── 9.9-Appendix-I-Autonomous-Weapons.md
+│   ├── 9.10-Appendix-J-Recommended-Resources.md
+│   ├── 9.11-Appendix-K-Challenging-Consciousness-Theories.md
+│   ├── 9.12-Appendix-L-AI-Skepticism.md
+│   ├── 9.13-Appendix-M-AI-Winters.md
+│   ├── 9.14-Glossary.md
+│   └── 9.15-Comprehensive-Glossary.md
+├── Part-10-Scripts/
+│   ├── combine-book.ps1
+│   ├── combine-book.sh
+│   └── audiobook-converter/
+│       ├── config/
+│       │   └── providers.json
+│       ├── css/
+│       │   └── styles.css
+│       ├── js/
+│       │   ├── app.js
+│       │   ├── converter.js
+│       │   └── providers.js
+│       ├── index.html
+│       ├── simple.html
+│       └── README.md
+├── CONTRIBUTING.md
+├── Editorial_Analysis_Report.md
+├── Editorial_Improvements_Summary.md
+├── LICENSE
+├── prompt.txt
+├── README.md
+├── .gitignore
+├── references/
+│   ├── jaynes_1976_bicameral_mind.md
+│   ├── searle_1980_minds_brains_programs.md
+│   └── watts_2006_blindsight.md
+└── summary.md
 ```
 
 ## Getting Started: How to Read the Book
@@ -45,23 +126,23 @@ The book is structured as a collection of individual Markdown files. To read the
 
 ### For Windows (PowerShell)
 
-1.  Open a PowerShell terminal in the project root (`c:\Users\lenne\Documents\the-last-light`).
+1.  Open a PowerShell terminal in the project root.
 2.  Run the command:
     ```powershell
-    .\12-scripts\combine-book.ps1
+    .\Part-10-Scripts\combine-book.ps1
     ```
     This script will automatically create the `_build` directory if it doesn't exist and output the combined Markdown file there.
 
 ### For macOS/Linux (Bash)
 
-1.  Open a terminal in the project root (`c:\Users\lenne\Documents\the-last-light`).
+1.  Open a terminal in the project root.
 2.  Make the script executable (if you haven't already):
     ```bash
-    chmod +x ./12-scripts/combine-book.sh
+    chmod +x ./Part-10-Scripts/combine-book.sh
     ```
 3.  Run the command:
     ```bash
-    ./12-scripts/combine-book.sh
+    ./Part-10-Scripts/combine-book.sh
     ```
     This script will automatically create the `_build` directory if it doesn't exist and output the combined Markdown file there.
 

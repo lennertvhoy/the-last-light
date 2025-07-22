@@ -19,7 +19,7 @@ HEADER="# THE LAST LIGHT\n## A Field Guide to Our Digital Crossroads\n\n---"
 echo -e "$HEADER" > "$OUTPUT_FILE"
 
 # Find all numbered directories, sort them, and process them
-find "$PROJECT_ROOT" -maxdepth 1 -type d -name "[0-9][0-9]-*" | sort | grep -vE '11-scripts|12-summary|12-appendices' | while read -r dir; do
+find "$PROJECT_ROOT" -maxdepth 1 -type d -name "Part-[0-9][0-9]-*" | sort | while read -r dir; do
     echo "Processing directory: $dir"
     
     # Find all .md files in the directory, sort them, and process them
