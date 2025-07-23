@@ -51,7 +51,8 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 5.0-The-Oppenheimer-Moment.md
 │   ├── 5.1-A-Few-People-Laughed-A-Few-People-Cried.md
 │   ├── 5.2-I-Am-Become-Death.md
-│   └── 5.3-The-Philosopher-King-Fallacy.md
+│   ├── 5.3-The-Philosopher-King-Fallacy.md
+│   └── 5.4-The-Benevolent-Dictator-Paradox.md
 ├── Part-06-The-Dead-End/
 │   ├── 6.0-The-Dead-End.md
 │   ├── 6.1-The-Choice-Point.md
@@ -59,36 +60,40 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 6.3-AI-Feudalism-The-New-Digital-Divide.md
 │   └── 6.4-The-Inflection-Point.md
 ├── Part-07-A-New-Beginning/
+├── Part-07-A-New-Beginning/
 │   ├── 7.0-A-New-Beginning.md
 │   ├── 7.1-How-I-Learned-to-Love-the-Bomb.md
 │   ├── 7.2-Cognitive-Homesteading.md
 │   ├── 7.3-Economic-Models-for-a-Conscious-Humanity.md
 │   ├── 7.4-The-Centaurs-Enduring-Stand.md
-│   ├── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
-│   ├── 7.6-The-Overmans-Shadow-A-Nietzschean-Response.md
-│   └── 7.7-The-Golem-of-Logos-A-Jungian-Interpretation.md
-├── Part-08-The-Digital-Pathogen/
-│   ├── 8.0-The-Digital-Pathogen.md
-│   ├── 8.1-AI-as-Virus.md
-│   ├── 8.2-AI-as-Prion.md
-│   └── 8.3-AI-as-Self-Replicating-RNA.md
-├── Part-09-Appendices/
-│   ├── 9.0-Appendices.md
-│   ├── 9.01-Appendix-A-How-LLMs-Work.md
-│   ├── 9.02-Appendix-B-Alignment-Problem.md
-│   ├── 9.03-Appendix-C-Cognitive-Atrophy.md
-│   ├── 9.04-Appendix-D-Environmental-Impact.md
-│   ├── 9.05-Appendix-E-Deepfakes.md
-│   ├── 9.06-Appendix-F-Algorithmic-Bias.md
-│   ├── 9.07-Appendix-G-Consciousness-Information.md
-│   ├── 9.08-Appendix-H-Economic-Models.md
-│   ├── 9.09-Appendix-I-Autonomous-Weapons.md
-│   ├── 9.10-Appendix-J-Recommended-Resources.md
-│   ├── 9.11-Appendix-K-Challenging-Consciousness-Theories.md
-│   ├── 9.12-Appendix-L-AI-Skepticism.md
-│   ├── 9.13-Appendix-M-AI-Winters.md
-│   └── 9.14-Appendix-N-Glossary.md
-├── Part-10-Scripts/
+│   └── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
+├── Part-08-Philosophical-Lenses/
+│   ├── 8.0-The-Overmans-Shadow-A-Nietzschean-Response.md
+│   └── 8.1-The-Golem-of-Logos-A-Jungian-Interpretation.md
+├── Part-09-The-Digital-Pathogen/
+│   ├── 9.0-The-Digital-Pathogen.md
+│   ├── 9.1-AI-as-Virus.md
+│   ├── 9.2-AI-as-Prion.md
+│   └── 9.3-AI-as-Self-Replicating-RNA.md
+├── Part-10-Conclusion/
+│   └── 10.0-The-Last-Light.md
+├── Part-11-Appendices/
+│   ├── 11.0-Appendices.md
+│   ├── 11.01-Appendix-A-How-LLMs-Work.md
+│   ├── 11.02-Appendix-B-Alignment-Problem.md
+│   ├── 11.03-Appendix-C-Cognitive-Atrophy.md
+│   ├── 11.04-Appendix-D-Environmental-Impact.md
+│   ├── 11.05-Appendix-E-Deepfakes.md
+│   ├── 11.06-Appendix-F-Algorithmic-Bias.md
+│   ├── 11.07-Appendix-G-Consciousness-Information.md
+│   ├── 11.08-Appendix-H-Economic-Models.md
+│   ├── 11.09-Appendix-I-Autonomous-Weapons.md
+│   ├── 11.10-Appendix-J-Recommended-Resources.md
+│   ├── 11.11-Appendix-K-Challenging-Consciousness-Theories.md
+│   ├── 11.12-Appendix-L-AI-Skepticism.md
+│   ├── 11.13-Appendix-M-AI-Winters.md
+│   └── 11.14-Appendix-N-Glossary.md
+├── Part-12-Scripts/
 │   ├── combine-book.ps1
 │   ├── combine-book.sh
 │   └── audiobook-converter/
