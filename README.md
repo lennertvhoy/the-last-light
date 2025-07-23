@@ -31,8 +31,7 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 1.3-The-Leveling-Effect.md
 │   └── 1.4-Cognitive-Atrophy.md
 ├── Part-02-Layer-8-Singularity/
-│   ├── 2.0-Layer-8-Singularity.md
-│   └── 2.1-When-Humans-Become-the-Bug.md
+│   └── 2.0-The-Layer-8-Singularity-When-Humans-Become-the-Bug.md
 ├── Part-03-The-Successors/
 │   ├── 3.0-The-Successors.md
 │   ├── 3.1-The-Predators-Gaze.md
@@ -44,8 +43,7 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   └── 3.7-The-Determinism.md
 ├── Part-04-Weaponized-Consciousness/
 │   ├── 4.0-Weaponized-Consciousness.md
-│   ├── 4.1-The-Vampires-Glitch.md
-│   ├── 4.2-The-Persuasion-Engine.md
+│   ├── 4.1-The-Persuasion-Engine-The-Vampires-Glitch-in-Action.md
 │   └── 4.3-The-Empathy-Trap.md
 ├── Part-05-The-Oppenheimer-Moment/
 │   ├── 5.0-The-Oppenheimer-Moment.md
@@ -59,7 +57,6 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 6.2-The-Obsolescence-Engine.md
 │   ├── 6.3-AI-Feudalism-The-New-Digital-Divide.md
 │   └── 6.4-The-Inflection-Point.md
-├── Part-07-A-New-Beginning/
 ├── Part-07-A-New-Beginning/
 │   ├── 7.0-A-New-Beginning.md
 │   ├── 7.1-How-I-Learned-to-Love-the-Bomb.md
@@ -92,7 +89,12 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 11.11-Appendix-K-Challenging-Consciousness-Theories.md
 │   ├── 11.12-Appendix-L-AI-Skepticism.md
 │   ├── 11.13-Appendix-M-AI-Winters.md
-│   └── 11.14-Appendix-N-Glossary.md
+│   ├── 11.14-Appendix-N-Glossary.md
+│   ├── 11.15-Appendix-O-Logical-Fallacies.md
+│   ├── 11.16-Appendix-P-The-Control-Problem.md
+│   ├── 11.17-Appendix-Q-Cognitive-Liberty.md
+│   ├── 11.18-Appendix-R-Data-Privacy.md
+│   └── 11.19-Appendix-S-Cybernetics.md
 ├── Part-12-Scripts/
 │   ├── combine-book.ps1
 │   ├── combine-book.sh
@@ -124,29 +126,29 @@ This repository contains the manuscript for "The Last Light" organized into logi
 
 ## Getting Started: How to Read the Book
 
-The book is structured as a collection of individual Markdown files. To read the complete manuscript as a single, compiled file, you can use the provided scripts to combine all chapters in the correct order. The output will be saved in a `_build` directory at the project root.
+The book is structured as a collection of individual Markdown files. To read the complete manuscript as a single, compiled file, you can use the provided scripts to combine all chapters in the correct order. The output will be saved in a `build` directory at the project root.
 
 ### For Windows (PowerShell)
 
 1.  Open a PowerShell terminal in the project root.
 2.  Run the command:
     ```powershell
-    .\Part-10-Scripts\combine-book.ps1
+    .\Part-12-Scripts\combine-book.ps1
     ```
-    This script will automatically create the `_build` directory if it doesn't exist and output the combined Markdown file there.
+    This script will automatically create the `build` directory if it doesn't exist and output the combined Markdown file there.
 
 ### For macOS/Linux (Bash)
 
 1.  Open a terminal in the project root.
 2.  Make the script executable (if you haven't already):
     ```bash
-    chmod +x ./Part-10-Scripts/combine-book.sh
+    chmod +x ./Part-12-Scripts/combine-book.sh
     ```
 3.  Run the command:
     ```bash
-    ./Part-10-Scripts/combine-book.sh
+    ./Part-12-Scripts/combine-book.sh
     ```
-    This script will automatically create the `_build` directory if it doesn't exist and output the combined Markdown file there.
+    This script will automatically create the `build` directory if it doesn't exist and output the combined Markdown file there.
 
 ## Contributing
 

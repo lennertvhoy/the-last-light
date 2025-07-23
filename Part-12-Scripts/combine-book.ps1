@@ -1,6 +1,10 @@
 # PowerShell script to combine all book chapters into a single file.
 # It automatically finds all .md files in the numbered directories and orders them alphabetically.
 
+param (
+    [switch]$WithoutAppendices
+)
+
 # Define the output directory and filename
 $outputDir = ".\build"
 $projectRoot = "."
@@ -14,7 +18,7 @@ if (-not (Test-Path -Path $outputDir)) {
 
 # --- Book Structure ---
 # Find all numbered directories and sort them numerically.
-$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^Part-\d{2}-" -and $_.Name -notlike "*Scripts*" } | Sort-Object Name
+$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^Part-" -and $_.Name -notlike "*Scripts*" } | Sort-Object Name
 
 # --- Header ---
 $header = @"
@@ -30,6 +34,11 @@ Set-Content -Path $outputFile -Value $header -Encoding UTF8
 
 # Process each directory and its markdown files
 foreach ($dir in $chapterDirs) {
+    if ($WithoutAppendices -and $dir.Name -eq "Part-11-Appendices") {
+        Write-Host "Skipping directory: $($dir.Name)" -ForegroundColor Yellow
+        continue
+    }
+
     Write-Host "Processing directory: $($dir.Name)" -ForegroundColor Cyan
     
     # Find all .md files in the directory and sort them
@@ -39,7 +48,7 @@ foreach ($dir in $chapterDirs) {
         Write-Host "  Appending file: $($file.Name)"
         
         # Add a clean separator
-        $separator = "`r`n`r`n---\r`n`r`n"
+        $separator = "`r`n`r`n---`n`r`n"
         Add-Content -Path $outputFile -Value $separator -Encoding UTF8
         
         # Get content and append
@@ -51,3 +60,4 @@ foreach ($dir in $chapterDirs) {
 # --- Completion Message ---
 Write-Host "`nBook combined successfully!" -ForegroundColor Green
 Write-Host "Output file: $outputFile"
+
