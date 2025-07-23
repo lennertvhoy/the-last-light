@@ -4,8 +4,9 @@
 # It automatically finds all .md files in the numbered directories and orders them.
 
 # Define the output directory and filename
-OUTPUT_DIR="./_build"
-OUTPUT_FILE="$OUTPUT_DIR/The-Last-Light_Combined.md"
+OUTPUT_DIR="./build"
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+OUTPUT_FILE="$OUTPUT_DIR/The-Last-Light_Combined_$TIMESTAMP.md"
 PROJECT_ROOT="."
 
 # Ensure the output directory exists

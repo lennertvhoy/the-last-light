@@ -50,7 +50,8 @@ This repository contains the manuscript for "The Last Light" organized into logi
 ├── Part-05-The-Oppenheimer-Moment/
 │   ├── 5.0-The-Oppenheimer-Moment.md
 │   ├── 5.1-A-Few-People-Laughed-A-Few-People-Cried.md
-│   └── 5.2-I-Am-Become-Death.md
+│   ├── 5.2-I-Am-Become-Death.md
+│   └── 5.3-The-Philosopher-King-Fallacy.md
 ├── Part-06-The-Dead-End/
 │   ├── 6.0-The-Dead-End.md
 │   ├── 6.1-The-Choice-Point.md
@@ -63,7 +64,9 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 7.2-Cognitive-Homesteading.md
 │   ├── 7.3-Economic-Models-for-a-Conscious-Humanity.md
 │   ├── 7.4-The-Centaurs-Enduring-Stand.md
-│   └── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
+│   ├── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
+│   ├── 7.6-The-Overmans-Shadow-A-Nietzschean-Response.md
+│   └── 7.7-The-Golem-of-Logos-A-Jungian-Interpretation.md
 ├── Part-08-The-Digital-Pathogen/
 │   ├── 8.0-The-Digital-Pathogen.md
 │   ├── 8.1-AI-as-Virus.md
@@ -71,26 +74,20 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   └── 8.3-AI-as-Self-Replicating-RNA.md
 ├── Part-09-Appendices/
 │   ├── 9.0-Appendices.md
-│   ├── 9.1-Appendix-A-How-LLMs-Work.md
+│   ├── 9.01-Appendix-A-How-LLMs-Work.md
+│   ├── 9.02-Appendix-B-Alignment-Problem.md
+│   ├── 9.03-Appendix-C-Cognitive-Atrophy.md
+│   ├── 9.04-Appendix-D-Environmental-Impact.md
+│   ├── 9.05-Appendix-E-Deepfakes.md
+│   ├── 9.06-Appendix-F-Algorithmic-Bias.md
+│   ├── 9.07-Appendix-G-Consciousness-Information.md
+│   ├── 9.08-Appendix-H-Economic-Models.md
+│   ├── 9.09-Appendix-I-Autonomous-Weapons.md
 │   ├── 9.10-Appendix-J-Recommended-Resources.md
 │   ├── 9.11-Appendix-K-Challenging-Consciousness-Theories.md
 │   ├── 9.12-Appendix-L-AI-Skepticism.md
 │   ├── 9.13-Appendix-M-AI-Winters.md
-│   ├── 9.14-Glossary.md
-│   ├── 9.2-Appendix-B-Alignment-Problem.md
-│   ├── 9.3-Appendix-C-Cognitive-Atrophy.md
-│   ├── 9.4-Appendix-D-Environmental-Impact.md
-│   ├── 9.5-Appendix-E-Deepfakes.md
-│   ├── 9.6-Appendix-F-Algorithmic-Bias.md
-│   ├── 9.7-Appendix-G-Consciousness-Information.md
-│   ├── 9.8-Appendix-H-Economic-Models.md
-│   ├── 9.9-Appendix-I-Autonomous-Weapons.md
-│   ├── 9.10-Appendix-J-Recommended-Resources.md
-│   ├── 9.11-Appendix-K-Challenging-Consciousness-Theories.md
-│   ├── 9.12-Appendix-L-AI-Skepticism.md
-│   ├── 9.13-Appendix-M-AI-Winters.md
-│   ├── 9.14-Glossary.md
-│   └── 9.15-Comprehensive-Glossary.md
+│   └── 9.14-Appendix-N-Glossary.md
 ├── Part-10-Scripts/
 │   ├── combine-book.ps1
 │   ├── combine-book.sh

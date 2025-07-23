@@ -1,4 +1,4 @@
-# Markdown to Audiobook Converter
+# # Markdown to Audiobook Converter
 
 A web-based tool to convert markdown files into high-quality audiobooks using various Text-to-Speech (TTS) providers.
 
@@ -89,26 +89,7 @@ Each provider offers unique voice customization:
 
 ## Troubleshooting
 
-### Common Issues
-
-1. **"Invalid API Key" Error**
-   - Verify your API key is correct
-   - Check if your account has sufficient credits
-   - Ensure the API is enabled for your account
-
-2. **"Chunk too large" Error**
-   - Reduce the chunk size in settings
-   - Check provider-specific limits
-
-3. **No Audio Output**
-   - Check browser console for errors
-   - Verify provider endpoints are accessible
-   - Try a different output format
-
-### Browser Requirements
-- Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- JavaScript must be enabled
-- Allow file downloads from the site
+## Troubleshooting
 
 ## Security & Privacy
 

@@ -2,9 +2,10 @@
 # It automatically finds all .md files in the numbered directories and orders them alphabetically.
 
 # Define the output directory and filename
-$outputDir = ".\_build"
+$outputDir = ".\build"
 $projectRoot = "."
-$outputFile = "$outputDir\The-Last-Light_Combined.md"
+$timestamp = Get-Date -Format "yyyyMMddHHmmss"
+$outputFile = "$outputDir\The-Last-Light_Combined_$timestamp.md"
 
 # Ensure the output directory exists
 if (-not (Test-Path -Path $outputDir)) {
