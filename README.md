@@ -44,6 +44,7 @@ This repository contains the manuscript for "The Last Light" organized into logi
 ├── Part-04-Weaponized-Consciousness/
 │   ├── 4.0-Weaponized-Consciousness.md
 │   ├── 4.1-The-Persuasion-Engine-The-Vampires-Glitch-in-Action.md
+│   ├── 4.2-The-Attention-Economy.md
 │   └── 4.3-The-Empathy-Trap.md
 ├── Part-05-The-Oppenheimer-Moment/
 │   ├── 5.0-The-Oppenheimer-Moment.md
@@ -94,7 +95,20 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 11.16-Appendix-P-The-Control-Problem.md
 │   ├── 11.17-Appendix-Q-Cognitive-Liberty.md
 │   ├── 11.18-Appendix-R-Data-Privacy.md
-│   └── 11.19-Appendix-S-Cybernetics.md
+│   ├── 11.19-Appendix-S-Cybernetics.md
+│   ├── 11.20-Appendix-T-The-Leveling-Effect.md
+│   ├── 11.21-Appendix-U-Cognitive-Atrophy-Extended.md
+│   ├── 11.21-Appendix-V-History-of-AI.md
+│   ├── 11.22-Appendix-W-Ethical-AI-Frameworks.md
+│   ├── 11.23-Appendix-X-Simulation-Hypothesis.md
+│   ├── 11.24-Appendix-Y-AI-Failure-Case-Studies.md
+│   ├── 11.25-Appendix-Z-Neuroscience-Consciousness-Metabolic-Costs.md
+│   ├── 11.26-Appendix-AA-Evolutionary-Mismatch-Theory.md
+│   ├── 11.27-Appendix-BB-Psychopathy-Corporate-Leadership.md
+│   ├── 11.28-Appendix-GG-Peter-Watts-Scientific-Framework.md
+│   ├── 11.29-Appendix-DD-Julian-Jaynes-Bicameral-Mind.md
+│   ├── 11.30-Appendix-FF-Techno-Feudalism-Economic-Theory.md
+│   └── 11.31-Appendix-CC-The-Behavioral-Engine-Technical-Analysis.md
 ├── Part-12-Scripts/
 │   ├── combine-book.ps1
 │   ├── combine-book.sh
@@ -111,17 +125,14 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │       ├── simple.html
 │       └── README.md
 ├── CONTRIBUTING.md
-├── Editorial_Analysis_Report.md
-├── Editorial_Improvements_Summary.md
 ├── LICENSE
-├── prompt.txt
 ├── README.md
 ├── .gitignore
 ├── references/
+│   ├── critical_mirror_thematic_analysis.md
 │   ├── jaynes_1976_bicameral_mind.md
 │   ├── searle_1980_minds_brains_programs.md
 │   └── watts_2006_blindsight.md
-└── summary.md
 ```
 
 ## Getting Started: How to Read the Book
