@@ -1,4 +1,5 @@
 # Build directory
+build/
 _build/
 
 # OS generated files
