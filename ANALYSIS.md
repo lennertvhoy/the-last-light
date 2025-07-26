@@ -47,20 +47,13 @@ The following is a list of statements from the book that require fact-checking. 
 *   **"A landmark study published in the journal MDPI provides strong empirical evidence for the phenomenon of cognitive offloading. The study found a 'significant negative correlation between frequent AI tool usage and critical thinking abilities.' This means that the more people relied on AI tools, the worse their critical thinking skills became."** This is a very specific claim that requires a specific citation.
 *   **"Studies on the 'forgetting curve' dating back to Ebbinghaus (1885) and more recent work on skill decay show that people consistently overestimate their retention rates. While individuals often predict they'll retain about 80% of a learned ability after a period of non-use, actual retention varies significantly by skill type, with rates ranging from 20% to 70%."** This is a very specific claim that requires a specific citation.
 
-### Part 3: The Successors
-
-*   **"In 2024, corporate AI investment hit a record $252.3 billion, with enterprise adoption jumping to 78% (Stanford AI Index Report, 2025)."** This is a very specific claim that requires a specific citation.
-*   **"PwC forecasts a potential 15% boost to global GDP from AI (PricewaterhouseCoopers, n.d.), while UNCTAD projects a staggering $4.8 trillion market by 2033 (United Nations Conference on Trade and Development, n.d.)."** These are very specific claims that require specific citations.
-
 ### Part 7: A New Beginning
 
 *   **"Case studies show a 10% reduction in cancer detection errors and a significant decrease in false positives, leading to earlier diagnosis, more effective treatment, and improved patient outcomes."** This is a very specific claim that requires a specific citation.
 *   **"When integrated thoughtfully, studies demonstrate a 20% increase in student engagement and improved learning outcomes."** This is a very specific claim that requires a specific citation.
 *   **"The Swedish government has recently announced a national plan to increase the use of physical books and reduce screen time in schools, citing concerns about the decline in reading comprehension and critical thinking skills among students."** This is a very specific claim that requires a specific citation.
 
-### Part 8: The Digital Pathogen
-
-*   **"The 2024 study on university success algorithms, which revealed significant racial bias (American Educational Research Association, 2024). This AI, designed to predict student success, effectively 'misfolded' its understanding of potential, leading to disparate outcomes. For instance, the study reported a 21% false negative rate for Hispanic students, meaning a significant number of qualified Hispanic students were incorrectly flagged as unlikely to succeed, compared to a 6% false negative rate for Asian students."** This is a very specific claim that requires a specific citation.
+### Part 9: Appendices
 
 ### Part 9: Appendices
 

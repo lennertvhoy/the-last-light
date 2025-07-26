@@ -28,7 +28,11 @@ echo -e "$HEADER" > "$OUTPUT_FILE"
 
 # Find all numbered directories, sort them, and process them
 find "$PROJECT_ROOT" -maxdepth 1 -type d -name "Part-*" | sort | while read -r dir; do
-    # Skip appendices if the flag is set
+    # Skip scripts directory and appendices if the flag is set
+    if [[ "$dir" == *"Part-12-Scripts"* ]]; then
+        echo "Skipping scripts directory: $dir"
+        continue
+    fi
     if [[ "$EXCLUDE_APPENDICES" == true && "$dir" == *"Part-11-Appendices"* ]]; then
         echo "Skipping directory: $dir"
         continue
@@ -41,7 +45,7 @@ find "$PROJECT_ROOT" -maxdepth 1 -type d -name "Part-*" | sort | while read -r d
         echo "  Appending file: $file"
         
         # Add a clean separator and the file content
-        echo \n\n---\n' >> "$OUTPUT_FILE"
+        echo -e '\n\n---\n' >> "$OUTPUT_FILE"
         cat "$file" >> "$OUTPUT_FILE"
     done
 done

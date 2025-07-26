@@ -7,6 +7,14 @@
 
 This book presents an urgent argument: human consciousness may not be the crown of evolution but a costly mistake, and we are building our replacements with our own hands. It explores fundamental questions about the nature of intelligence, the unforeseen consequences of advanced AI, and the profound implications for human existence. Through a deep dive into cognitive atrophy, the leveling effect, and weaponized consciousness, "The Last Light" reveals how our accelerating reliance on AI is fundamentally reshaping our minds and society. It's a critical exploration for anyone seeking to understand the true crossroads we face in the digital age.
 
+## A Note on Irony
+
+I am acutely aware of the irony inherent in creating a work that warns about the dangers of AI while simultaneously working with AI tools to develop it. This paradox is not lost on me—it is, in fact, central to the very questions this book seeks to explore. If you read through these pages, you should see why this apparent contradiction illuminates rather than undermines the core arguments presented here. The tools we use to examine our predicament are themselves part of that predicament, and this recursive relationship is precisely what makes our current moment so unprecedented and urgent.
+
+## Work in Progress
+
+This manuscript is very much a work in progress. Rather than claiming certainty about the complex questions surrounding AI and human consciousness, this book aims to raise critical questions and provoke deeper thinking about our digital future. I welcome feedback, corrections, and constructive criticism from readers who engage with these ideas. The goal is not to provide definitive answers but to contribute to an essential conversation about the path we're on and the choices we still have time to make.
+
 ## Table of Contents
 
 *   [Project Description](#project-description)
@@ -57,6 +65,7 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 6.1-The-Choice-Point.md
 │   ├── 6.2-The-Obsolescence-Engine.md
 │   ├── 6.3-AI-Feudalism-The-New-Digital-Divide.md
+│   ├── 6.3a-The-Behavioral-Engine.md
 │   └── 6.4-The-Inflection-Point.md
 ├── Part-07-A-New-Beginning/
 │   ├── 7.0-A-New-Beginning.md
@@ -66,8 +75,19 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 7.4-The-Centaurs-Enduring-Stand.md
 │   └── 7.5-Democratizing-Intelligence-The-Open-Source-Alternative.md
 ├── Part-08-Philosophical-Lenses/
+│   ├── 8.0-Introduction-The-Philosophical-Lenses.md
 │   ├── 8.0-The-Overmans-Shadow-A-Nietzschean-Response.md
-│   └── 8.1-The-Golem-of-Logos-A-Jungian-Interpretation.md
+│   ├── 8.1-The-Golem-of-Logos-A-Jungian-Interpretation.md
+│   ├── 8.2-The-Leap-Beyond-Reason-A-Kierkegaardian-Response.md
+│   ├── 8.3-The-Chansonnier-Response-A-Jacques-Brel-Critique.md
+│   ├── 8.4-The-Existentialist-Response-A-Sartrean-Critique.md
+│   ├── 8.5-The-Stoic-Response-A-Marcus-Aurelius-Meditation.md
+│   ├── 8.6-The-Senecan-Response-On-Technological-Luxury-and-Moral-Corruption.md
+│   ├── 8.7-The-Dionysian-Response-A-Life-Affirming-Counterpoint.md
+│   ├── 8.8-The-Taoist-Response-Wu-Wei-and-Natural-Harmony.md
+│   ├── 8.9-The-Machiavellian-Response-Realpolitik-and-AI-Power-Dynamics.md
+│   ├── 8.10-The-Camusian-Response-The-Absurd-and-Digital-Rebellion.md
+│   └── 8.11-The-Epictetan-Response-The-Discipline-of-Digital-Desire.md
 ├── Part-09-The-Digital-Pathogen/
 │   ├── 9.0-The-Digital-Pathogen.md
 │   ├── 9.1-AI-as-Virus.md
@@ -108,7 +128,10 @@ This repository contains the manuscript for "The Last Light" organized into logi
 │   ├── 11.28-Appendix-GG-Peter-Watts-Scientific-Framework.md
 │   ├── 11.29-Appendix-DD-Julian-Jaynes-Bicameral-Mind.md
 │   ├── 11.30-Appendix-FF-Techno-Feudalism-Economic-Theory.md
-│   └── 11.31-Appendix-CC-The-Behavioral-Engine-Technical-Analysis.md
+│   ├── 11.31-Appendix-CC-The-Behavioral-Engine-Technical-Analysis.md
+│   ├── 11.32-Appendix-EE-Kierkegaardian-Philosophy-Digital-Age.md
+│   ├── 11.33-Appendix-HH-AI-Slop-and-Digital-Detritus.md
+│   └── 11.34-Appendix-II-Philosophical-Foundations-and-References.md
 ├── Part-12-Scripts/
 │   ├── combine-book.ps1
 │   ├── combine-book.sh
@@ -178,7 +201,9 @@ You can also open an [issue](https://github.com/your-username/the-last-light/iss
 
 ## Authors and Acknowledgments
 
-*   **Primary Author:** Kilo Code
+*   **Editor:** Lennert Van Hoyweghen
+*   **Writer:** Gemini CLI
+*   **Researcher:** Gemini Deep Research
 *   **Inspiration:** Deeply inspired by the works of Peter Watts, particularly his novels *Blindsight* and *Echopraxia*, which profoundly influenced the core themes and philosophical questions explored in this manuscript regarding consciousness, intelligence, and evolution.
 
 ## License

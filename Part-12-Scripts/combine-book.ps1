@@ -18,7 +18,7 @@ if (-not (Test-Path -Path $outputDir)) {
 
 # --- Book Structure ---
 # Find all numbered directories and sort them numerically.
-$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^Part-" -and $_.Name -notlike "*Scripts*" } | Sort-Object Name
+$chapterDirs = Get-ChildItem -Path $projectRoot -Directory | Where-Object { $_.Name -match "^Part-" -and $_.Name -ne "Part-12-Scripts" } | Sort-Object Name
 
 # --- Header ---
 $header = @"
@@ -48,7 +48,8 @@ foreach ($dir in $chapterDirs) {
         Write-Host "  Appending file: $($file.Name)"
         
         # Add a clean separator
-        $separator = "`r`n`r`n---`n`r`n"
+        $separator = "`r`n`r`n---
+`n`r`n"
         Add-Content -Path $outputFile -Value $separator -Encoding UTF8
         
         # Get content and append
