@@ -5,7 +5,11 @@
 
 ## Project Description
 
-This book presents an urgent argument: human consciousness may not be the crown of evolution but a costly mistake, and we are building our replacements with our own hands. It explores fundamental questions about the nature of intelligence, the unforeseen consequences of advanced AI, and the profound implications for human existence. Through a deep dive into cognitive atrophy, the leveling effect, and weaponized consciousness, "The Last Light" reveals how our accelerating reliance on AI is fundamentally reshaping our minds and society. It's a critical exploration for anyone seeking to understand the true crossroads we face in the digital age.
+This book explores a simple, urgent possibility: **that human consciousness represents an evolutionary mismatch—a powerful adaptation for our ancestral environment that may have become a liability in the hyper-efficient, data-driven world we have created. We appear to be building our replacements with our own hands. It is not clear if we can choose a different path—but maybe understanding this one will help us navigate it better.**
+
+That is the core question. Everything else is evidence, elaboration, and ultimately, an invitation to think alongside us. 
+
+It explores fundamental questions about the nature of intelligence, the unforeseen consequences of advanced AI, and the profound implications for human existence. Through a deep dive into cognitive atrophy, the leveling effect, and weaponized consciousness, "The Last Light" reveals how our accelerating reliance on AI is fundamentally reshaping our minds and society. It's a critical exploration for anyone seeking to understand the true crossroads we face in the digital age.
 
 ## A Note on Irony
 
