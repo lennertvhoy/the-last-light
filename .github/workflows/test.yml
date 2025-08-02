@@ -1,0 +1,85 @@
+name: Test Book
+
+on:
+  push:
+    branches:
+      - main
+      - discussion
+  pull_request:
+    branches:
+      - main
+      - discussion
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run build script
+        run: |
+          chmod +x f.Scripts/combine-book.sh
+          ./f.Scripts/combine-book.sh
+          
+      - name: Verify build output
+        run: |
+          # Check that the combined book file was created
+          if ls e.Combined-Book/The-Last-Light_Combined_NoExtras_*.md 1> /dev/null 2>&1; then
+            echo "Build output verified"
+          else
+            echo "Build output not found"
+            exit 1
+          fi
+          
+      - name: Check for broken links
+        run: |
+          # Simple check for obvious broken link patterns
+          ! grep -r "\[.*\](.*\.md)" --include="*.md" a.The-Last-Light-Book b.Philosophical-Lenses c.Appendices d.References || echo "Warning: Relative markdown links found, these may not work on GitHub Pages"
+          
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Validate directory structure
+        run: |
+          # Check that all expected directories exist
+          test -d "a.The-Last-Light-Book" || { echo "Missing a.The-Last-Light-Book directory"; exit 1; }
+          test -d "b.Philosophical-Lenses" || { echo "Missing b.Philosophical-Lenses directory"; exit 1; }
+          test -d "c.Appendices" || { echo "Missing c.Appendices directory"; exit 1; }
+          test -d "d.References" || { echo "Missing d.References directory"; exit 1; }
+          test -d "e.Combined-Book" || { echo "Missing e.Combined-Book directory"; exit 1; }
+          test -d "f.Scripts" || { echo "Missing f.Scripts directory"; exit 1; }
+          
+          # Check that required files exist
+          test -f "index.html" || { echo "Missing index.html"; exit 1; }
+          test -f "README.md" || { echo "Missing README.md"; exit 1; }
+          test -f "PROJECT_README.md" || { echo "Missing PROJECT_README.md"; exit 1; }
+          
+          echo "Directory structure validated"
+          
+  validate-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        
+      - name: Check for required content elements
+        run: |
+          # Check that introduction file exists
+          test -f "a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md" || { echo "Missing introduction file"; exit 1; }
+          
+          # Check that introduction contains key elements
+          grep -q "# The Last Light" "a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md" || { echo "Introduction missing title"; exit 1; }
+          
+          echo "Content validation passed"

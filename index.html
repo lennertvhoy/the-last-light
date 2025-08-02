@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Last Light</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="A Field Guide to Our Digital Crossroads">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search/search.min.css">
+  <style>
+    :root {
+      --theme-color: #42b983;
+      --theme-color-dark: #359c6d;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+      line-height: 1.6;
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+    
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      font-weight: 500;
+      line-height: 1.2;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    
+    .markdown-section h1 {
+      font-size: 2em;
+      border-bottom: 1px solid var(--borderColor);
+      padding-bottom: 0.3em;
+    }
+    
+    .markdown-section h2 {
+      font-size: 1.5em;
+      border-bottom: 1px solid var(--borderColor);
+      padding-bottom: 0.3em;
+    }
+    
+    .markdown-section p {
+      margin: 1em 0;
+    }
+    
+    .markdown-section ul, .markdown-section ol {
+      line-height: 1.8;
+      padding-left: 1.5em;
+    }
+    
+    .markdown-section blockquote {
+      margin: 1.5em 0;
+      padding: 0.5em 1em;
+      border-left: 4px solid var(--theme-color);
+      background-color: rgba(66, 185, 131, 0.1);
+    }
+    
+    /* Light/Dark mode toggle */
+    .theme-switch-wrapper {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    .theme-switch {
+      display: inline-block;
+      height: 24px;
+      position: relative;
+      width: 50px;
+      margin: 0 10px;
+    }
+    
+    .theme-switch input {
+      display: none;
+    }
+    
+    .slider {
+      background-color: #ccc;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    
+    .slider:before {
+      background-color: white;
+      bottom: 2px;
+      content: "";
+      height: 20px;
+      left: 2px;
+      position: absolute;
+      transition: .4s;
+      width: 20px;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: var(--theme-color);
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .slider-icon {
+      font-size: 18px;
+      color: #666;
+    }
+    
+    input:checked ~ .slider-icon.sun {
+      color: #f39c12;
+    }
+    
+    .docsify-pagination-container {
+      margin: 2em 0;
+      border-top: 1px solid var(--borderColor);
+      padding-top: 1em;
+    }
+    
+    .pagination-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .pagination-item a {
+      text-decoration: none !important;
+    }
+    
+    .pagination-item a:hover {
+      text-decoration: underline !important;
+    }
+    
+    .pagination-item .label {
+      font-size: 0.8em;
+      color: var(--textColor);
+      opacity: 0.7;
+      margin-bottom: 0.2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    // Light/Dark mode toggle
+    function initTheme() {
+      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+      const currentTheme = localStorage.getItem('theme');
+      
+      if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+          toggleSwitch.checked = true;
+        }
+      }
+      
+      toggleSwitch.addEventListener('change', switchTheme, false);
+    }
+    
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    
+    window.$docsify = {
+      name: 'The Last Light',
+      repo: '',
+      loadSidebar: true,
+      loadNavbar: true,
+      auto2top: true,
+      coverpage: false,
+      executeScript: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      search: {
+        maxAge: 86400000, // 1 day
+        paths: 'auto',
+        placeholder: 'Search',
+        noData: 'No Results!',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+      plugins: [
+        function(hook, vm) {
+          hook.ready(function() {
+            initTheme();
+          });
+        }
+      ]
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+</body>
+</html>

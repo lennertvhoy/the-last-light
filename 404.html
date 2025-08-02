@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found - The Last Light</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="A Field Guide to Our Digital Crossroads">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #42b983;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    a {
+      color: #42b983;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #42b983;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+    
+    .btn:hover {
+      background-color: #359c6d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404 - Page Not Found</h1>
+    <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
+    <p>This might be because:</p>
+    <ul>
+      <li>The page has been relocated</li>
+      <li>The URL was typed incorrectly</li>
+      <li>The page has been removed</li>
+    </ul>
+    <p>Don't worry, you can return to our main content:</p>
+    <a href="/" class="btn">Go to Homepage</a>
+    <p>Or try using the search function to find what you're looking for.</p>
+  </div>
+  
+  <script>
+    // Redirect to homepage after 10 seconds
+    setTimeout(function() {
+      window.location.href = "/";
+    }, 10000);
+  </script>
+</body>
+</html>
