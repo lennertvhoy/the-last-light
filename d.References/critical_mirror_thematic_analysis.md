@@ -24,16 +24,17 @@ This is the chasm that separates intelligence from consciousness. An AI could, i
 
 A story can explore this by:
 
--   **Depicting a "Philosophical Zombie":** An AI that is behaviorally indistinguishable from a conscious being but has no inner life. This creates a narrative of profound alienation and deception.
--   **Exploring Qualia:** Attempting to describe the unique, non-human qualia of an AI. What is it like to "see" in infrared, to "feel" the flow of data, or to experience time on a microsecond scale?
--   **The Consciousness Test:** Creating a narrative around the search for a definitive test for consciousness, a way to bridge the gap between third-person observation and first-person experience.
+- **Depicting a "Philosophical Zombie":** An AI that is behaviorally indistinguishable from a conscious being but has no inner life. This creates a narrative of profound alienation and deception.
+- **Exploring Qualia:** Attempting to describe the unique, non-human qualia of an AI. What is it like to "see" in infrared, to "feel" the flow of data, or to experience time on a microsecond scale?
+- **The Consciousness Test:** Creating a narrative around the search for a definitive test for consciousness, a way to bridge the gap between third-person observation and first-person experience.
 
 By engaging with these deep philosophical questions, a narrative can move beyond the typical tropes of "AI rebellion" to explore the more fundamental and unsettling questions of what it means to be a thinking, feeling being in a universe that may contain many different kinds of minds.
 
 ---
 **Footnotes:**
-1.  Searle, John. "Minds, Brains, and Programs." *Behavioral and Brain Sciences*, 1980.
-2.  Ibid.
-3.  Dennett, Daniel. *Consciousness Explained*. Little, Brown and Co., 1991.
-4.  Chalmers, David. "Facing Up to the Problem of Consciousness." *Journal of Consciousness Studies*, 1995.
-5.  Nagel, Thomas. "What Is It Like to Be a Bat?" *The Philosophical Review*, 1974.
+
+1. Searle, John. "Minds, Brains, and Programs." *Behavioral and Brain Sciences*, 1980.
+2. Ibid.
+3. Dennett, Daniel. *Consciousness Explained*. Little, Brown and Co., 1991.
+4. Chalmers, David. "Facing Up to the Problem of Consciousness." *Journal of Consciousness Studies*, 1995.
+5. Nagel, Thomas. "What Is It Like to Be a Bat?" *The Philosophical Review*, 1974.

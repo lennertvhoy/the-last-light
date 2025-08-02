@@ -1,0 +1,23 @@
+
+name: Build Book
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Run build script
+        run: |
+          chmod +x f.Scripts/combine-book.sh
+          ./f.Scripts/combine-book.sh
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: the-last-light-book
+          path: e.Combined-Book/The-Last-Light_Combined_NoExtras_*.md

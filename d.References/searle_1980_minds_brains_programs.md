@@ -6,10 +6,10 @@ John Searle's 1980 paper, "Minds, Brains, and Programs," introduces the now-famo
 
 The thought experiment proceeds as follows:
 
-1.  **The Setup:** Imagine a native English speaker who does not know any Chinese locked in a room. This person is the central processing unit (CPU) of the system.
-2.  **The Inputs:** Inside the room, there are several baskets of Chinese symbols (the database) and a rulebook written in English (the program). The rulebook provides instructions for manipulating the symbols. For example, "When you see symbol X, produce symbol Y."
-3.  **The Process:** People outside the room, who are native Chinese speakers, pass in slips of paper with questions written in Chinese symbols. The person inside the room uses the rulebook to find the corresponding symbols and passes back slips of paper with the appropriate answers, also in Chinese.
-4.  **The Result:** From the perspective of the observers outside, the room is behaving as if it understands Chinese. It takes Chinese questions as input and produces coherent Chinese answers as output. It passes the Turing Test for understanding Chinese.
+1. **The Setup:** Imagine a native English speaker who does not know any Chinese locked in a room. This person is the central processing unit (CPU) of the system.
+2. **The Inputs:** Inside the room, there are several baskets of Chinese symbols (the database) and a rulebook written in English (the program). The rulebook provides instructions for manipulating the symbols. For example, "When you see symbol X, produce symbol Y."
+3. **The Process:** People outside the room, who are native Chinese speakers, pass in slips of paper with questions written in Chinese symbols. The person inside the room uses the rulebook to find the corresponding symbols and passes back slips of paper with the appropriate answers, also in Chinese.
+4. **The Result:** From the perspective of the observers outside, the room is behaving as if it understands Chinese. It takes Chinese questions as input and produces coherent Chinese answers as output. It passes the Turing Test for understanding Chinese.
 
 ## Core Claims and Refutation of Strong AI
 
