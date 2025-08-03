@@ -1,15 +1,26 @@
+<details>
+<summary>Introduction</summary>
 
 - [Introduction](a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md)
+</details>
 
-- **Part 1: The Chinese Room**
+<details>
+<summary>Part 1: The Chinese Room</summary>
+
   - [1.0 We All Live in the Chinese Room](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.0-We-All-Live-in-the-Chinese-Room.md)
   - [1.1 The Broken Man](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.1-The-Broken-Man.md)
   - [1.2 The Leveling Effect and the Price of Convenience](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.2-The-Leveling-Effect-and-the-Price-of-Convenience.md)
+</details>
 
-- **Part 2: The Layer 8 Singularity**
+<details>
+<summary>Part 2: The Layer 8 Singularity</summary>
+
   - [2.0 The Layer 8 Singularity](a.The-Last-Light-Book/Part-02-The-Layer-8-Singularity/2.0-The-Layer-8-Singularity-When-Humans-Become-the-Bug.md)
+</details>
 
-- **Part 3: The Successors**
+<details>
+<summary>Part 3: The Successors</summary>
+
   - [3.0 The Successors](a.The-Last-Light-Book/Part-03-The-Successors/3.0-The-Successors.md)
   - [3.1 The Predators Gaze](a.The-Last-Light-Book/Part-03-The-Successors/3.1-The-Predators-Gaze.md)
   - [3.2 The Scramblers](a.The-Last-Light-Book/Part-03-The-Successors/3.2-The-Scramblers.md)
@@ -18,43 +29,64 @@
   - [3.5 The Bicameral Mind Revisited](a.The-Last-Light-Book/Part-03-The-Successors/3.5-The-Bicameral-Mind-Revisited.md)
   - [3.6 The Cosmic Static](a.The-Last-Light-Book/Part-03-The-Successors/3.6-The-Cosmic-Static.md)
   - [3.7 The Determinism](a.The-Last-Light-Book/Part-03-The-Successors/3.7-The-Determinism.md)
+</details>
 
-- **Part 4: Weaponized Consciousness**
+<details>
+<summary>Part 4: Weaponized Consciousness</summary>
+
   - [4.0 Weaponized Consciousness](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.0-Weaponized-Consciousness.md)
   - [4.1 The Persuasion Engine](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.1-The-Persuasion-Engine-The-Vampires-Glitch-in-Action.md)
   - [4.2 The Attention Economy](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.2-The-Attention-Economy.md)
   - [4.3 The Empathy Trap](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.3-The-Empathy-Trap.md)
+</details>
 
-- **Part 5: The Oppenheimer Moment**
+<details>
+<summary>Part 5: The Oppenheimer Moment</summary>
+
   - [5.0 The Oppenheimer Moment](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.0-The-Oppenheimer-Moment.md)
   - [5.1 A Few People Laughed, A Few People Cried](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.1-A-Few-People-Laughed-A-Few-People-Cried.md)
   - [5.2 I Am Become Death](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.2-I-Am-Become-Death.md)
   - [5.3 The Philosopher King Fallacy](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.3-The-Philosopher-King-Fallacy.md)
   - [5.4 The Benevolent Dictator Paradox](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.4-The-Benevolent-Dictator-Paradox.md)
+</details>
 
-- **Part 6: The Dead End**
+<details>
+<summary>Part 6: The Dead End</summary>
+
   - [6.0 The Dead End](a.The-Last-Light-Book/Part-06-The-Dead-End/6.0-The-Dead-End.md)
   - [6.1 The Choice Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.1-The-Choice-Point.md)
   - [6.2 The Obsolescence Engine](a.The-Last-Light-Book/Part-06-The-Dead-End/6.2-The-Obsolescence-Engine.md)
   - [6.3 The Rise of Techno-feudalism](a.The-Last-Light-Book/Part-06-The-Dead-End/6.3-The-Rise-of-Techno-feudalism.md)
   - [6.4 The Inflection Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.4-The-Inflection-Point.md)
+</details>
 
-- **Part 7: The Digital Pathogen**
+<details>
+<summary>Part 7: The Digital Pathogen</summary>
+
   - [7.0 The Digital Pathogen](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.0-The-Digital-Pathogen.md)
   - [7.1 AI as Virus](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.1-AI-as-Virus.md)
   - [7.2 AI as Prion](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.2-AI-as-Prion.md)
   - [7.3 AI as Self-Replicating RNA](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.3-AI-as-Self-Replicating-RNA.md)
+</details>
 
-- **Part 8: A New Beginning**
+<details>
+<summary>Part 8: A New Beginning</summary>
+
   - [8.0 A New Beginning](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.0-A-New-Beginning.md)
   - [8.1 A Field Guide to Dignified Rebellion](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.1-A-Field-Guide-to-Dignified-Rebellion.md)
   - [8.2 Economic and Collaborative Futures](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.2-Economic-and-Collaborative-Futures.md)
   - [8.3 Centaurs and Cyborgs](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.3-Centaurs-and-Cyborgs.md)
+</details>
 
-- **Part 9: Conclusion**
+<details>
+<summary>Part 9: Conclusion</summary>
+
   - [9.0 The Last Light](a.The-Last-Light-Book/Part-09-Conclusion/9.0-The-Last-Light.md)
+</details>
 
-- **Philosophical Lenses**
+<details>
+<summary>Philosophical Lenses</summary>
+
   - [10.0 Introduction](b.Philosophical-Lenses/10.0-Introduction-The-Philosophical-Lenses.md)
   - [10.1 The Overman's Shadow](b.Philosophical-Lenses/10.1-The-Overmans-Shadow-A-Nietzschean-Response.md)
   - [10.2 The Golem of Logos](b.Philosophical-Lenses/10.2-The-Golem-of-Logos-A-Jungian-Interpretation.md)
@@ -68,8 +100,11 @@
   - [10.10 The Machiavellian Response](b.Philosophical-Lenses/10.10-The-Machiavellian-Response-Realpolitik-and-AI-Power-Dynamics.md)
   - [10.11 The Camusian Response](b.Philosophical-Lenses/10.11-The-Camusian-Response-The-Absurd-and-Digital-Rebellion.md)
   - [10.12 The Epictetan Response](b.Philosophical-Lenses/10.12-The-Epictetan-Response-The-Discipline-of-Digital-Desire.md)
+</details>
 
-- **Appendices**
+<details>
+<summary>Appendices</summary>
+
   - [11.0 Appendices](c.Appendices/11.0-Appendices.md)
   - [11.01 Appendix A: How LLMs Work](c.Appendices/11.01-Appendix-A-How-LLMs-Work.md)
   - [11.02 Appendix B: Alignment Problem](c.Appendices/11.02-Appendix-B-Alignment-Problem.md)
@@ -107,3 +142,4 @@
   - [11.33 Appendix HH: AI Slop and Digital Detritus](c.Appendices/11.33-Appendix-HH-AI-Slop-and-Digital-Detritus.md)
   - [11.34 Appendix II: Future Research Directions](c.Appendices/11.34-Appendix-II-Future-Research-Directions.md)
   - [11.35 Appendix JJ: Acknowledgements](c.Appendices/11.35-Appendix-JJ-Acknowledgements.md)
+</details>
