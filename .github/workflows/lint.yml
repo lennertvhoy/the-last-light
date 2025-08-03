@@ -37,7 +37,7 @@ jobs:
       - name: Install cspell
         run: npm install -g cspell
       - name: Run spell check
-        run: cspell "**/*.md" --exclude e.Combined-Book
+        run: cspell --config cspell.json "**/*.md" --exclude e.Combined-Book
         
   link-check:
     runs-on: ubuntu-latest

@@ -1,0 +1,32 @@
+
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "Searle's",
+    "rulebook",
+    "Searle",
+    "Blindsight",
+    "blindsight",
+    "Siri",
+    "Keeton",
+    "superintelligence",
+    "nojekyll",
+    "jaynes",
+    "searle",
+    "Lennert",
+    "Hoyweghen",
+    "docsify",
+    "markdownlint",
+    "linkinator",
+    "cspell",
+    "hoy",
+    "lennertvhoy"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "package.json",
+    "package-lock.json",
+    "e.Combined-Book/**"
+  ]
+}
