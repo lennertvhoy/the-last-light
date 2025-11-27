@@ -170,6 +170,60 @@
       opacity: 0.7;
       margin-bottom: 0.2em;
     }
+
+    /* Language Switcher */
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 1rem 0;
+      padding: 0 10px;
+    }
+    
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      flex: 1;
+    }
+    
+    .lang-switch button:hover {
+      border-color: var(--theme-color);
+    }
+    
+    .lang-switch button.active {
+      background-color: var(--theme-color);
+      color: white;
+      border-color: var(--theme-color);
+      font-weight: bold;
+    }
+
+    /* Mobile Improvements */
+    @media screen and (max-width: 768px) {
+      .markdown-section {
+        padding: 2rem 1rem;
+      }
+      body {
+        font-size: 16px;
+      }
+      /* Ensure toggle is visible on dark backgrounds */
+      .sidebar-toggle {
+        background-color: rgba(30, 30, 30, 0.8);
+        border-radius: 4px;
+        width: auto;
+        padding: 10px;
+      }
+      /* Better table scrolling */
+      .markdown-section table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -204,12 +258,13 @@
       name: 'The Last Light',
       repo: '',
       loadSidebar: true,
-      loadNavbar: true,
+      loadNavbar: false,
       auto2top: true,
       coverpage: false,
       executeScript: true,
       maxLevel: 4,
       subMaxLevel: 2,
+      sidebarDisplayLevel: 0, // 0: collapse all, 1: keep first level open
       search: {
         maxAge: 86400000, // 1 day
         paths: 'auto',
@@ -222,6 +277,62 @@
         function(hook, vm) {
           hook.ready(function() {
             initTheme();
+            
+            // Language Switcher Injection
+            var sidebar = document.querySelector('.sidebar');
+            var nav = document.querySelector('.sidebar-nav');
+            var div = document.createElement('div');
+            div.className = 'lang-switch';
+            
+            // Initial State
+            var isNl = window.location.hash.indexOf('#/nl/') === 0;
+            
+            div.innerHTML = 
+              '<button id="btn-en" class="' + (!isNl ? 'active' : '') + '">English</button>' +
+              '<button id="btn-nl" class="' + (isNl ? 'active' : '') + '">Nederlands</button>';
+              
+            // Insert before nav or append if nav missing
+            if (nav) {
+              sidebar.insertBefore(div, nav);
+            } else {
+              sidebar.appendChild(div);
+            }
+            
+            // Event Listeners
+            div.querySelector('#btn-en').addEventListener('click', function() {
+              if (window.location.hash.indexOf('#/nl/') === 0) {
+                window.location.hash = window.location.hash.replace('#/nl/', '#/');
+              }
+            });
+            
+            div.querySelector('#btn-nl').addEventListener('click', function() {
+              if (window.location.hash.indexOf('#/nl/') !== 0) {
+                 // Handle root or specific path
+                 var current = window.location.hash;
+                 if (current === '' || current === '#/') {
+                    window.location.hash = '#/nl/';
+                 } else {
+                    window.location.hash = current.replace('#/', '#/nl/');
+                 }
+              }
+            });
+          });
+          
+          hook.doneEach(function() {
+            // Update active state on navigation
+            var isNl = window.location.hash.indexOf('#/nl/') === 0;
+            var btnEn = document.querySelector('#btn-en');
+            var btnNl = document.querySelector('#btn-nl');
+            
+            if (btnEn && btnNl) {
+              if (isNl) {
+                btnEn.classList.remove('active');
+                btnNl.classList.add('active');
+              } else {
+                btnEn.classList.add('active');
+                btnNl.classList.remove('active');
+              }
+            }
           });
         }
       ]
@@ -232,5 +343,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 </body>
 </html>
