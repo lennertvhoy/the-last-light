@@ -34,3 +34,18 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local.kilocode/
+# secrets
+*.env
+secrets.env
+**/secrets.env
+**/*.pem
+**/*.p12
+**/*.kdbx
+id_rsa
+id_ed25519
+# deps/build
+.venv/
+venv/
+__pycache__/
+dist/
+build/
