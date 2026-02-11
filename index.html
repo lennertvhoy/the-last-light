@@ -1,262 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>The Last Light</title>
+  <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="A Field Guide to Our Digital Crossroads">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
-  
-  <style>
-    :root {
-      --theme-color: #9b59b6; /* Purple */
-      --theme-color-dark: #8e44ad; /* Darker Purple */
-      --body-background-color: #1e1e1e;
-      --sidebar-background-color: #252525;
-      --card-background-color: #2c2c2c;
-      --text-color: #f0f0f0;
-      --heading-color: #ffffff;
-      --border-color: #444;
-    }
-    
-    body {
-      background-color: var(--body-background-color);
-      color: var(--text-color);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-      line-height: 1.7;
-      font-size: 17px;
-      letter-spacing: 0.3px;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <title>The Last Light</title>
+  <meta name="description" content="A Field Guide to Our Digital Crossroads" />
 
-    .markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6 {
-        color: var(--heading-color);
-        font-weight: 600;
-        line-height: 1.3;
-        margin-top: 2em;
-        margin-bottom: 0.8em;
-    }
-
-    .markdown-section h1 {
-        font-size: 2.2em;
-        border-bottom: 2px solid var(--border-color);
-        padding-bottom: 0.4em;
-    }
-
-    .markdown-section h2 {
-        font-size: 1.8em;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 0.3em;
-    }
-
-    .markdown-section p {
-      margin: 1.2em 0;
-    }
-    
-    .markdown-section ul, .markdown-section ol {
-      line-height: 1.9;
-      padding-left: 1.8em;
-    }
-    
-    .markdown-section blockquote {
-      margin: 1.8em 0;
-      padding: 0.8em 1.2em;
-      border-left: 5px solid var(--theme-color);
-      background-color: var(--card-background-color);
-      color: var(--text-color);
-    }
-
-    .sidebar {
-        background-color: var(--sidebar-background-color);
-    }
-
-    .sidebar-nav > ul > li > a {
-        color: var(--text-color);
-    }
-
-    .sidebar-nav > ul > li > a:hover {
-        text-decoration: underline;
-    }
-
-    .sidebar-nav .active > a {
-        color: var(--theme-color);
-        border-left: 3px solid var(--theme-color);
-    }
-    
-    /* Light/Dark mode toggle */
-    .theme-switch-wrapper {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-    }
-    
-    .theme-switch {
-      display: inline-block;
-      height: 24px;
-      position: relative;
-      width: 50px;
-      margin: 0 10px;
-    }
-    
-    .theme-switch input {
-      display: none;
-    }
-    
-    .slider {
-      background-color: #ccc;
-      bottom: 0;
-      cursor: pointer;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: .4s;
-      border-radius: 24px;
-    }
-    
-    .slider:before {
-      background-color: white;
-      bottom: 2px;
-      content: "";
-      height: 20px;
-      left: 2px;
-      position: absolute;
-      transition: .4s;
-      width: 20px;
-      border-radius: 50%;
-    }
-    
-    input:checked + .slider {
-      background-color: var(--theme-color);
-    }
-    
-    input:checked + .slider:before {
-      transform: translateX(26px);
-    }
-    
-    .slider-icon {
-      font-size: 18px;
-      color: #666;
-    }
-    
-    input:checked ~ .slider-icon.sun {
-      color: #f39c12;
-    }
-    
-    .docsify-pagination-container {
-      margin: 2em 0;
-      border-top: 1px solid var(--border-color);
-      padding-top: 1em;
-    }
-    
-    .pagination-item {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .pagination-item a {
-      text-decoration: none !important;
-      color: var(--theme-color);
-    }
-    
-    .pagination-item a:hover {
-      text-decoration: underline !important;
-    }
-    
-    .pagination-item .label {
-      font-size: 0.8em;
-      color: var(--text-color);
-      opacity: 0.7;
-      margin-bottom: 0.2em;
-    }
-
-    /* Language Switcher */
-    .lang-switch {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 1rem 0;
-      padding: 0 10px;
-    }
-    
-    .lang-switch button {
-      background: transparent;
-      border: 1px solid var(--border-color);
-      color: var(--text-color);
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      transition: all 0.3s ease;
-      flex: 1;
-    }
-    
-    .lang-switch button:hover {
-      border-color: var(--theme-color);
-    }
-    
-    .lang-switch button.active {
-      background-color: var(--theme-color);
-      color: white;
-      border-color: var(--theme-color);
-      font-weight: bold;
-    }
-
-    /* Mobile Improvements */
-    @media screen and (max-width: 768px) {
-      .markdown-section {
-        padding: 2rem 1rem;
-      }
-      body {
-        font-size: 16px;
-      }
-      /* Ensure toggle is visible on dark backgrounds */
-      .sidebar-toggle {
-        background-color: rgba(30, 30, 30, 0.8);
-        border-radius: 4px;
-        width: auto;
-        padding: 10px;
-      }
-      /* Better table scrolling */
-      .markdown-section table {
-        display: block;
-        overflow-x: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
+  <link rel="stylesheet" href="portia-theme.css" />
 </head>
+
 <body>
   <div id="app"></div>
+
   <script>
-    // Light/Dark mode toggle
-    function initTheme() {
-      const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-      const currentTheme = localStorage.getItem('theme');
-      
-      if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'dark') {
-          toggleSwitch.checked = true;
-        }
-      }
-      
-      toggleSwitch.addEventListener('change', switchTheme, false);
-    }
-    
-    function switchTheme(e) {
-      if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-    
     window.$docsify = {
       name: 'The Last Light',
-      repo: '',
+      repo: 'https://github.com/lennertvhoy/the-last-light',
       loadSidebar: true,
       loadNavbar: false,
       auto2top: true,
@@ -264,87 +26,40 @@
       executeScript: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      sidebarDisplayLevel: 0, // 0: collapse all, 1: keep first level open
       search: {
-        maxAge: 86400000, // 1 day
+        maxAge: 86400000,
         paths: 'auto',
-        placeholder: 'Search',
-        noData: 'No Results!',
-        depth: 6,
-        hideOtherSidebarContent: false,
+        placeholder: 'Search chapters…',
+        noData: 'No results.',
+        depth: 4,
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
       },
       plugins: [
-        function(hook, vm) {
-          hook.ready(function() {
-            initTheme();
-            
-            // Language Switcher Injection
-            var sidebar = document.querySelector('.sidebar');
-            var nav = document.querySelector('.sidebar-nav');
-            var div = document.createElement('div');
-            div.className = 'lang-switch';
-            
-            // Initial State
-            var isNl = window.location.hash.indexOf('#/nl/') === 0;
-            
-            div.innerHTML = 
-              '<button id="btn-en" class="' + (!isNl ? 'active' : '') + '">English</button>' +
-              '<button id="btn-nl" class="' + (isNl ? 'active' : '') + '">Nederlands</button>';
-              
-            // Insert before nav or append if nav missing
-            if (nav) {
-              sidebar.insertBefore(div, nav);
-            } else {
-              sidebar.appendChild(div);
-            }
-            
-            // Event Listeners
-            div.querySelector('#btn-en').addEventListener('click', function() {
-              if (window.location.hash.indexOf('#/nl/') === 0) {
-                window.location.hash = window.location.hash.replace('#/nl/', '#/');
-              }
-            });
-            
-            div.querySelector('#btn-nl').addEventListener('click', function() {
-              if (window.location.hash.indexOf('#/nl/') !== 0) {
-                 // Handle root or specific path
-                 var current = window.location.hash;
-                 if (current === '' || current === '#/') {
-                    window.location.hash = '#/nl/';
-                 } else {
-                    window.location.hash = current.replace('#/', '#/nl/');
-                 }
+        function (hook) {
+          hook.doneEach(function () {
+            document.querySelectorAll('.content a').forEach((a) => {
+              const href = a.getAttribute('href') || '';
+              if (href.startsWith('http')) {
+                a.setAttribute('target', '_blank');
+                a.setAttribute('rel', 'noopener noreferrer');
               }
             });
           });
-          
-          hook.doneEach(function() {
-            // Update active state on navigation
-            var isNl = window.location.hash.indexOf('#/nl/') === 0;
-            var btnEn = document.querySelector('#btn-en');
-            var btnNl = document.querySelector('#btn-nl');
-            
-            if (btnEn && btnNl) {
-              if (isNl) {
-                btnEn.classList.remove('active');
-                btnNl.classList.add('active');
-              } else {
-                btnEn.classList.add('active');
-                btnNl.classList.remove('active');
-              }
-            }
-          });
-        }
-      ]
-    }
+        },
+      ],
+    };
   </script>
-  <!-- Docsify v4 -->
+
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- Plugins -->
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-void: #050508;
+  --bg-surface: #0a0a10;
+  --bg-card: #0c0c14;
+  --text-main: #e8e8ee;
+  --text-muted: #9b9bb0;
+  --text-faint: #66667a;
+  --accent: #7c73ff;
+  --accent-soft: rgba(124, 115, 255, 0.15);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(124, 115, 255, 0.35);
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', sans-serif;
+  --theme-color: #7c73ff;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-main);
+  font-family: var(--sans);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(124, 115, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 115, 255, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.sidebar {
+  background: rgba(8, 8, 14, 0.95);
+  border-right: 1px solid var(--border);
+  width: 320px;
+}
+
+.sidebar .app-name {
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar .app-name a {
+  color: var(--text-main);
+  font-family: var(--mono);
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  padding: 0.6rem 0.6rem 1rem;
+}
+
+.sidebar ul li a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-radius: 9px;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid transparent;
+}
+
+.sidebar ul li.active > a,
+.sidebar ul li a:hover {
+  color: var(--text-main);
+  background: var(--accent-soft);
+  border-color: var(--border-hover);
+}
+
+.content {
+  padding-top: 0;
+}
+
+.markdown-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2.2rem 3rem;
+}
+
+.markdown-section h1 {
+  font-family: var(--mono);
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+}
+
+.markdown-section h2,
+.markdown-section h3 {
+  color: var(--text-main);
+  margin-top: 2.2rem;
+}
+
+.markdown-section p,
+.markdown-section li {
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.markdown-section a {
+  color: #b8b5ff;
+}
+
+.markdown-section blockquote {
+  border-left: 3px solid var(--accent);
+  background: rgba(124, 115, 255, 0.08);
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1rem;
+}
+
+.markdown-section code {
+  font-family: var(--mono);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+}
+
+.markdown-section pre {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0b0b12;
+}
+
+.pagination-item {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-main) !important;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .markdown-section {
+    padding: 1.3rem 1rem 2rem;
+  }
+}
