@@ -25,13 +25,15 @@
       coverpage: false,
       executeScript: true,
       maxLevel: 4,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: 'Search chapters…',
-        noData: 'No results.',
-        depth: 4,
+        placeholder: 'Search chapters, concepts, names…',
+        noData: 'No matching section found.',
+        depth: 6,
+        hideOtherSidebarContent: true,
+        namespace: 'the-last-light-v2'
       },
       pagination: {
         previousText: 'Previous',
@@ -58,7 +60,6 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 </body>
 

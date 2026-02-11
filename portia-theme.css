@@ -37,6 +37,7 @@ body::before {
   background: rgba(8, 8, 14, 0.95);
   border-right: 1px solid var(--border);
   width: 320px;
+  transition: transform .24s ease, opacity .24s ease;
 }
 
 .sidebar .app-name {
@@ -129,12 +130,55 @@ body::before {
   color: var(--text-main) !important;
 }
 
+/* Search UX */
+.search {
+  margin: .75rem .6rem .5rem;
+}
+
+.search input {
+  width: 100%;
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-main) !important;
+  border-radius: 10px !important;
+  padding: .6rem .75rem !important;
+  font-size: .9rem;
+}
+
+.search input:focus {
+  border-color: var(--border-hover) !important;
+  box-shadow: 0 0 0 2px rgba(124,115,255,.15);
+}
+
+.search .results-panel {
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  background: #0b0b12 !important;
+}
+
+.search .matching-post {
+  border-bottom: 1px solid rgba(255,255,255,.05) !important;
+}
+
+.search .matching-post:last-child {
+  border-bottom: 0 !important;
+}
+
+.sidebar-toggle {
+  transition: all .2s ease;
+}
+
+.sidebar-toggle:hover {
+  background: rgba(124,115,255,.12) !important;
+}
+
 @media (max-width: 900px) {
+  /* Let Docsify control mobile off-canvas behavior; only tune visuals. */
   .sidebar {
-    width: 100%;
-    position: static;
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
+    width: 300px;
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
   }
 
   .markdown-section {
