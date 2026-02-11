@@ -167,10 +167,19 @@ body::before {
 
 .sidebar-toggle {
   transition: all .2s ease;
+  background: #0b0b12 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 0 1px rgba(124,115,255,.12), 0 6px 18px rgba(0,0,0,.35);
+}
+
+.sidebar-toggle span {
+  background-color: #c7c5ff !important;
 }
 
 .sidebar-toggle:hover {
-  background: rgba(124,115,255,.12) !important;
+  background: rgba(124,115,255,.16) !important;
+  border-color: var(--border-hover) !important;
 }
 
 @media (max-width: 900px) {
