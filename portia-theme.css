@@ -17,7 +17,7 @@
 }
 
 body {
-  background: var(--bg-void);
+  background: var(--bg-void) !important;
   color: var(--text-main);
   font-family: var(--sans);
 }
@@ -31,6 +31,25 @@ body::before {
     linear-gradient(rgba(124, 115, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(124, 115, 255, 0.025) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* Kill docsify default surface overlays that show as purple/brown blocks on mobile */
+body.close,
+body.ready,
+body.sticky,
+#app,
+.app-nav,
+.content,
+.markdown-section,
+.sidebar,
+.sidebar-toggle,
+.sidebar-toggle-button {
+  background-color: transparent;
+}
+
+.content,
+.markdown-section-container {
+  background: transparent !important;
 }
 
 .sidebar {
@@ -188,6 +207,14 @@ body::before {
     width: 300px;
     border-right: 1px solid var(--border);
     border-bottom: 0;
+    background: rgba(8, 8, 14, 0.98) !important;
+  }
+
+  .content,
+  .app-nav,
+  .markdown-section,
+  .markdown-section-container {
+    background: transparent !important;
   }
 
   .markdown-section {
