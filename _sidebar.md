@@ -2,57 +2,57 @@
   - [Introduction](a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md)
 
 * Part 1: The Chinese Room
-  - [1.0 We All Live in the Chinese Room](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.0-We-All-Live-in-the-Chinese-Room.md)
-  - [1.1 The Broken Man](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.1-The-Broken-Man.md)
-  - [1.2 The Leveling Effect and the Price of Convenience](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.2-The-Leveling-Effect-and-the-Price-of-Convenience.md)
+  - [Chapter 1: We All Live in the Chinese Room](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.0-We-All-Live-in-the-Chinese-Room.md)
+  - [Chapter 2: The Broken Man](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.1-The-Broken-Man.md)
+  - [Chapter 3: The Leveling Effect and the Price of Convenience](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.2-The-Leveling-Effect-and-the-Price-of-Convenience.md)
 
 * Part 2: The Layer 8 Singularity
-  - [2.0 The Layer 8 Singularity](a.The-Last-Light-Book/Part-02-The-Layer-8-Singularity/2.0-The-Layer-8-Singularity-When-Humans-Become-the-Bug.md)
+  - [Chapter 4: The Layer 8 Singularity](a.The-Last-Light-Book/Part-02-The-Layer-8-Singularity/2.0-The-Layer-8-Singularity-When-Humans-Become-the-Bug.md)
 
 * Part 3: The Successors
-  - [3.0 The Successors](a.The-Last-Light-Book/Part-03-The-Successors/3.0-The-Successors.md)
-  - [3.1 The Predators Gaze](a.The-Last-Light-Book/Part-03-The-Successors/3.1-The-Predators-Gaze.md)
-  - [3.2 The Scramblers](a.The-Last-Light-Book/Part-03-The-Successors/3.2-The-Scramblers.md)
-  - [3.3 Echopraxia](a.The-Last-Light-Book/Part-03-The-Successors/3.3-Echopraxia.md)
-  - [3.4 The Bicameral Solution](a.The-Last-Light-Book/Part-03-The-Successors/3.4-The-Bicameral-Solution.md)
-  - [3.5 The Bicameral Mind Revisited](a.The-Last-Light-Book/Part-03-The-Successors/3.5-The-Bicameral-Mind-Revisited.md)
-  - [3.6 The Cosmic Static](a.The-Last-Light-Book/Part-03-The-Successors/3.6-The-Cosmic-Static.md)
-  - [3.7 The Algorithm of Fate](a.The-Last-Light-Book/Part-03-The-Successors/3.7-The-Determinism.md)
+  - [Chapter 5: The Successors](a.The-Last-Light-Book/Part-03-The-Successors/3.0-The-Successors.md)
+  - [Chapter 6: The Predators Gaze](a.The-Last-Light-Book/Part-03-The-Successors/3.1-The-Predators-Gaze.md)
+  - [Chapter 7: The Scramblers](a.The-Last-Light-Book/Part-03-The-Successors/3.2-The-Scramblers.md)
+  - [Chapter 8: Echopraxia](a.The-Last-Light-Book/Part-03-The-Successors/3.3-Echopraxia.md)
+  - [Chapter 9: The Bicameral Solution](a.The-Last-Light-Book/Part-03-The-Successors/3.4-The-Bicameral-Solution.md)
+  - [Chapter 10: The Bicameral Mind Revisited](a.The-Last-Light-Book/Part-03-The-Successors/3.5-The-Bicameral-Mind-Revisited.md)
+  - [Chapter 11: The Cosmic Static](a.The-Last-Light-Book/Part-03-The-Successors/3.6-The-Cosmic-Static.md)
+  - [Chapter 12: The Algorithm of Fate](a.The-Last-Light-Book/Part-03-The-Successors/3.7-The-Determinism.md)
 
 * Part 4: Weaponized Consciousness
-  - [4.0 Weaponized Consciousness](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.0-Weaponized-Consciousness.md)
-  - [4.1 The Persuasion Engine](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.1-The-Persuasion-Engine-The-Vampires-Glitch-in-Action.md)
-  - [4.2 The Attention Economy](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.2-The-Attention-Economy.md)
-  - [4.3 The Empathy Trap](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.3-The-Empathy-Trap.md)
+  - [Chapter 13: Weaponized Consciousness](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.0-Weaponized-Consciousness.md)
+  - [Chapter 14: The Persuasion Engine](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.1-The-Persuasion-Engine-The-Vampires-Glitch-in-Action.md)
+  - [Chapter 15: The Attention Economy](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.2-The-Attention-Economy.md)
+  - [Chapter 16: The Empathy Trap](a.The-Last-Light-Book/Part-04-Weaponized-Consciousness/4.3-The-Empathy-Trap.md)
 
 * Part 5: The Oppenheimer Moment
-  - [5.0 The Oppenheimer Moment](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.0-The-Oppenheimer-Moment.md)
-  - [5.1 A Few People Laughed, A Few People Cried](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.1-A-Few-People-Laughed-A-Few-People-Cried.md)
-  - [5.2 I Am Become Death](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.2-I-Am-Become-Death.md)
-  - [5.3 The Philosopher King Fallacy](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.3-The-Philosopher-King-Fallacy.md)
-  - [5.4 The Benevolent Dictator Paradox](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.4-The-Benevolent-Dictator-Paradox.md)
+  - [Chapter 17: The Oppenheimer Moment](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.0-The-Oppenheimer-Moment.md)
+  - [Chapter 18: A Few People Laughed, A Few People Cried](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.1-A-Few-People-Laughed-A-Few-People-Cried.md)
+  - [Chapter 19: I Am Become Death](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.2-I-Am-Become-Death.md)
+  - [Chapter 20: The Philosopher King Fallacy](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.3-The-Philosopher-King-Fallacy.md)
+  - [Chapter 21: The Benevolent Dictator Paradox](a.The-Last-Light-Book/Part-05-The-Oppenheimer-Moment/5.4-The-Benevolent-Dictator-Paradox.md)
 
 * Part 6: The Dead End
-  - [6.0 The Dead End](a.The-Last-Light-Book/Part-06-The-Dead-End/6.0-The-Dead-End.md)
-  - [6.1 The Choice Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.1-The-Choice-Point.md)
-  - [6.2 The Obsolescence Engine](a.The-Last-Light-Book/Part-06-The-Dead-End/6.2-The-Obsolescence-Engine.md)
-  - [6.3 The Rise of Techno-feudalism](a.The-Last-Light-Book/Part-06-The-Dead-End/6.3-The-Rise-of-Techno-feudalism.md)
-  - [6.4 The Inflection Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.4-The-Inflection-Point.md)
+  - [Chapter 22: The Dead End](a.The-Last-Light-Book/Part-06-The-Dead-End/6.0-The-Dead-End.md)
+  - [Chapter 23: The Choice Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.1-The-Choice-Point.md)
+  - [Chapter 24: The Obsolescence Engine](a.The-Last-Light-Book/Part-06-The-Dead-End/6.2-The-Obsolescence-Engine.md)
+  - [Chapter 25: The Rise of Techno-feudalism](a.The-Last-Light-Book/Part-06-The-Dead-End/6.3-The-Rise-of-Techno-feudalism.md)
+  - [Chapter 26: The Inflection Point](a.The-Last-Light-Book/Part-06-The-Dead-End/6.4-The-Inflection-Point.md)
 
 * Part 7: The Digital Pathogen
-  - [7.0 The Digital Pathogen](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.0-The-Digital-Pathogen.md)
-  - [7.1 AI as Virus](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.1-AI-as-Virus.md)
-  - [7.2 AI as Prion](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.2-AI-as-Prion.md)
-  - [7.3 AI as Self-Replicating RNA](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.3-AI-as-Self-Replicating-RNA.md)
+  - [Chapter 27: The Digital Pathogen](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.0-The-Digital-Pathogen.md)
+  - [Chapter 28: AI as Virus](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.1-AI-as-Virus.md)
+  - [Chapter 29: AI as Prion](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.2-AI-as-Prion.md)
+  - [Chapter 30: AI as Self-Replicating RNA](a.The-Last-Light-Book/Part-07-The-Digital-Pathogen/7.3-AI-as-Self-Replicating-RNA.md)
 
 * Part 8: A New Beginning
-  - [8.0 A New Beginning](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.0-A-New-Beginning.md)
-  - [8.1 A Field Guide to Dignified Rebellion](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.1-A-Field-Guide-to-Dignified-Rebellion.md)
-  - [8.2 Economic and Collaborative Futures](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.2-Economic-and-Collaborative-Futures.md)
-  - [8.3 Centaurs and Cyborgs](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.3-Centaurs-and-Cyborgs.md)
+  - [Chapter 31: A New Beginning](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.0-A-New-Beginning.md)
+  - [Chapter 32: A Field Guide to Dignified Rebellion](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.1-A-Field-Guide-to-Dignified-Rebellion.md)
+  - [Chapter 33: Economic and Collaborative Futures](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.2-Economic-and-Collaborative-Futures.md)
+  - [Chapter 34: Centaurs and Cyborgs](a.The-Last-Light-Book/Part-08-A-New-Beginning/8.3-Centaurs-and-Cyborgs.md)
 
 * Part 9: Conclusion
-  - [9.0 The Last Light](a.The-Last-Light-Book/Part-09-Conclusion/9.0-The-Last-Light.md)
+  - [Chapter 35: The Last Light](a.The-Last-Light-Book/Part-09-Conclusion/9.0-The-Last-Light.md)
 
 * Philosophical Lenses
   - [10.0 Introduction](b.Philosophical-Lenses/10.0-Introduction-The-Philosophical-Lenses.md)
