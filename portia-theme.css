@@ -6,10 +6,10 @@
    ═══════════════════════════════════════════════════════ */
 
 :root {
-  --bg-void: #050508;
-  --bg-surface: #0a0a10;
-  --bg-card: #0c0c14;
-  --bg-elevated: #10101a;
+  --bg-void: #0f0f14;
+  --bg-surface: #16161e;
+  --bg-card: #1c1c26;
+  --bg-elevated: #242430;
   --text-main: #e8e8ee;
   --text-muted: #9b9bb0;
   --text-faint: #66667a;
@@ -88,7 +88,7 @@ body.sticky,
 /* ─── Sidebar ─── */
 
 .sidebar {
-  background: rgba(8, 8, 14, 0.97) !important;
+  background: rgba(15, 15, 20, 0.97) !important;
   border-right: 1px solid var(--border);
   width: var(--sidebar-width);
   transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
@@ -710,7 +710,7 @@ html {
     width: var(--sidebar-width);
     border-right: 1px solid var(--border);
     border-bottom: 0;
-    background: rgba(8, 8, 14, 0.98) !important;
+    background: rgba(15, 15, 20, 0.98) !important;
   }
 
   .content,
