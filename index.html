@@ -48,18 +48,29 @@
       executeScript: true,
       maxLevel: 4,
       subMaxLevel: 3,
+      nameLink: {
+        '/nl/': '#/nl/',
+        '/': '#/',
+      },
       // Prevent Docsify from looking for _sidebar.md in every subdirectory
       alias: {
-        '/.*/_sidebar.md': '/_sidebar.md',
+        '/nl/.*/_sidebar.md': '/nl/_sidebar.md',
+        '/(?!nl\/).*/_sidebar.md': '/_sidebar.md',
       },
       // Fallback sidebar if _sidebar.md is not found
-      fallbackLanguages: [],
+      fallbackLanguages: ['nl'],
       notFoundPage: true,
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: 'Search chapters, concepts, names…',
-        noData: 'No matching section found.',
+        placeholder: {
+          '/nl/': 'Zoeken...',
+          '/': 'Search chapters, concepts, names…',
+        },
+        noData: {
+          '/nl/': 'Geen resultaten gevonden.',
+          '/': 'No matching section found.',
+        },
         depth: 6,
         hideOtherSidebarContent: true,
         namespace: 'the-last-light-v3'
@@ -71,8 +82,42 @@
         crossChapterText: true,
       },
       plugins: [
-        function (hook) {
+        function (hook, vm) {
+          hook.ready(function () {
+            // Function to change language
+            window.changeLanguage = function (lang) {
+              if (lang === 'nl') {
+                window.location.hash = '/nl/';
+              } else {
+                window.location.hash = '/';
+              }
+              window.location.reload();
+            };
+          });
+
           hook.doneEach(function () {
+            // Language Switcher injection
+            var nav = document.querySelector('.app-nav');
+            if (!nav) {
+              nav = document.createElement('nav');
+              nav.className = 'app-nav';
+              document.querySelector('.app-name').insertAdjacentElement('afterend', nav);
+            }
+
+            // Allow user to toggle
+            var isDutch = window.location.hash.startsWith('#/nl');
+            var langText = isDutch ? 'English' : 'Nederlands';
+            var targetLang = isDutch ? 'en' : 'nl';
+
+            // Create a simple button/link in the upper right or top of sidebar
+            var langSwitch = document.createElement('a');
+            langSwitch.href = 'javascript:void(0)';
+            langSwitch.onclick = function () { window.changeLanguage(targetLang); };
+            langSwitch.innerText = isDutch ? '🇬🇧 EN' : '🇳🇱 NL';
+            langSwitch.style.cssText = 'position:fixed; bottom:20px; right:20px; font-weight:bold; cursor:pointer; color:var(--theme-color, #ea6f5a); z-index:999; text-decoration:none; border:1px solid currentColor; padding:4px 8px; border-radius:4px; background:var(--background, #fff);';
+
+            document.body.appendChild(langSwitch);
+
             // Open external links in new tab
             document.querySelectorAll('.content a').forEach(function (a) {
               var href = a.getAttribute('href') || '';

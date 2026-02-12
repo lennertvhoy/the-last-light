@@ -1,0 +1,45 @@
+name: Automated Dutch Translation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+      - '_sidebar.md'
+      - 'f.Scripts/translate_site.py'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # fetch all history for proper diffing if we needed it
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install openai
+
+    - name: Run Translation Script
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        python3 f.Scripts/translate_site.py
+        
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'Portia Labs AI'
+        git config --global user.email 'ai@portialabs.com'
+        git add nl/
+        # Only commit if there are changes
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update dutch translations [skip ci]" && git push)
