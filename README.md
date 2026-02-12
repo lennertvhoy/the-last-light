@@ -1,6 +1,8 @@
 
 # The Last Light: A Field Guide to Our Digital Crossroads
 
+[**Read the book online**](https://lennertvhoy.github.io/the-last-light/)
+
 > *What happens when the machines we built to think for us start thinking better than us?*
 
 **The Last Light** is an open-source book exploring the collision between human consciousness and artificial intelligence. Drawing on neuroscience, philosophy, cyberpunk literature, and economics, it maps the terrain of our species' most consequential crossroads — the moment when our tools become our successors.
@@ -24,6 +26,8 @@
 ---
 
 ## Start Reading
+
+**[Read the full book online at lennertvhoy.github.io/the-last-light](https://lennertvhoy.github.io/the-last-light/)**
 
 **New here?** Begin with the [Introduction](a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md) for the full thesis, or jump straight into [Chapter 1: We All Live in the Chinese Room](a.The-Last-Light-Book/Part-01-The-Chinese-Room/1.0-We-All-Live-in-the-Chinese-Room.md).
 
