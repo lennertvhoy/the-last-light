@@ -417,8 +417,16 @@ body.sticky,
   font-size: 0.92rem;
 }
 
+.markdown-section tbody tr:nth-child(2n) {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.markdown-section tbody tr:nth-child(2n+1) {
+  background: transparent !important;
+}
+
 .markdown-section tbody tr:hover {
-  background: var(--accent-subtle);
+  background: var(--accent-subtle) !important;
 }
 
 
