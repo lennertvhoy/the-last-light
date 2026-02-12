@@ -287,31 +287,31 @@ body.sticky,
 /* ─── Emphasis — Catppuccin pastels ─── */
 
 .markdown-section strong {
-  color: var(--cat-peach);
+  color: #e7c9a8;
   font-weight: 600;
 }
 
 .markdown-section em {
-  color: var(--cat-lavender);
+  color: #c7cce8;
   font-style: italic;
 }
 
 .markdown-section em strong,
 .markdown-section strong em {
-  color: var(--cat-sky);
+  color: #b7d6e6;
   font-weight: 600;
   font-style: italic;
 }
 
 .markdown-section a {
-  color: var(--cat-blue);
+  color: #a9c2eb;
   text-decoration: none;
   border-bottom: 1px solid rgba(137, 180, 250, 0.2);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .markdown-section a:hover {
-  color: var(--cat-sapphire);
+  color: #b8cdef;
   border-bottom-color: rgba(137, 180, 250, 0.5);
 }
 
@@ -609,9 +609,16 @@ section.cover .cover-main>p:last-child a:first-child:hover {
 }
 
 section.cover .cover-main>p:last-child a:last-child:hover {
-  background: var(--accent-soft) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  background: #8b83ff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+section.cover .cover-main>p:last-child a:last-child {
+  background: var(--accent) !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-color: var(--accent) !important;
 }
 
 /* Hide the broken image reference on cover */
@@ -796,4 +803,27 @@ section.cover * {
 section.cover::before,
 section.cover::after {
   pointer-events: none;
+}
+
+
+/* Home cover must not block sidebar toggle interactions */
+section.cover {
+  z-index: 1;
+}
+
+section.cover .mask,
+section.cover .cover-main,
+section.cover .cover-main * {
+  pointer-events: auto;
+}
+
+/* Force toggle to stay interactive above cover */
+.sidebar-toggle,
+.sidebar-toggle-button,
+.sidebar-toggle-button span {
+  pointer-events: auto !important;
+}
+
+.sidebar-toggle {
+  z-index: 2147483647 !important;
 }
