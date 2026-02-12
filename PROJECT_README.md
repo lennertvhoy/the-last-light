@@ -143,7 +143,7 @@ To contribute:
 5.  **Commit and Push:** Save your changes and push them to your forked repository on GitHub.
 6.  **Submit a Pull Request (PR):** Open a PR from your branch to the `main` branch of the original repository. Please provide a clear title and description of your changes.
 
-You can also open an [issue](https://github.com/your-username/the-last-light/issues) to report errors, suggest ideas, or discuss potential enhancements.
+You can also open an [issue](https://github.com/portia-labs/the-last-light/issues) to report errors, suggest ideas, or discuss potential enhancements.
 
 ## Authors and Acknowledgments
 
@@ -157,6 +157,6 @@ You can also open an [issue](https://github.com/your-username/the-last-light/iss
 "The Last Light" is a creative work that also contains code scripts. To ensure appropriate licensing for both aspects, this project is dually licensed:
 
 *   **For the book manuscript content (all Markdown files):** Licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**. This license allows you to share and adapt the content for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. This ensures the creative work remains openly accessible and adaptable within the community.
-*   **For the code scripts (e.g., in `12-scripts/` and subdirectories):** Licensed under the **MIT License**. This is a permissive open-source license that allows you to freely use, modify, distribute, and even sell the software, provided you include the original copyright and license notice. This choice facilitates easy integration and use of the utility scripts within other projects.
+*   **For the code scripts (e.g., in `f.Scripts/` and subdirectories):** Licensed under the **MIT License**. This is a permissive open-source license that allows you to freely use, modify, distribute, and even sell the software, provided you include the original copyright and license notice. This choice facilitates easy integration and use of the utility scripts within other projects.
 
 By dual-licensing, we aim to balance the copyleft nature desired for the creative content with the permissive freedom often preferred for code, offering clarity for all users and contributors.
