@@ -774,3 +774,26 @@ html {
     background: #f9f9f9;
   }
 }
+
+/* Ensure cover homepage is centered and toggle remains clickable */
+section.cover .cover-main {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+section.cover,
+section.cover * {
+  pointer-events: auto;
+}
+
+/* Keep hamburger above cover overlays on home */
+.sidebar-toggle {
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+section.cover::before,
+section.cover::after {
+  pointer-events: none;
+}
