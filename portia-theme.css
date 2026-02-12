@@ -827,3 +827,33 @@ section.cover .cover-main * {
 .sidebar-toggle {
   z-index: 2147483647 !important;
 }
+
+
+/* Stabilize pagination layout to prevent overlap/collision */
+.pagination-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  gap: 14px !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  flex-wrap: nowrap !important;
+}
+
+.pagination-item {
+  flex: 1 1 0 !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .pagination-container {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .pagination-item {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
