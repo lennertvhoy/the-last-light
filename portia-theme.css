@@ -462,10 +462,7 @@ body.sticky,
 }
 
 .pagination-item-label {
-  color: var(--text-faint) !important;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  display: none !important;
 }
 
 .pagination-item-title {
@@ -475,8 +472,7 @@ body.sticky,
 }
 
 .pagination-item-subtitle {
-  color: var(--text-faint) !important;
-  font-size: 0.78rem !important;
+  display: none !important;
 }
 
 
@@ -838,7 +834,7 @@ section.cover .cover-main * {
 
 
 /* Stabilize pagination layout to prevent overlap/collision */
-.pagination-container {
+.docsify-pagination-container {
   display: flex !important;
   justify-content: space-between !important;
   align-items: stretch !important;
@@ -855,7 +851,7 @@ section.cover .cover-main * {
 }
 
 @media (max-width: 900px) {
-  .pagination-container {
+  .docsify-pagination-container {
     flex-direction: column !important;
     gap: 10px !important;
   }
