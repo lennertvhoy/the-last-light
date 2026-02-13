@@ -43,7 +43,7 @@
       loadSidebar: true,
       loadNavbar: false,
       auto2top: true,
-      coverpage: true,
+      coverpage: ['/', '/nl/'],
       onlyCover: true,
       executeScript: true,
       maxLevel: 4,
@@ -54,11 +54,11 @@
       },
       // Prevent Docsify from looking for _sidebar.md in every subdirectory
       alias: {
+        '/nl/': '/nl/README.md',
         '/nl/.*/_sidebar.md': '/nl/_sidebar.md',
         '/(?!nl\/).*/_sidebar.md': '/_sidebar.md',
       },
       // Fallback sidebar if _sidebar.md is not found
-      fallbackLanguages: ['nl'],
       notFoundPage: true,
       search: {
         maxAge: 86400000,
