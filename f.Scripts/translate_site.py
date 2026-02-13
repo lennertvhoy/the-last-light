@@ -70,10 +70,10 @@ def translate_sidebar():
     with open(SIDEBAR_PATH, 'r') as f:
         content = f.read()
 
+    # First, translate the content (titles)
+    translated_content = translate_content(content, filename="_sidebar.md")
+
     # Rewrite links to point to /nl/ directory
-    # Regex to find standard markdown links: [Title](path/to/file)
-    # We use negative lookbehind (?<!!) to ensure we don't match images ![Alt](url)
-    
     def replace_link(match):
         title = match.group(1)
         url = match.group(2)
@@ -81,11 +81,9 @@ def translate_sidebar():
         if url.startswith('http') or url.startswith('/'):
             return f"[{title}]({url})"
         
-        # Check if it's a known file or directory structure
-        # We blindly prefix /nl/ because we are mirroring the structure
         return f"[{title}](/nl/{url})"
 
-    rewritten_content = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', replace_link, content)
+    rewritten_content = re.sub(r'(?<!\!)\[(.*?)\]\((.*?)\)', replace_link, translated_content)
     
     target_sidebar = TARGET_DIR / "_sidebar.md"
     target_sidebar.parent.mkdir(parents=True, exist_ok=True)
@@ -209,6 +207,12 @@ def main():
     cache = load_cache()
     files = get_files_from_sidebar()
     
+    # Add root files that are not necessarily in sidebar but needed for homepage
+    root_files = ["README.md", "_coverpage.md"]
+    for rf in root_files:
+        if (REPO_ROOT / rf).exists() and rf not in [str(f) for f in files]:
+            files.append(Path(rf))
+
     print(f"Found {len(files)} files to process.")
 
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
