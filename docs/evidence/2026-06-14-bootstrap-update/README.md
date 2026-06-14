@@ -43,7 +43,7 @@
 - **Result:** PASSED
 
 ### Claim 7: Committed, pushed, and CI/CD passes
-- **Evidence:** GitHub Actions runs for commit `404035a`.
+- **Evidence:** GitHub Actions runs for commit `4056519`.
 - **Verification:**
   - Build and Deploy Book: success
   - Test Book: success
@@ -51,12 +51,13 @@
   - StateDD Validate: success
   - Automated Dutch Translation: success (skipped due to missing API key)
 - **Result:** PASSED
+- **Note:** Content changes were committed as `404035a`; state-file sync produced `4056519`.
 
 ## Runtime Identity
 
 - repo: /home/ff/Documents/Projects/the-last-light
 - branch: main
-- head: 404035a0aeb8393265e630426469d57757480a84
+- head: 40565196a1a5fde112a0e53b4c69f81ac4a83c81
 
 ## Test / Build / Lint Commands Run
 
