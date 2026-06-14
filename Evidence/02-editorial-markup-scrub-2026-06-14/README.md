@@ -20,7 +20,9 @@ This evidence shows that visible editorial scaffolding (`* edit:` comments and a
 | 05 | `05-chapter1-after-cleanup.png` | Browser screenshot of Chapter 1 after cleanup. |
 | 06 | `06-homepage-after-cleanup.png` | Browser screenshot of the homepage after cleanup. |
 | 07 | `07-grep-after-cleanup.txt` | Grep output confirming no `* edit:`, `TODO`, `FIXME`, or `citation needed` strings remain in the manuscript. |
-| 08 | `README.md` | This file. |
+| 08 | `08-public-authors-note-after-push.png` | Public GitHub Pages site immediately after push — still showed cached/stale editorial markup (before storage clear). |
+| 11 | `11-public-authors-note-after-cache-clear.png` | Public GitHub Pages site after clearing `localStorage`/`sessionStorage` and reloading with cache-busting query — no visible editorial markup. |
+| — | `README.md` | This file. |
 | — | `2026-06-14-presentation-smb-access/` | Historical evidence of the SMB access attempt, moved here from `docs/evidence/` as part of untracked-directory disposition. |
 | — | `quarantine-prompt-copy-site-work/` | Incomplete prompt-copy website files (`Evidence/03-prompt-copy-site/` and `docs/ai-driven-dev/`) discovered during this slice; quarantined because they belong to BL-021/NA-18 and their completion status is unknown. |
 
@@ -30,6 +32,7 @@ This evidence shows that visible editorial scaffolding (`* edit:` comments and a
 - Public site: `https://lennertvhoy.github.io/the-last-light/`
 - Browser verification: Kimi WebBridge
 - DOM evaluation after cleanup: no `* edit:`, `TODO:`, or `FIXME:` strings found in the rendered page body.
+- Public site initially served cached/stale content containing the old `* edit:` notes; after clearing browser `localStorage`/`sessionStorage` and reloading with a cache-busting query, the public render matched the local clean render.
 
 ## Disposition of untracked directories found during this slice
 

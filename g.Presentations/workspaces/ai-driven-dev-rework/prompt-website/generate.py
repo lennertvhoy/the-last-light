@@ -186,6 +186,8 @@ def render_readme(index: dict[str, Any], prompts: list[PromptMeta], phase_map: d
 
         body = load_prompt_body(p, index)
         body = escape_markdown_fences(body, "````")
+        lines.append(f'<p><button class="prompt-copy-btn" data-prompt="{p.slug}">{ui["copy_button"]}</button> <span class="prompt-copy-feedback" data-prompt="{p.slug}">{ui["copied_feedback"]}</span></p>')
+        lines.append("")
         lines.append("````text")
         lines.append(body)
         lines.append("````")
@@ -208,6 +210,75 @@ def render_readme(index: dict[str, Any], prompts: list[PromptMeta], phase_map: d
     lines.append("")
     lines.append(ui["community_intro"])
     lines.append("")
+
+    # Custom copy-button styles and logic (Dutch labels, clear feedback)
+    lines.append("""
+<style>
+.prompt-copy-btn {
+  background: var(--theme-color, #ea6f5a);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.prompt-copy-btn:hover {
+  opacity: 0.9;
+}
+.prompt-copy-feedback {
+  margin-left: 8px;
+  font-weight: bold;
+  color: var(--theme-color, #ea6f5a);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.prompt-copy-feedback.visible {
+  opacity: 1;
+}
+</style>
+
+<script>
+(function () {
+  function setupCopyButtons() {
+    document.querySelectorAll('.prompt-copy-btn').forEach(function (btn) {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', function () {
+        var slug = btn.dataset.prompt;
+        var codeBlock = btn.parentElement.nextElementSibling;
+        while (codeBlock && codeBlock.tagName !== 'PRE') {
+          codeBlock = codeBlock.nextElementSibling;
+        }
+        if (!codeBlock) return;
+        var text = codeBlock.textContent.replace(/^text\n?/, '').trim();
+        navigator.clipboard.writeText(text).then(function () {
+          var feedback = document.querySelector('.prompt-copy-feedback[data-prompt="' + slug + '"]');
+          if (feedback) {
+            feedback.classList.add('visible');
+            setTimeout(function () { feedback.classList.remove('visible'); }, 2000);
+          }
+        }).catch(function (err) {
+          console.error('Copy failed', err);
+          btn.textContent = 'Fout bij kopiëren';
+        });
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCopyButtons);
+  } else {
+    setupCopyButtons();
+  }
+  // Docsify re-renders content on route changes; re-bind after each render.
+  if (window.$docsify && window.$docsify.plugins) {
+    window.$docsify.plugins.push(function (hook) {
+      hook.doneEach(setupCopyButtons);
+    });
+  }
+})();
+</script>
+""")
 
     return "\n".join(lines)
 

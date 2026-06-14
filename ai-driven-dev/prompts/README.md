@@ -8,7 +8,7 @@ je op slides kunt zetten. Klik op **Kopieer prompt** om de volledige tekst naar
 je klembord te kopiëren.
 
 
-> **Laatst gesynchroniseerd:** 2026-06-14T18:27:15Z  
+> **Laatst gesynchroniseerd:** 2026-06-14T18:31:34Z  
 > **Canonieke bron:** [`prompts/`](../../prompts/) in deze repo.
 
 ## Fase-navigatie
@@ -53,6 +53,8 @@ geïnspecteerd. De vragen vormen de intake voor een eerlijke bootstrap.
 
 
 > **Kopieer-tip:** Gebruik dit na `CODING_AGENT_STARTUP_PROMPT.md` als de repo zich nog in bootstrap-modus bevindt.
+
+<p><button class="prompt-copy-btn" data-prompt="bootstrap">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="bootstrap">Gekopieerd!</span></p>
 
 ````text
 # Bootstrap Intake Prompt
@@ -101,6 +103,8 @@ De tekst is identiek; beide tracks leiden tot dezelfde StateDD-artefacten.
 
 
 > **Kopieer-tip:** Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateDD-bestanden leest.
+
+<p><button class="prompt-copy-btn" data-prompt="start">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="start">Gekopieerd!</span></p>
 
 ````text
 Read these files first in order:
@@ -185,6 +189,8 @@ zichtbaar blijft tijdens de sessie.
 
 > **Kopieer-tip:** Vervang `BL-XXX`, `user_value` en `non_goals` door de concrete waarde en grenzen van je slice.
 
+<p><button class="prompt-copy-btn" data-prompt="contract">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="contract">Gekopieerd!</span></p>
+
 ````text
 # Slice Contract Template
 
@@ -254,6 +260,8 @@ blijven van toepassing.
 
 > **Kopieer-tip:** Bewijs eerst welk proces op welke poort draait, en pas dan screenshots vergelijken.
 
+<p><button class="prompt-copy-btn" data-prompt="runtime">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="runtime">Gekopieerd!</span></p>
+
 ````text
 # Runtime Identity Checklist
 
@@ -304,6 +312,8 @@ is tool-agnostisch; het claim-ledger is het belangrijkste onderdeel.
 
 
 > **Kopieer-tip:** Vul het claim-ledger in vóór je de slice afsluit, niet achteraf.
+
+<p><button class="prompt-copy-btn" data-prompt="evidence">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="evidence">Gekopieerd!</span></p>
 
 ````text
 # Evidence README Template
@@ -379,6 +389,8 @@ bij een pull request / handoff-thread.
 
 > **Kopieer-tip:** Beoordeel eerst de evidence README en runtime-identity-proof voor je een closure-verdict geeft.
 
+<p><button class="prompt-copy-btn" data-prompt="review">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="review">Gekopieerd!</span></p>
+
 ````text
 Closure verdict: accepted / rejected / conditionally accepted
 
@@ -417,6 +429,8 @@ closure-states (implemented, validated, closure-grade, accepted) expliciet.
 
 
 > **Kopieer-tip:** Vul runtime identity, evidence-referenties en wat nog partial/risky is altijd in.
+
+<p><button class="prompt-copy-btn" data-prompt="handoff">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="handoff">Gekopieerd!</span></p>
 
 ````text
 Final handoff for CTO lane
@@ -511,6 +525,8 @@ expliciet opneemt in evidence README en final handoff.
 
 > **Kopieer-tip:** Een override is toegestaan, maar mag nooit stilzwijgend of zonder risico-notitie gebeuren.
 
+<p><button class="prompt-copy-btn" data-prompt="override">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="override">Gekopieerd!</span></p>
+
 ````text
 StateDD rules are mandatory defaults, but the human product owner may explicitly
 override a workflow step. The agent must respect a clear human override unless
@@ -567,6 +583,8 @@ coding-agent-chat. Dit is de architectuur-/review-rol.
 
 
 > **Kopieer-tip:** Gebruik deze prompt om de CTO-lane op te starten voordat je een grote slice uitbesteedt.
+
+<p><button class="prompt-copy-btn" data-prompt="cto">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="cto">Gekopieerd!</span></p>
 
 ````text
 # CTO Session Prompt
@@ -677,3 +695,71 @@ Deze ruimte is gereserveerd voor deelnemersprojecten die voortkomen uit de
 workshop. De eerste kandidaat is Caners StateDD-gebaseerd programma — details
 volgen zodra deze beschikbaar zijn.
 
+
+
+<style>
+.prompt-copy-btn {
+  background: var(--theme-color, #ea6f5a);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.prompt-copy-btn:hover {
+  opacity: 0.9;
+}
+.prompt-copy-feedback {
+  margin-left: 8px;
+  font-weight: bold;
+  color: var(--theme-color, #ea6f5a);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.prompt-copy-feedback.visible {
+  opacity: 1;
+}
+</style>
+
+<script>
+(function () {
+  function setupCopyButtons() {
+    document.querySelectorAll('.prompt-copy-btn').forEach(function (btn) {
+      if (btn.dataset.bound) return;
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', function () {
+        var slug = btn.dataset.prompt;
+        var codeBlock = btn.parentElement.nextElementSibling;
+        while (codeBlock && codeBlock.tagName !== 'PRE') {
+          codeBlock = codeBlock.nextElementSibling;
+        }
+        if (!codeBlock) return;
+        var text = codeBlock.textContent.replace(/^text
+?/, '').trim();
+        navigator.clipboard.writeText(text).then(function () {
+          var feedback = document.querySelector('.prompt-copy-feedback[data-prompt="' + slug + '"]');
+          if (feedback) {
+            feedback.classList.add('visible');
+            setTimeout(function () { feedback.classList.remove('visible'); }, 2000);
+          }
+        }).catch(function (err) {
+          console.error('Copy failed', err);
+          btn.textContent = 'Fout bij kopiëren';
+        });
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCopyButtons);
+  } else {
+    setupCopyButtons();
+  }
+  // Docsify re-renders content on route changes; re-bind after each render.
+  if (window.$docsify && window.$docsify.plugins) {
+    window.$docsify.plugins.push(function (hook) {
+      hook.doneEach(setupCopyButtons);
+    });
+  }
+})();
+</script>

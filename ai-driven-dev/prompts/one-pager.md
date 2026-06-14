@@ -1,6 +1,6 @@
 # AI-Driven Development — Workshop Prompten — Printbare versie
 
-**Laatst gesynchroniseerd:** 2026-06-14T18:27:15Z
+**Laatst gesynchroniseerd:** 2026-06-14T18:31:34Z
 
 ## Snelle link-lijst
 
