@@ -42,11 +42,21 @@
 - **Verification:** `find flemish-market -type f | wc -l` returns non-zero; `/home/ff/Documents/Projects/the-last-light-v2/` is now empty.
 - **Result:** PASSED
 
+### Claim 7: Committed, pushed, and CI/CD passes
+- **Evidence:** GitHub Actions runs for commit `404035a`.
+- **Verification:**
+  - Build and Deploy Book: success
+  - Test Book: success
+  - Lint and Quality Check: success
+  - StateDD Validate: success
+  - Automated Dutch Translation: success (skipped due to missing API key)
+- **Result:** PASSED
+
 ## Runtime Identity
 
 - repo: /home/ff/Documents/Projects/the-last-light
 - branch: main
-- head: 85b548227419991b0e75e7478d0b8a1eddc5133d
+- head: 404035a0aeb8393265e630426469d57757480a84
 
 ## Test / Build / Lint Commands Run
 
