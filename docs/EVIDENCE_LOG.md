@@ -106,6 +106,83 @@ as_of: 2026-06-04T09:35:00+02:00
 Notes: The older The_Last_Light_Manuscript.docx remains in the v2 repo but is not treated as the active source. This evidence was merged from /home/ff/Documents/Projects/the-last-light-v2 on 2026-06-14.
 ```
 
+## EV-2026-06-14-009: Editorial markup scrubbed from canonical manuscript and rendered site verified clean
+
+```yaml
+ID: EV-2026-06-14-009
+Files:
+  - Evidence/02-editorial-markup-scrub-2026-06-14/01-grep-before-cleanup.txt
+  - Evidence/02-editorial-markup-scrub-2026-06-14/02-authors-note-before-cleanup.png
+  - Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md
+  - Evidence/02-editorial-markup-scrub-2026-06-14/04-authors-note-after-cleanup.png
+  - Evidence/02-editorial-markup-scrub-2026-06-14/05-chapter1-after-cleanup.png
+  - Evidence/02-editorial-markup-scrub-2026-06-14/06-homepage-after-cleanup.png
+  - Evidence/02-editorial-markup-scrub-2026-06-14/07-grep-after-cleanup.txt
+  - Evidence/02-editorial-markup-scrub-2026-06-14/README.md
+Title: Visible editorial markup removed from The-Last-Light.md and verified in rendered Docsify site
+Source/System: grep | Kimi WebBridge | Docsify local server
+Action: Removed 8 internal author notes from the Author's Note, preserved concerns in an internal ledger, and verified the local rendered page shows no editorial scaffolding.
+Shows:
+  - 8 editorial notes were visible before cleanup
+  - Author's Note renders cleanly after cleanup
+  - Chapter 1 and homepage render without editorial markup
+  - DOM evaluation finds no "* edit:", "TODO:", or "FIXME:" strings in rendered body
+  - grep finds no "* edit:", "TODO", "FIXME", or "citation needed" strings in canonical manuscript
+Proves:
+  - the strongest negative trust signal identified by the UI/UX audit has been removed
+  - the cleanup was surgical (6 lines changed in The-Last-Light.md)
+  - substantive authorial concerns were preserved, not silently discarded
+Type: docs-render-verification
+as_of: 2026-06-14T20:10:00+02:00
+Notes: Intentional "VERIFY" text in Appendix A (decision-tree framework card) was preserved as final content. Public site will reflect changes only after next GitHub Pages deployment.
+```
+
+## EV-2026-06-14-008: Handoff prompt written for prompt-copy website build on user's existing site
+
+```yaml
+ID: EV-2026-06-14-008
+Files:
+  - g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md
+Title: Self-contained handoff prompt for another coding agent to build the prompt-copy website
+Source/System: file
+Action: User indicated they already have a good site; wrote a handoff prompt so another agent can build the prompt-copy website on that existing site instead of rebuilding from scratch.
+Shows:
+  - HANDOFF_BUILD_PROMPT_SITE.md exists and contains goal, slugs, UX requirements, content rules, acceptance criteria, and state-file update instructions
+  - document explicitly tells the next agent not to discard the user's existing site
+Proves:
+  - next implementation step is ready to hand off without losing context
+  - user's existing site investment is preserved
+Type: docs-render-verification
+as_of: 2026-06-14T20:15:00+02:00
+Notes: Handoff still depends on user confirming Dutch vs English delivery and live vs staged PersonaLab demo.
+```
+
+## EV-2026-06-14-007: Agent swarm integrated trial-lesson feedback into AI-Driven Development rework plan
+
+```yaml
+ID: EV-2026-06-14-007
+Files:
+  - g.Presentations/workspaces/ai-driven-dev-rework/course-rework.md
+  - g.Presentations/workspaces/ai-driven-dev-rework/prompt-screenshots.md
+  - g.Presentations/workspaces/ai-driven-dev-rework/prompt-website.md
+  - g.Presentations/workspaces/ai-driven-dev-rework/cli-gui-recommendation.md
+  - g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md
+  - g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md
+Title: Trial-lesson feedback synthesized into AI-Driven Development rework plan
+Source/System: AgentSwarm | coder subagents
+Action: Launched 4 parallel coder subagents to rework course, design screenshot sequence, design prompt-copy website, and compare CLI/GUI tooling; then a synthesis subagent merged them into an integrated action plan and design-decisions record.
+Shows:
+  - 5 subagent deliverables plus 2 synthesis documents exist
+  - rework plan addresses prompt confusion, copy-paste source, CLI/GUI split, PersonaLab context, and MCP overload
+  - design-decisions document records hybrid CLI/GUI track, Docsify prompt site, and unresolved language/demo questions
+Proves:
+  - trial-lesson feedback has been translated into concrete build-ready plans
+  - next implementation step is user-confirmed and scoped
+Type: docs-render-verification
+as_of: 2026-06-14T20:05:00+02:00
+Notes: Open questions remain: Dutch vs English delivery, and live vs staged PersonaLab BL-002 demo.
+```
+
 ## EV-2026-06-14-006: Agent-swarm analysis produced course and slide maps
 
 ```yaml

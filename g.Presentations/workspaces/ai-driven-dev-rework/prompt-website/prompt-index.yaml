@@ -1,0 +1,226 @@
+last_synced: '2026-06-14T18:23:30Z'
+site_path: /#/ai-driven-dev/prompts
+prompt_source_dir: prompts
+prompt_source_link: ../../prompts
+ui:
+  lang: nl
+  title: AI-Driven Development — Workshop Prompten
+  subtitle: Kopieer de canonieke prompts rechtstreeks in je agent.
+  home_intro: 'Deze pagina bevat alle prompts die tijdens de AI-Driven Development-workshop
+
+    worden gebruikt. Elke prompt heeft een stabiele korte link (hash-fragment) die
+
+    je op slides kunt zetten. Klik op **Kopieer prompt** om de volledige tekst naar
+
+    je klembord te kopiëren.
+
+    '
+  print_link: Printbare versie
+  copy_button: Kopieer prompt
+  copied_feedback: Gekopieerd!
+  cli_gui_label: CLI vs GUI
+  when_label: Wanneer gebruik je dit?
+  source_note: Canonieke bron
+  sync_warning: Laatst gesynchroniseerd
+  staged_label: Demo-screenshots
+  staged_note: 'De PersonaLab BL-002 screenshots op deze pagina zijn **gestagede/demo-screenshots**.
+
+    Ze zijn gelabeld als zodanig. Zodra een live demo beschikbaar is, worden ze
+
+    vervangen of aangevuld.
+
+    '
+  community_title: Community artifacts
+  community_intro: 'Deze ruimte is gereserveerd voor deelnemersprojecten die voortkomen
+    uit de
+
+    workshop. De eerste kandidaat is Caners StateDD-gebaseerd programma — details
+
+    volgen zodra deze beschikbaar zijn.
+
+    '
+  back_to_top: Terug naar boven
+phases:
+- id: start
+  title: Start / Opzet
+  order: 1
+- id: contract
+  title: Contract
+  order: 2
+- id: build-prove
+  title: Bouw & Bewijs
+  order: 3
+- id: review-close
+  title: Review & Afsluiting
+  order: 4
+- id: governance
+  title: Override / Governance
+  order: 5
+prompts:
+- slug: start
+  title: Coding Agent Startup Prompt
+  hash: start
+  phase: start
+  source: prompts/CODING_AGENT_STARTUP_PROMPT.md
+  when: Plak dit als allereerste bericht in de coding-agent aan het begin van elke
+    sessie.
+  cli_gui: '**CLI:** plak in OpenCode CLI, Kimi Code CLI, Claude Code of een vergelijkbare
+
+    terminal-gebaseerde agent.
+
+    **GUI:** plak in de chat van Kimi IDE, GitHub Copilot Chat, Cursor, OpenCode
+
+    GUI, etc.
+
+    De tekst is identiek; beide tracks leiden tot dezelfde StateDD-artefacten.
+
+    '
+  copy_tip: Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateDD-bestanden
+    leest.
+  slide_moments:
+  - B
+  - 1
+  - 2
+- slug: bootstrap
+  title: Bootstrap Intake Prompt
+  hash: bootstrap
+  phase: start
+  source: prompts/BOOTSTRAP_INTAKE_PROMPT.md
+  when: Gebruik dit wanneer een repo nieuw is, onduidelijk is, of opnieuw gebaselined
+    moet worden.
+  cli_gui: '**CLI/GUI:** plak in een nieuwe chat nadat de agent de bestaande repo
+    heeft
+
+    geïnspecteerd. De vragen vormen de intake voor een eerlijke bootstrap.
+
+    '
+  copy_tip: Gebruik dit na `CODING_AGENT_STARTUP_PROMPT.md` als de repo zich nog in
+    bootstrap-modus bevindt.
+  slide_moments:
+  - A
+  - G
+- slug: contract
+  title: Slice / Work Contract Template
+  hash: contract
+  phase: contract
+  source: prompts/SLICE_CONTRACT_TEMPLATE.md
+  when: Vul dit in voordat de coding-agent ook maar iets mag bouwen.
+  cli_gui: '**CLI:** plak het ingevulde contract in de chat voordat je de bouw-stap
+    start.
+
+    **GUI:** plak het in een pinned note of eerste chat-bericht zodat het contract
+
+    zichtbaar blijft tijdens de sessie.
+
+    '
+  copy_tip: Vervang `BL-XXX`, `user_value` en `non_goals` door de concrete waarde
+    en grenzen van je slice.
+  slide_moments:
+  - C
+  - 3
+- slug: cto
+  title: CTO Session Prompt
+  hash: cto
+  phase: governance
+  source: prompts/CTO_SESSION_PROMPT.md
+  aliases:
+  - strategy
+  when: Start hiermee een apart strategie-gesprek in de CTO-lane.
+  cli_gui: '**CLI/GUI:** plak in een apart ChatGPT/Claude/Gemini-venster — niet in
+    de
+
+    coding-agent-chat. Dit is de architectuur-/review-rol.
+
+    '
+  copy_tip: Gebruik deze prompt om de CTO-lane op te starten voordat je een grote
+    slice uitbesteedt.
+  slide_moments:
+  - 4
+- slug: evidence
+  title: Evidence README Template
+  hash: evidence
+  phase: build-prove
+  source: prompts/EVIDENCE_README_TEMPLATE.md
+  when: Maak hiermee het bewijsboekje / evidence README voor elke slice.
+  cli_gui: '**CLI/GUI:** kopieer dit naar `Evidence/<nummer>-<naam>/README.md`. De
+    template
+
+    is tool-agnostisch; het claim-ledger is het belangrijkste onderdeel.
+
+    '
+  copy_tip: Vul het claim-ledger in vóór je de slice afsluit, niet achteraf.
+  slide_moments:
+  - D
+  - 6
+- slug: runtime
+  title: Runtime Identity Checklist
+  hash: runtime
+  phase: build-prove
+  source: prompts/RUNTIME_IDENTITY_CHECKLIST.md
+  when: Gebruik dit vóór je gebruikersgericht gedrag accepteert of een visuele regressie
+    onderzoekt.
+  cli_gui: '**CLI:** voer de checklist stappen uit in de terminal (`ss -tlnp`, `git
+    log`, etc.).
+
+    **GUI:** noteer de bewijzen uit de IDE/statusbalk; dezelfde identiteitsvragen
+
+    blijven van toepassing.
+
+    '
+  copy_tip: Bewijs eerst welk proces op welke poort draait, en pas dan screenshots
+    vergelijken.
+  slide_moments:
+  - 5
+- slug: review
+  title: CTO Review Checklist
+  hash: review
+  phase: review-close
+  source: prompts/CTO_REVIEW_CHECKLIST.md
+  when: Gebruik dit om een afgeronde slice te reviewen en ACCEPTED / CONDITIONAL /
+    REJECTED te bepalen.
+  cli_gui: '**CLI/GUI:** plak in de CTO-lane-chat of gebruik het als commentaar-template
+
+    bij een pull request / handoff-thread.
+
+    '
+  copy_tip: Beoordeel eerst de evidence README en runtime-identity-proof voor je een
+    closure-verdict geeft.
+  slide_moments:
+  - E
+  - 7
+- slug: handoff
+  title: Final Handoff Template
+  hash: handoff
+  phase: review-close
+  source: prompts/FINAL_HANDOFF_TEMPLATE.md
+  when: Gebruik dit aan het einde van elke implementatie-sessie, voordat je terugkeert
+    naar de CTO-lane.
+  cli_gui: '**CLI/GUI:** plak het ingevulde template in de handoff-thread. Houd de
+    vier
+
+    closure-states (implemented, validated, closure-grade, accepted) expliciet.
+
+    '
+  copy_tip: Vul runtime identity, evidence-referenties en wat nog partial/risky is
+    altijd in.
+  slide_moments:
+  - F
+  - 8
+  - 9
+- slug: override
+  title: Human Override Rule
+  hash: override
+  phase: governance
+  source: AGENTS.md
+  source_section: Human Override Rule
+  when: Gebruik dit wanneer de menselijke product owner expliciet een StateDD-regel
+    overschrijft.
+  cli_gui: '**CLI/GUI:** plak de override-vraag in de chat en eis dat de agent het
+
+    expliciet opneemt in evidence README en final handoff.
+
+    '
+  copy_tip: Een override is toegestaan, maar mag nooit stilzwijgend of zonder risico-notitie
+    gebeuren.
+  slide_moments:
+  - 10

@@ -1,0 +1,27 @@
+Pre-change git state:
+Repo: /home/ff/Documents/Projects/the-last-light
+Branch: main
+HEAD: 248041b6fdf423ee5d64b30b85f5a95a0847dee5
+Worktree status:
+ M AGENTS.md
+ M BACKLOG.md
+ M NEXT_ACTIONS.md
+ M PROJECT_STATE.yaml
+ M STATUS.md
+ M The-Last-Light.md
+ M WORKLOG.md
+ M docs/EVIDENCE_LOG.md
+?? Evidence/02-editorial-markup-scrub-2026-06-14/
+?? Evidence/03-prompt-copy-site/
+?? g.Presentations/
+
+Home repo (/home/ff) state:
+Branch: main
+HEAD: dfed9a2aa2789e495428f6f1a7a96ecae057b764
+Worktree status:
+ M BACKLOG.md
+ M STATUS.md
+ M WORKLOG.md
+ M docs/EVIDENCE_LOG.md
+?? Evidence/018-2026-06-14-statedd-template-sync/
+?? homelab/evidence/Evidence/013-homelab-cool-agent-architecture-spike/

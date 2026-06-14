@@ -1,0 +1,15 @@
+﻿=== Presentation Backup Manifest ===
+Generated: 2026-06-14 19:25:58
+Total files: 11
+
+Desktop\AI-Driven Development.pdf | 3333620 bytes | 2026-06-11 15:26:29
+Desktop\Presentaties\AI-20251103_lenny_remix.pdf | 5966850 bytes | 2026-04-10 12:15:59
+Desktop\Presentaties\AI-20251103_lenny_remix.pptx | 48246132 bytes | 2026-05-04 07:35:07
+Desktop\Presentaties\AI-Driven Development.pptx | 17666368 bytes | 2026-05-04 14:39:21
+Desktop\Presentaties\Digitale dubbelgangers_ wanneer AI zelf initiatief neemt.pptx | 5040756 bytes | 2026-05-04 13:26:10
+Desktop\Presentaties\Moltbook_MiddagSessie.pptx | 14378866 bytes | 2026-05-04 07:35:27
+Desktop\Presentaties\StateDD v2_ Controleerbare AI-Coding Workflow.pptx | 18016799 bytes | 2026-05-04 09:06:11
+Desktop\Presentaties\StateDD_ Een Project-OS voor AI Coding Agents.pptx | 9788725 bytes | 2026-05-04 08:21:17
+Documents\AI-Driven Development.pdf | 3333620 bytes | 2026-06-11 15:27:18
+Documents\Digitale dubbelgangers_ wanneer AI zelf initiatief neemt.pptx | 30712362 bytes | 2026-05-05 15:20:04
+Downloads\AI-Driven Development.pdf | 3333620 bytes | 2026-06-11 15:28:07

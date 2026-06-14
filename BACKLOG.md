@@ -105,6 +105,20 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
 - **Status:** retrieval, deduplication, extraction, and agent-swarm analysis complete; awaiting user review of course/slide maps
 - **Next action:** NA-17 (user review of maps)
 
+## [BL-021] Rework AI-Driven Development course and build prompt-copy website
+- **Added:** 2026-06-14
+- **Source:** Trial-lesson feedback for AI-Driven Development session
+- **Problem:** Trial lesson showed prompt confusion, no copy-paste source, CLI-only framing that alienated non-developers, missing PersonaLab context, and tool-heavy MCP section.
+- **Acceptance criteria:**
+  - Integrated action plan and design-decisions documents reviewed and accepted.
+  - Handoff prompt `HANDOFF_BUILD_PROMPT_SITE.md` delivered to another coding agent.
+  - Prompt-copy website built on user's existing preferred site with stable short-link slugs and one-click copy.
+  - AI-Driven Development slide outline updated with 10 screenshot moments and hybrid CLI/GUI track.
+  - Missing `CTO_SESSION_PROMPT` and human-override slugs resolved.
+  - Decision recorded on Dutch vs English delivery and live vs staged PersonaLab demo.
+- **Status:** integrated plan ready; handoff prompt written; awaiting user confirmation of open questions
+- **Next action:** NA-18 (hand off to another agent after confirming language/demo approach)
+
 ## [BL-012] Scrub canonical manuscript of visible editorial markup
 - **Added:** 2026-06-14
 - **Source:** UI/UX audit (NA-7)
@@ -112,7 +126,9 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
 - **Acceptance criteria:**
   - No visible `* edit:`, `TODO`, or `VERIFY` scaffolding in rendered `/The-Last-Light`.
   - Editorial decisions are either resolved in the text or moved to internal notes, not shown to readers.
-- **Next action:** NA-8
+- **Status:** completed by NA-8 on 2026-06-14; 8 editorial notes removed, rendered page verified clean, evidence captured.
+- **Evidence:** Evidence/02-editorial-markup-scrub-2026-06-14/
+- **Next action:** awaiting user acceptance before moving to docs/ACCEPTANCE_FREEZES.md
 
 ## [BL-013] Redesign coverpage as a book landing page
 - **Added:** 2026-06-14
@@ -184,3 +200,7 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
   - Icon-only links have `aria-label` text.
   - Language switcher has a clear accessible name describing its function.
 - **Next action:** NA-16
+
+## LATER
+
+- [BL-WB-001] Use Kimi WebBridge to browser-verify any user-facing change in the real browser when available.

@@ -10,16 +10,27 @@ Every active item references a backlog ID in the form `### Pn [BL-XXX] ...`.
 
 ## Active Work
 
-### P0 [BL-011] Review agent-swarm course/slide maps and choose first build target
+### P0 [BL-021] Build AI-Driven Development prompt-copy website and start slide rework
+- **Agent ID:** NA-18
+- **Scope:** User confirms language and PersonaLab demo approach, then passes `g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md` to another coding agent. That agent builds the prompt-copy website on the user's existing preferred site (do not rebuild from scratch in a different stack), adds the missing `cto`/`strategy` and `override` slugs, wires one-click copy buttons, and generates a printable one-pager. After the site is live, begin updating the AI-Driven Development slide outline with the 10 new screenshot moments and hybrid CLI/GUI notes.
+- **Exit:** Prompt site renders on user's existing site, all planned slugs resolve, copy buttons work, printable one-pager exists, and a revised slide outline is saved to `g.Presentations/workspaces/ai-driven-dev-rework/`.
+- **Risk:** medium — depends on language decision (Dutch vs English) and live-vs-staged demo choice
+- **Blocked by:** user confirms language and PersonaLab demo approach
+- **Deliverables:**
+  - `g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md`
+  - `g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md`
+  - `g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md`
+
+### P1 [BL-011] Review remaining agent-swarm course/slide maps and choose next build target
 - **Agent ID:** NA-17 (completed analysis; awaiting review)
-- **Scope:** User reviews `g.Presentations/workspaces/courses/COURSE_MAP.md` and `g.Presentations/workspaces/slides/SLIDE_MAP.md`. Choose the first course or deck to build, and identify any presentations that should be merged, archived, or removed.
+- **Scope:** After AI-Driven Development, user reviews `g.Presentations/workspaces/courses/COURSE_MAP.md` and `g.Presentations/workspaces/slides/SLIDE_MAP.md` for the other 7 presentations and picks the next course/deck to build.
 - **Exit:** User approves the maps or records edits; next coding-agent slice picks the chosen build target.
 - **Risk:** medium — interpretation of slide content without visuals
 - **Deliverables:**
   - `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 proposed courses)
   - `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 proposed decks)
 
-### P1 [BL-001] Review and approve StateDD bootstrap baseline
+### P2 [BL-001] Review and approve StateDD bootstrap baseline
 - **Agent ID:** NA-1
 - **Scope:** User reviews AGENTS.md, STATUS.md, PROJECT_STATE.yaml, PROJECT_DNA.yaml, PROJECT_ADAPTER.yaml, NEXT_ACTIONS.md, BACKLOG.md, WORKLOG.md.
 - **Exit:** User confirms or requests edits; repo_mode updated to `operating` if accepted.
@@ -53,10 +64,18 @@ Every active item references a backlog ID in the form `### Pn [BL-XXX] ...`.
 - **Risk:** low
 - **Blocked by:** NA-1 baseline acceptance
 
-### P6 [BL-012] Scrub visible editorial markup from canonical manuscript
-- **Agent ID:** NA-8
-- **Scope:** Remove visible `* edit:`, `TODO`, and `VERIFY` scaffolding from `The-Last-Light.md` before it is rendered on the site.
-- **Exit:** Rendered `/The-Last-Light` shows no editorial markup in Author's Note or Chapter 1; screenshots captured as evidence.
-- **Risk:** low
-- **Blocked by:** none — this is the recommended next implementation slice
-- **Recommended because:** highest-ROI fix identified by UI/UX audit; removes the strongest negative trust signal.
+### P0 [BL-015] Fix or retire Dutch (`/nl/`) route
+- **Agent ID:** NA-11
+- **Scope:** Replace the current stale/broken `/nl/` route with either a real Dutch translation or a clean "coming soon" page. No English body copy, no unstyled CTA buttons, no contradictory messaging. Do not delete `nl/` without user approval; hide or clearly deprecate it.
+- **Exit:** `/nl/` renders either a real Dutch translation or a clean deprecation page; mobile and desktop screenshots captured as evidence; no 404s or unstyled links.
+- **Risk:** medium — requires a user-facing decision on whether to invest in translation or deprecate
+- **Blocked by:** none — hide/deprecate path does not require a full translation
+- **Recommended because:** second-highest audit blocker; a broken translation route is a strong negative trust signal for Flemish/Dutch visitors.
+
+### P1 [BL-013] Redesign coverpage as a book landing page
+- **Agent ID:** NA-9
+- **Scope:** Redesign `_coverpage.md` to clearly position the book: title, subtitle, one-sentence promise, primary/secondary CTAs, audience paths (reader, teacher, professional, publisher), and basic trust signals.
+- **Exit:** Coverpage answers "Who is this for?" and "Why read it now?"; desktop + mobile screenshots captured.
+- **Risk:** medium — copy and positioning decisions are product calls
+- **Blocked by:** none
+- **Recommended because:** audit ranked weak homepage positioning as a high-leverage improvement after markup cleanup and Dutch route.

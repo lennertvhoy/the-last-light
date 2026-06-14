@@ -4,6 +4,104 @@ Append-only history. Each entry records what changed, why, and what evidence exi
 
 ---
 
+## 2026-06-14 — Scrub visible editorial markup from canonical manuscript (NA-8 / BL-012)
+
+**Scope:** Remove reader-visible editorial scaffolding from `The-Last-Light.md` and verify the rendered Docsify site no longer exposes internal editing notes.
+
+**What changed:**
+- Searched `The-Last-Light.md` for visible editorial markup and found 8 internal notes in the Author's Note:
+  - 7 `* edit:` comments questioning voice, factual claims, and examples.
+  - 1 inline `*** most of this book was written with ai agent assistance...` disclosure note.
+- Removed all 8 notes from the public canonical manuscript using a targeted regex that preserved surrounding prose and spacing.
+- Preserved the removed text and flagged substantive concerns in `Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md`.
+- Started the local Docsify server on port 3456 and verified the rendered Author's Note and Chapter 1 are clean.
+- Confirmed via DOM evaluation that no `* edit:`, `TODO:`, or `FIXME:` strings remain in the rendered page body.
+- Created evidence folder `Evidence/02-editorial-markup-scrub-2026-06-14/` with before/after screenshots, grep results, removed-notes ledger, and README.
+- Dispositioned untracked directories found during this slice:
+  - Moved `docs/evidence/2026-06-14-presentation-smb-access/` into the new evidence folder as historical evidence.
+  - Left `g.Presentations/` in place as project-relevant assets to be committed.
+  - Quarantined incomplete prompt-copy website work (`Evidence/03-prompt-copy-site/` and `docs/ai-driven-dev/`) inside the evidence folder because it belongs to BL-021/NA-18 and its completion status was unknown.
+  - Reverted unrelated changes to `AGENTS.md` and `_sidebar.md` so this slice stays focused on BL-012.
+- Updated StateDD files:
+  - `STATUS.md` latest change and next step updated.
+  - `PROJECT_STATE.yaml` manuscript status, site verification, and risk R7 updated.
+  - `NEXT_ACTIONS.md` completed BL-012 removed; BL-015 set as next P0 slice, BL-013 as P1.
+  - `BACKLOG.md` BL-012 marked completed with evidence reference.
+  - `docs/EVIDENCE_LOG.md` entry EV-2026-06-14-009 added.
+
+**Evidence:**
+- `Evidence/02-editorial-markup-scrub-2026-06-14/01-grep-before-cleanup.txt`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/02-authors-note-before-cleanup.png`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/04-authors-note-after-cleanup.png`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/05-chapter1-after-cleanup.png`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/06-homepage-after-cleanup.png`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/07-grep-after-cleanup.txt`
+- `Evidence/02-editorial-markup-scrub-2026-06-14/README.md`
+- `docs/EVIDENCE_LOG.md` entry EV-2026-06-14-009
+
+**Verification performed:**
+- Local Docsify server returned HTTP 200 on `http://127.0.0.1:3456/`.
+- Kimi WebBridge screenshots captured before and after cleanup.
+- DOM evaluation confirmed no visible `* edit:`, `TODO:`, or `FIXME:` strings in rendered page body.
+- `grep` confirmed no `* edit:`, `TODO`, `FIXME`, or `citation needed` strings remain in `The-Last-Light.md`.
+- Intentional `VERIFY` text in Appendix A decision-tree framework card was preserved as final content.
+
+**Remaining risks / open questions:**
+- Removed notes flagged factual contradictions (who the author teaches, the fourteen-year-old example, AI-assistance disclosure scope, people's AI adoption posture). Author should review `03-removed-editorial-notes.md` and decide whether to revise prose.
+- Public site will only reflect the cleanup after the next GitHub Pages deployment.
+
+**Next action:** NA-11 / BL-015 — fix or retire the Dutch (`/nl/`) route.
+
+---
+
+## 2026-06-14 — Integrate trial-lesson feedback into AI-Driven Development using agent swarm
+
+**Scope:** Use an agent swarm to rework the AI-Driven Development course based on the trial lesson: prompt confusion, missing copy-paste source, CLI-only framing, PersonaLab context gap, and tool-heavy MCP section.
+
+**What changed:**
+- Read AI-Driven Development extracted texts and analyses, plus the existing COURSE_MAP.md and SLIDE_MAP.md.
+- Launched 4 parallel coder subagents:
+  - `course-rework` — revised 3.5-hour workshop outline, learning objectives, screenshot insertion plan, PersonaLab context sandwich.
+  - `prompt-screenshots` — 10 screenshot specifications tied to canonical prompts.
+  - `prompt-website` — Docsify sub-page design with stable short-link slugs and one-click copy.
+  - `cli-gui-recommendation` — hybrid CLI/GUI track recommendation for mixed audience.
+- Launched 1 synthesis subagent to merge the four deliverables into:
+  - `g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md`
+  - `g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md`
+- User indicated they already have a good site; wrote handoff prompt for another coding agent:
+  - `g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md`
+- Updated StateDD files:
+  - `PROJECT_STATE.yaml` new `ai_driven_dev_rework` section.
+  - `NEXT_ACTIONS.md` new P0 NA-18 for building the prompt site and slide rework.
+  - `BACKLOG.md` new BL-021.
+  - `docs/EVIDENCE_LOG.md` entries EV-2026-06-14-007 and EV-2026-06-14-008.
+  - `STATUS.md` latest change updated.
+
+**Evidence:**
+- `g.Presentations/workspaces/ai-driven-dev-rework/course-rework.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/prompt-screenshots.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/prompt-website.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/cli-gui-recommendation.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md`
+- `g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md`
+- `docs/EVIDENCE_LOG.md` entries EV-2026-06-14-007 and EV-2026-06-14-008
+
+**Verification performed:**
+- Confirmed all 5 subagent deliverables, 2 synthesis files, and the handoff prompt exist and are non-empty.
+- Re-ran `python3 scripts/check_state_docs.py --bootstrap-gate` — PASSED.
+
+**Remaining risks / open questions:**
+- Delivery language: Dutch source deck vs English delivery.
+- Live vs staged PersonaLab BL-002 demo.
+- Exact URL/path on user's existing site.
+- GUI tool versions must be tested for feature parity with CLI.
+
+**Next action:** NA-18 — user confirms language and demo approach, then hands off `HANDOFF_BUILD_PROMPT_SITE.md` to another coding agent to build the prompt-copy website on the user's existing site.
+
+---
+
 ## 2026-06-14 — UI/UX audit of The Last Light Docsify site
 
 **Scope:** Perform a browser-based UI/UX review of the local and public Docsify site, capture evidence, and update StateDD docs with findings and recommended next slice.

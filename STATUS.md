@@ -3,7 +3,7 @@
 **Updated At:** 2026-06-14
 **Mode:** bootstrap
 **Repo:** `/home/ff/Documents/Projects/the-last-light` on branch `main`
-**Git HEAD:** `9361dcb`
+**Git HEAD:** `248041b`
 
 ## Current Truth
 
@@ -17,16 +17,13 @@
 
 ## Latest Change
 
-- Completed a UI/UX audit of the Docsify site using Kimi WebBridge (desktop) and Playwright viewport emulation (mobile).
-- Evidence saved to `/home/ff/Documents/Projects/the-last-light/Evidence/01-ui-ux-audit-2026-06-14/`.
-- Full report written to `docs/ui-ux/last-light-site-audit-2026-06-14.md`.
-- Key blockers identified: visible editorial markup in the rendered manuscript, broken Dutch route, bare 404 page, weak publisher/media path.
-- Added backlog items BL-012 through BL-020 derived from audit findings.
-- Also completed end-to-end retrieval and integration of 11 Windows-hosted presentations via SMB.
-- Built `g.Presentations/` with originals, curated deduplicated set, extracted Markdown, catalog, checksums, and extraction script.
-- Ran an agent swarm (8 parallel subagents + 1 synthesis subagent) over the extracted presentations.
-- Produced `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 courses) and `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 decks).
-- Updated StateDD contract files and evidence log (EV-2026-06-14-005 and EV-2026-06-14-006).
+- Completed NA-8 / BL-012: scrubbed visible editorial markup from `The-Last-Light.md`.
+- Removed 8 internal author notes (`* edit:` comments and one inline AI-assistance disclosure) from the public Author's Note.
+- Preserved removed text and substantive concerns in `Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md`.
+- Verified local Docsify render on `http://127.0.0.1:3456/` and confirmed no `* edit:`, `TODO:`, or `FIXME:` strings remain in the rendered page body.
+- Captured before/after browser screenshots with Kimi WebBridge.
+- Dispositioned untracked directories: moved `docs/evidence/2026-06-14-presentation-smb-access/` into the new evidence folder; committed `g.Presentations/` in place; quarantined incomplete prompt-copy site work (`Evidence/03-prompt-copy-site/` and `docs/ai-driven-dev/`) because it belongs to BL-021/NA-18 and its status is unknown.
+- Updated StateDD files and evidence log (EV-2026-06-14-009).
 
 ## Bootstrap Goal
 
@@ -34,5 +31,5 @@ Establish a truthful operating baseline for The Last Light project and transitio
 
 ## Next Step
 
-- Run `python3 scripts/check_state_docs.py --bootstrap-gate` and fix any failures.
-- User reviews and accepts the baseline; flip `AGENTS.md` `repo_mode` to `operating`.
+- NA-9 / BL-015: fix or retire the Dutch (`/nl/`) route so it no longer shows English content and unstyled CTAs.
+- Then NA-10 / BL-013: redesign the coverpage as a serious book landing page, or NA-11 / BL-016: improve the 404 page.

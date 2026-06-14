@@ -8,8 +8,8 @@ repo:
   path: /home/ff/Documents/Projects/the-last-light
   git_initialized: true
   branch: main
-  head: 9361dcb
-  worktree_status: clean
+  head: 248041b
+  worktree_status: modified
   remote: https://github.com/lennertvhoy/the-last-light.git
 
 manuscript:
@@ -21,6 +21,9 @@ manuscript:
   word_count: observed
   line_count: 7514
   heading_count: 461
+  status: editorial_markup_scrubbed_2026-06-14
+  editorial_notes_removed: 8
+  removed_notes_preserved: Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md
   archived_copies:
     - e.Combined-Book/The-Last-Light_Author-Ready_Final.md
 
@@ -84,13 +87,48 @@ presentations:
     - g.Presentations/workspaces/courses/COURSE_MAP.md
     - g.Presentations/workspaces/slides/SLIDE_MAP.md
   evidence:
-    - docs/evidence/2026-06-14-presentation-smb-access/
+    - Evidence/02-editorial-markup-scrub-2026-06-14/2026-06-14-presentation-smb-access/
     - g.Presentations/CATALOG.md
     - g.Presentations/CHECKSUMS.sha256
     - g.Presentations/workspaces/courses/COURSE_MAP.md
     - g.Presentations/workspaces/slides/SLIDE_MAP.md
   next_action_agent_id: NA-17
   next_action: user review of COURSE_MAP.md and SLIDE_MAP.md
+
+ai_driven_dev_rework:
+  source_presentation: AI-Driven Development
+  source_files:
+    - g.Presentations/curated/AI-Driven Development.pptx
+    - g.Presentations/curated/AI-Driven Development.pdf
+  extracted_text:
+    - g.Presentations/extracted/AI-Driven Development.pptx.md
+    - g.Presentations/extracted/AI-Driven Development.pdf.md
+  trial_lesson_feedback:
+    - prompt confusion: attendees did not know which prompts to use when
+    - no copy-paste source: static screenshots only
+    - CLI-only framing alienated non-developers
+    - PersonaLab BL-002 needed context
+    - MCP section was tool-heavy, not decision-heavy
+  rework_outputs:
+    - g.Presentations/workspaces/ai-driven-dev-rework/course-rework.md
+    - g.Presentations/workspaces/ai-driven-dev-rework/prompt-screenshots.md
+    - g.Presentations/workspaces/ai-driven-dev-rework/prompt-website.md
+    - g.Presentations/workspaces/ai-driven-dev-rework/cli-gui-recommendation.md
+    - g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md
+    - g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md
+  key_decisions:
+    - hybrid CLI/GUI track: developers default to CLI, non-developers to GUI, same StateDD artifacts
+    - prompt-copy website to be built on user's existing preferred site (do not rebuild from scratch)
+    - 10 screenshot moments tied to canonical prompts
+    - Caner StateDD program tracked as community artifact
+  open_questions:
+    - delivery language: Dutch source vs English delivery
+    - live vs staged PersonaLab BL-002 demo
+    - exact URL/path on user's existing site
+  status: integrated_plan_ready
+  handoff_prompt_for_website: g.Presentations/workspaces/ai-driven-dev-rework/HANDOFF_BUILD_PROMPT_SITE.md
+  next_action_agent_id: NA-18
+  next_action: user confirms language and demo approach; another coding agent builds prompt-copy website on user's existing site using HANDOFF_BUILD_PROMPT_SITE.md
 
 site:
   generator: Docsify
@@ -109,11 +147,15 @@ site:
     evidence: Evidence/01-ui-ux-audit-2026-06-14/
     verdict: functional_not_launch_ready
     top_blockers:
-      - visible editorial markup in rendered manuscript
       - Dutch route broken/stale
       - bare 404 page
       - weak publisher/media path
       - sidebar labels truncated and all-caps
+    latest_verification:
+      date: 2026-06-14
+      agent_id: NA-8
+      result: no visible editorial markup in rendered Author's Note or Chapter 1
+      evidence: Evidence/02-editorial-markup-scrub-2026-06-14/
 
 build:
   scripts:
@@ -186,7 +228,8 @@ risks:
     title: Visible editorial markup in published manuscript undermines trust
     likelihood: confirmed
     impact: high
-    mitigation: Scrub The-Last-Light.md of `* edit:`, TODO, and VERIFY markers before next render
+    status: mitigated_2026-06-14
+    mitigation: Scrubbed The-Last-Light.md of visible `* edit:` notes and inline AI-assistance scaffolding; preserved substantive concerns for author review in Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md.
   - id: R8
     title: Dutch route appears broken to visitors
     likelihood: confirmed
