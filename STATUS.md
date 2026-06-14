@@ -3,7 +3,7 @@
 **Updated At:** 2026-06-14
 **Mode:** bootstrap
 **Repo:** `/home/ff/Documents/Projects/the-last-light` on branch `main`
-**Git HEAD:** `0763eaf`
+**Git HEAD:** `4a4b13b`
 
 ## Current Truth
 

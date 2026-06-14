@@ -8,9 +8,9 @@ repo:
   path: /home/ff/Documents/Projects/the-last-light
   git_initialized: true
   branch: main
-  head: 0763eaf
+  head: 4a4b13b
   worktree_status: dirty
-  remote: not configured locally
+  remote: https://github.com/lennertvhoy/the-last-light.git
 
 manuscript:
   canonical_file: The-Last-Light.md
