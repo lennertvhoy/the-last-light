@@ -1,5 +1,9 @@
 * [The Last Light](/The-Last-Light.md)
 
+* Workshops
+  - [AI-Driven Development — Prompten](/ai-driven-dev/prompts/)
+  - [AI-Driven Development — Printbare versie](/ai-driven-dev/prompts/one-pager)
+
 * Front Matter
   - [Author's Note](/The-Last-Light.md#authors-note)
   - [Prologue](/The-Last-Light.md#prologue-the-last-animal-that-knew-it-was-dying)
