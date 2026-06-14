@@ -46,7 +46,7 @@
 
 - repo: /home/ff/Documents/Projects/the-last-light
 - branch: main
-- head: 4a4b13b578fc98d8f1112c63e9bd3a59b4efadaa
+- head: 85b548227419991b0e75e7478d0b8a1eddc5133d
 
 ## Test / Build / Lint Commands Run
 
