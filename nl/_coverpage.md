@@ -1,21 +1,22 @@
-# Het Laatste Licht
+# The Last Light
 
-### Een Veldgids voor Onze Digitale Kruispunten
+## How to Stay Human When Everything Can Be Outsourced
 
-> *Wat gebeurt er wanneer de machines die we hebben gebouwd om voor ons te denken, beter gaan denken dan wij?*
+> *What happens when the machines we built to think for us start thinking better than us?*
 
-**Let op:** dit is een oudere Nederlandse vertaling. De nieuwste Engelstalige versie is **The Last Light: How to Stay Human When Everything Can Be Outsourced**.
-
----
-
-- **Nieuwe versie** — [The Last Light (Engels)](/The-Last-Light.md)
-- **Legacy** — 35 hoofdstukken en 37 bijlagen in het Nederlands
-- **Open source** — bijdragen, bekritiseren, remix
+This is a book about AI, agency, and conscious delegation — about knowing what to hand over, what to keep, and how to decide when the cost of refusal is no longer free.
 
 ---
 
-[Begin met Lezen](a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md)
-[Bekijk op GitHub](https://github.com/lennertvhoy/the-last-light)
+- **22 chapters** — from the mirror to the edge
+- **7 appendices** — tools for classrooms, professionals, and governance
+- **Open source** — contribute, critique, remix
+
+---
+
+[Start Reading](The-Last-Light.md)
+[View on GitHub](https://github.com/lennertvhoy/the-last-light)
+
 
 ---
 *Vertaald door AI. Controleer de originele Engelse versie bij twijfel.*
