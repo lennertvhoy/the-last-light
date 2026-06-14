@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0 # fetch all history for proper diffing if we needed it
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -34,12 +34,21 @@ jobs:
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
+        if [ -z "$OPENAI_API_KEY" ]; then
+          echo "OPENAI_API_KEY not configured; skipping automated translation."
+          exit 0
+        fi
         python3 f.Scripts/translate_site.py
-        
+
     - name: Commit and Push Changes
       run: |
         git config --global user.name 'Portia Labs AI'
         git config --global user.email 'ai@portialabs.com'
-        git add nl/
-        # Only commit if there are changes
-        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update dutch translations [skip ci]" && git push)
+        git add nl/ .translation_cache_nl.json
+        # Only commit if there are staged changes
+        if git diff --staged --quiet; then
+          echo "No translation changes to commit"
+        else
+          git commit -m "chore: update dutch translations [skip ci]"
+          git push
+        fi
