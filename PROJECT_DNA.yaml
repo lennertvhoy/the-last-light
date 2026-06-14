@@ -1,0 +1,110 @@
+---
+# PROJECT_DNA.yaml — The Last Light
+# Stable architecture contract. Change only when architecture changes.
+name: The Last Light
+short_name: the-last-light
+purpose: >-
+  Publish and evolve an open-source book — "The Last Light: How to Stay Human
+  When Everything Can Be Outsourced" — as a Docsify static site, with the
+  manuscript stored as Markdown and developed using a State Driven Development
+  workflow.
+
+principles:
+  - explicit_state_over_implicit_knowledge
+  - manuscript_is_the_source_of_truth
+  - one_canonical_manuscript_file
+  - archived_not_deleted
+  - evidence_before_acceptance
+  - human_in_the_loop_for_non_trivial_decisions
+  - preserve_website_compatibility
+
+topology:
+  layers:
+    - id: content
+      name: Content Layer
+      description: The book manuscript and any legacy translations
+      components:
+        - The-Last-Light.md (canonical author-ready manuscript)
+        - e.Combined-Book/ (dated copies of the canonical manuscript)
+        - archive/legacy-manuscript/ (previous 35-chapter manuscript)
+        - nl/ (legacy Dutch translation)
+    - id: site
+      name: Site Layer
+      description: Docsify static-site configuration
+      components:
+        - index.html
+        - _coverpage.md
+        - _sidebar.md
+        - portia-theme.css
+        - favicon.png
+    - id: tooling
+      name: Tooling Layer
+      description: Scripts, CI, and quality checks
+      components:
+        - f.Scripts/ (project-specific helpers)
+        - scripts/ (StateDD hygiene and audit helpers)
+        - .github/workflows/ (build, lint, test, translate, statedd-validate)
+        - package.json (docsify-cli, markdownlint-cli)
+
+state_model:
+  files:
+    AGENTS.md: contract and read order
+    STATUS.md: short human-readable snapshot
+    PROJECT_STATE.yaml: structured current truth
+    PROJECT_DNA.yaml: stable architecture
+    PROJECT_ADAPTER.yaml: vocabulary and runtime adapter
+    NEXT_ACTIONS.md: active queue
+    BACKLOG.md: strategic roadmap
+    WORKLOG.md: append-only history
+    docs/EVIDENCE_LOG.md: proof ledger
+    docs/ACCEPTANCE_FREEZES.md: accepted milestones
+  transitions:
+    bootstrap_to_operating:
+      condition: state files filled, backlog real, user agrees
+      action: update AGENTS.md repo_mode to operating
+
+workflow:
+  roles:
+    CEO: Lennert / human
+    CTO: separate AI chat (Claude/ChatGPT/Gemini)
+    coding_agent: the agent editing this repo
+  loop:
+    - CEO provides state, requirements, priorities
+    - CTO reviews, chooses next move, writes implementation prompt
+    - coding_agent reads AGENTS.md and state files
+    - coding_agent implements one coherent slice
+    - coding_agent verifies and gathers evidence
+    - coding_agent updates state files
+    - coding_agent commits changes
+    - coding_agent writes handoff for CTO
+
+communication:
+  preferred_channels:
+    - this repo for state and evidence
+    - separate CTO chat for architecture and prioritization
+    - direct user chat for quick yes/no or clarifications
+  handoff_format: prompts/FINAL_HANDOFF_TEMPLATE.md
+
+constraints:
+  - do not delete the canonical manuscript or legacy archives without explicit user approval
+  - do not publish unverified claims about book content as author intent
+  - do not change the public URL or repo owner without explicit approval
+  - keep secrets out of committed files
+  - preserve Docsify compatibility when changing site files
+  - do not overwrite LICENSE without confirming the dual-license intent (MIT code + CC BY-SA 4.0 content)
+
+governance:
+  license: LICENSE (MIT code + CC BY-SA 4.0 content)
+  evidence_log: docs/EVIDENCE_LOG.md
+  acceptance_freezes: docs/ACCEPTANCE_FREEZES.md
+  adr_root: docs/adr
+  getting_started_guide: docs/GETTING_STARTED_5_MIN.md
+  workflow_for_beginners: docs/WORKFLOW_FOR_BEGINNERS.md
+  handoff_snapshot_helper: scripts/statedd_handoff.py
+  hygiene_check: scripts/check_state_docs.py
+  bootstrap_gate_check: scripts/check_state_docs.py --bootstrap-gate
+  closure_audit: scripts/statedd_audit.py
+  health_doctor: scripts/statedd_doctor.py
+  slice_contract: prompts/SLICE_CONTRACT_TEMPLATE.md
+  evidence_readme: prompts/EVIDENCE_README_TEMPLATE.md
+  final_handoff_template: prompts/FINAL_HANDOFF_TEMPLATE.md

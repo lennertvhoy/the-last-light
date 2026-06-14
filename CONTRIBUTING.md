@@ -1,4 +1,4 @@
-# Contributing to The Last Light: An Open Intellectual Project
+# Contributing to The Last Light: How to Stay Human When Everything Can Be Outsourced
 
 Welcome. This book is an open intellectual project, and we invite contributions from colleagues, peers, and intellectually curious readers. The goal is to foster a rigorous, collaborative dialogue around the book's central thesis. We encourage you to engage with the ideas presented here using the established conventions of open-source development.
 
@@ -48,7 +48,7 @@ markdownlint . --ignore e.Combined-Book
 ### Submitting Changes
 
 1.  **Create a new branch** off of the `discussion` branch. Please do not target the `main` branch directly.
-2.  **Make your changes** in the relevant chapter file(s).
+2.  **Make your changes** in the canonical manuscript (`The-Last-Light.md`) or the relevant supporting file. If you change chapter or appendix headings, regenerate `_sidebar.md` by running `python3 f.Scripts/generate-sidebar.py`.
 3.  **Commit your changes** with a clear and descriptive commit message.
 4.  **Push your changes** to your fork.
 5.  **Open a pull request** from your branch to the `discussion` branch of this repository.

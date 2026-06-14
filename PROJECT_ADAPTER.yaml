@@ -1,0 +1,52 @@
+---
+# PROJECT_ADAPTER.yaml — The Last Light
+# Project-specific vocabulary and runtime adapter.
+
+version: "statedd-template-v3"
+
+project:
+  name: The Last Light
+  short_name: the-last-light
+  description: >-
+    Open-source book project: "The Last Light: How to Stay Human When
+    Everything Can Be Outsourced". Published via Docsify on GitHub Pages.
+
+vocabulary:
+  manuscript: The-Last-Light.md
+  canonical_source: The-Last-Light.md
+  legacy_archive: archive/legacy-manuscript/
+  site_generator: Docsify
+  deployment_target: GitHub Pages
+
+runtime:
+  frontend_port: 3000
+  api_port: null
+  public_url: https://lennertvhoy.github.io/the-last-light/
+  execution_mode: bootstrap
+  runtime_identity_surface: docsify dev server or GitHub Pages deployment
+
+integrations:
+  - name: GitHub Pages
+    purpose: Static site hosting
+    url: https://lennertvhoy.github.io/the-last-light/
+  - name: Docsify
+    purpose: Markdown-to-site rendering
+    url: https://docsify.js.org/
+
+ai_execution_preferences:
+  available_tools:
+    - bash
+    - python3
+    - node/npm
+  planning_models: []
+  coding_models: []
+  review_models: []
+  default_routing_priority: quality_then_cost
+  notes:
+    - "Fill models only with user-confirmed or currently verified access."
+    - "Book content edits require careful handling of author voice and citations."
+
+notes:
+  - "The canonical manuscript is a single Markdown file."
+  - "Legacy split-file manuscript is archived, not deleted."
+  - "Dutch translation (nl/) is legacy and not aligned with the new manuscript."

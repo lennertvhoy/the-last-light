@@ -34,6 +34,15 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local.kilocode/
+# StateDD / agent tooling
+.playwright-mcp/
+.codex
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+security_best_practices_report.md
+
 # secrets
 *.env
 secrets.env

@@ -1,0 +1,31 @@
+1:# Table of Contents {#table-of-contents .TOC-Heading}
+3:# The Last Light
+11:# Author's Note
+107:# Prologue
+215:# Introduction --- The Question Is Not Whether AI Replaces Work
+385:# Chapter 1 --- We Were Wrong About the Chinese Room
+539:# The Blessing and the Danger
+671:# Chapter 3 --- What Understanding Feels Like
+781:# Chapter 4 --- Procedural Humanity
+921:# Chapter 5 --- The Layer 8 Singularity
+1231:# Chapter 7 --- Cognitive Debt
+1427:# Chapter 8 --- The Leveling Effect
+1589:# Chapter 9 --- What Automation Reveals
+1707:# Chapter 10 --- Conscious Delegation
+1915:# Chapter 11 --- State Is the Soul of Agency
+2051:# Chapter 12 --- From Vibe Coding to Conscious Work
+2257:# Chapter 13 --- The Verification Instinct
+2393:# Chapter 14 --- Cognitive Homesteading
+2535:# Chapter 15 --- Recovery as Agency Under Siege
+2665:# Chapter 16 --- Love, Simulation, and the Real
+2819:# Chapter 17 --- The Successor Is Not a Robot
+2961:# Chapter 18 --- The Predator, the Hive, the Scrambler, and the Saint
+3115:# Chapter 19 --- The Centaur Was Temporary
+3227:# Chapter 20 --- Who Controls the Gods?
+3395:# Chapter 21 --- The New Bottleneck
+3553:# Chapter 22 --- After Work
+3705:# Chapter 23 --- Worthy Ancestors
+3861:# Chapter 24 --- The Last Light Practices
+4063:# Chapter 25 --- The Teacher at the End of the World
+4235:# Chapter 26 --- Death Watches the Dancers
+4371:# Chapter 27 --- The Edge

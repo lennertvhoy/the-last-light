@@ -1,0 +1,48 @@
+source_docx=the_last_light.docx
+source_docx_size=277348
+source_docx_mtime=2026-06-04 09:03:52.539793489 +0200
+docx_core_created=2026-06-04T05:58:31Z
+docx_core_modified=2026-06-04T05:58:31Z
+plain_word_count_split=118962
+markdown_regex_word_count=117523
+markdown_line_count=4581
+heading_count=254
+TODO_or_VERIFY=75
+soft_hyphen_U+00AD=0
+replacement_U+FFFD=0
+noncharacter_U+FFFE=0
+object_replacement_U+FFFC=0
+double_spaces=4
+unusual_control_chars=0
+primary_top_level_headings=
+# Table of Contents {#table-of-contents .TOC-Heading}
+# The Last Light
+# Author's Note
+# Prologue
+# Introduction --- The Question Is Not Whether AI Replaces Work
+# Chapter 1 --- We Were Wrong About the Chinese Room
+# The Blessing and the Danger
+# Chapter 3 --- What Understanding Feels Like
+# Chapter 4 --- Procedural Humanity
+# Chapter 5 --- The Layer 8 Singularity
+# Chapter 7 --- Cognitive Debt
+# Chapter 8 --- The Leveling Effect
+# Chapter 9 --- What Automation Reveals
+# Chapter 10 --- Conscious Delegation
+# Chapter 11 --- State Is the Soul of Agency
+# Chapter 12 --- From Vibe Coding to Conscious Work
+# Chapter 13 --- The Verification Instinct
+# Chapter 14 --- Cognitive Homesteading
+# Chapter 15 --- Recovery as Agency Under Siege
+# Chapter 16 --- Love, Simulation, and the Real
+# Chapter 17 --- The Successor Is Not a Robot
+# Chapter 18 --- The Predator, the Hive, the Scrambler, and the Saint
+# Chapter 19 --- The Centaur Was Temporary
+# Chapter 20 --- Who Controls the Gods?
+# Chapter 21 --- The New Bottleneck
+# Chapter 22 --- After Work
+# Chapter 23 --- Worthy Ancestors
+# Chapter 24 --- The Last Light Practices
+# Chapter 25 --- The Teacher at the End of the World
+# Chapter 26 --- Death Watches the Dancers
+# Chapter 27 --- The Edge

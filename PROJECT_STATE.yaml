@@ -1,0 +1,127 @@
+---
+# PROJECT_STATE.yaml — The Last Light
+# Structured current truth. Update only when truth changes.
+updated_at: 2026-06-14
+mode: bootstrap
+
+repo:
+  path: /home/ff/Documents/Projects/the-last-light
+  git_initialized: true
+  branch: main
+  head: 0763eaf
+  worktree_status: dirty
+  remote: not configured locally
+
+manuscript:
+  canonical_file: The-Last-Light.md
+  title: "The Last Light: How to Stay Human When Everything Can Be Outsourced"
+  subtitle: "A Field Guide to AI, Agency, and Conscious Delegation"
+  source_file: /home/ff/Documents/ff-vault/The_Last_Light_Author_Ready_Final.md
+  source_updated: 2026-06-05
+  word_count: observed
+  line_count: 7514
+  heading_count: 461
+  archived_copies:
+    - e.Combined-Book/The-Last-Light_Author-Ready_Final.md
+
+legacy_archive:
+  path: archive/legacy-manuscript/
+  contents:
+    - a.The-Last-Light-Book/ (previous 35-chapter manuscript)
+    - b.Philosophical-Lenses/
+    - c.Appendices/
+  status: archived_not_deleted
+  note: >-
+    Old split-file manuscript preserved for reference. Dutch translation (nl/)
+    remains in place but is stale relative to the new canonical manuscript.
+
+flemish_market_adaptation:
+  path: flemish-market/
+  source: /home/ff/Documents/Projects/the-last-light-v2/the_last_light_flemish_market/
+  merged_at: 2026-06-14
+  status: not_canonical
+  note: >-
+    Dutch/Flemish-market adaptation workspace merged from the-last-light-v2.
+    Contains publisher package, editorial audits, title options, and a drafted
+    Dutch sample gate. The v2 DOCX and Markdown sources are preserved inside
+    flemish-market/source_preserved/ for reference, but the canonical manuscript
+    remains The-Last-Light.md.
+  key_files:
+    - flemish-market/README.md
+    - flemish-market/manuscript_status.md
+    - flemish-market/samples_for_publishers/sample_auteursnoot_inleiding_h1.md
+    - flemish-market/publisher_package/titelopties.md
+    - flemish-market/editorial/factual_claims_to_verify.md
+  evidence:
+    - docs/evidence/2026-06-04-bootstrap-docx-audit/
+    - docs/evidence/2026-06-04-dutch-sample-gate/
+
+site:
+  generator: Docsify
+  entry_point: index.html
+  coverpage: _coverpage.md
+  sidebar: _sidebar.md
+  theme: portia-theme.css
+  public_url: https://lennertvhoy.github.io/the-last-light/
+  search_namespace: the-last-light-v4
+  language_switcher: true
+  known_stale:
+    - nl/ translation does not match canonical manuscript
+
+build:
+  scripts:
+    - f.Scripts/generate-sidebar.py
+    - f.Scripts/combine-book.sh (legacy; operates on archived split files)
+  dependencies:
+    - docsify-cli
+    - markdownlint-cli
+  github_workflows:
+    - build.yml
+    - lint.yml
+    - test.yml
+    - translate.yml
+    - statedd-validate.yml
+
+statedd:
+  contract_files:
+    - AGENTS.md
+    - STATUS.md
+    - PROJECT_STATE.yaml
+    - PROJECT_DNA.yaml
+    - PROJECT_ADAPTER.yaml
+    - NEXT_ACTIONS.md
+    - BACKLOG.md
+    - WORKLOG.md
+  docs:
+    - docs/EVIDENCE_LOG.md
+    - docs/ACCEPTANCE_FREEZES.md
+  scripts:
+    - scripts/check_state_docs.py
+    - scripts/statedd_handoff.py
+    - scripts/statedd_doctor.py
+    - scripts/statedd_audit.py
+  prompts:
+    - prompts/
+  status: integrated_during_bootstrap
+
+risks:
+  - id: R1
+    title: Dutch translation is stale
+    likelihood: confirmed
+    impact: low
+    mitigation: README and Dutch coverpage now warn readers; full re-translation is backlog item BL-002
+  - id: R2
+    title: Old combine-book.sh script references archived paths
+    likelihood: confirmed
+    impact: low
+    mitigation: script noted as legacy in PROJECT_DNA.yaml; update or retire in BL-003
+  - id: R3
+    title: Sidebar anchors may drift if manuscript headings change
+    likelihood: possible
+    impact: low
+    mitigation: regenerate _sidebar.md with f.Scripts/generate-sidebar.py after heading edits
+
+unknowns:
+  - exact word count of canonical manuscript
+  - whether all existing GitHub workflow secrets/permissions remain valid
+  - desired final disposition of legacy archive (keep vs. delete)

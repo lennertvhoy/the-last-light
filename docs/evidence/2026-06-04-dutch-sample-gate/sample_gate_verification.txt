@@ -1,0 +1,32 @@
+Dutch sample gate verification
+As of: 2026-06-04T09:50:00+02:00
+
+Repo:
+- /home/ff/Documents/Projects/the-last-light-v2
+
+Sample artifact:
+- /home/ff/Documents/Projects/the-last-light-v2/the_last_light_flemish_market/samples_for_publishers/sample_auteursnoot_inleiding_h1.md
+
+Source basis:
+- /home/ff/Documents/Projects/the-last-light-v2/the_last_light_flemish_market/source_preserved/the_last_light_source_2026-06-04.md
+- Source sections used: Author's Note, Introduction, Chapter 1
+
+Observed checks:
+- `wc -l -w` returned 487 lines and 7655 words for the sample file.
+- Required title found at line 1: Het Laatste Licht.
+- Required subtitle found at line 3: Hoe we AI kunnen gebruiken zonder onszelf uit te besteden.
+- Sample status marker found at line 5 and states the text is for human review, not a definitive or publisher-ready manuscript version.
+- Scope marker found at line 7: Auteursnoot, Inleiding en Hoofdstuk 1.
+- Section headings found:
+  - line 13: Auteursnoot
+  - line 111: Inleiding - De vraag is niet of AI werk vervangt
+  - line 291: Hoofdstuk 1 - We hadden het mis over de Chinese Room
+- `rg -n "TODO|VERIFY"` found no raw TODO/VERIFY markers in the sample.
+- `LC_ALL=C rg -n "[^\\x00-\\x7F]"` found no non-ASCII characters in the sample after cleanup.
+- Search for obvious false-seniority terms found no claim of senior professorial or long-career authority in the sample.
+
+Limits:
+- This verification proves the sample exists and meets mechanical gate checks.
+- It does not prove the Dutch/Flemish voice is accepted.
+- It does not prove publisher readiness.
+- No DOCX export or render QA was performed in this slice.

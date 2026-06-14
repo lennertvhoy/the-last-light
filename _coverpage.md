@@ -1,18 +1,18 @@
 # The Last Light
 
-### A Field Guide to Our Digital Crossroads
+## How to Stay Human When Everything Can Be Outsourced
 
 > *What happens when the machines we built to think for us start thinking better than us?*
 
-This is a book about the collision between human consciousness and artificial intelligence — told through the lens of philosophy, neuroscience, cyberpunk fiction, and the economics of obsolescence.
+This is a book about AI, agency, and conscious delegation — about knowing what to hand over, what to keep, and how to decide when the cost of refusal is no longer free.
 
 ---
 
-- **35 chapters** across 9 parts — from the Chinese Room to the Last Light
-- **37 appendices** — deep dives into the science, philosophy, and case studies
+- **22 chapters** — from the mirror to the edge
+- **7 appendices** — tools for classrooms, professionals, and governance
 - **Open source** — contribute, critique, remix
 
 ---
 
-[Start Reading](a.The-Last-Light-Book/Part-00-Introduction/0.0-Introduction.md)
-[View on GitHub](https://github.com/portia-labs/the-last-light)
+[Start Reading](The-Last-Light.md)
+[View on GitHub](https://github.com/lennertvhoy/the-last-light)

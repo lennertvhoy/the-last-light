@@ -1,0 +1,36 @@
+name: StateDD Validate
+
+on:
+  push:
+    branches:
+      - main
+      - discussion
+  pull_request:
+    branches:
+      - main
+      - discussion
+
+permissions:
+  contents: read
+
+jobs:
+  statedd:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Compile Python scripts
+        run: |
+          python3 -m py_compile scripts/check_state_docs.py scripts/statedd_handoff.py scripts/statedd_audit.py scripts/statedd_doctor.py
+
+      - name: Validate StateDD docs
+        run: |
+          python3 scripts/check_state_docs.py
+          python3 scripts/statedd_doctor.py
