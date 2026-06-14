@@ -8,7 +8,7 @@ repo:
   path: /home/ff/Documents/Projects/the-last-light
   git_initialized: true
   branch: main
-  head: 248041b
+  head: 73b775d
   worktree_status: modified
   remote: https://github.com/lennertvhoy/the-last-light.git
 
