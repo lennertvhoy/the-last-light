@@ -13,15 +13,20 @@
 - The Dutch translation (`nl/`) remains available but is stale; warnings have been added to `nl/README.md` and `nl/_coverpage.md`.
 - State Driven Development (StateDD) workflow has been integrated: `AGENTS.md`, state files, `docs/`, `scripts/`, `prompts/`, `.github/ISSUE_TEMPLATE/`, and `statedd-validate.yml`.
 - Dutch/Flemish-market adaptation workspace merged from `the-last-light-v2` into `flemish-market/` (not canonical).
+- UI/UX audit completed; site is functional but not yet launch-ready as a book landing page.
 
 ## Latest Change
 
-- Imported latest manuscript from `/home/ff/Documents/ff-vault/The_Last_Light_Author_Ready_Final.md`.
-- Archived old manuscript directories.
-- Generated new `_sidebar.md` from canonical headings.
-- Updated `README.md`, `index.html`, and cover pages.
-- Integrated StateDD v2 template files, adapted for a book project.
-- Merged `the-last-light-v2` Flemish-market adaptation materials into `flemish-market/`; v2 manuscript/DOCX not treated as canonical.
+- Completed a UI/UX audit of the Docsify site using Kimi WebBridge (desktop) and Playwright viewport emulation (mobile).
+- Evidence saved to `/home/ff/Documents/Projects/the-last-light/Evidence/01-ui-ux-audit-2026-06-14/`.
+- Full report written to `docs/ui-ux/last-light-site-audit-2026-06-14.md`.
+- Key blockers identified: visible editorial markup in the rendered manuscript, broken Dutch route, bare 404 page, weak publisher/media path.
+- Added backlog items BL-012 through BL-020 derived from audit findings.
+- Also completed end-to-end retrieval and integration of 11 Windows-hosted presentations via SMB.
+- Built `g.Presentations/` with originals, curated deduplicated set, extracted Markdown, catalog, checksums, and extraction script.
+- Ran an agent swarm (8 parallel subagents + 1 synthesis subagent) over the extracted presentations.
+- Produced `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 courses) and `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 decks).
+- Updated StateDD contract files and evidence log (EV-2026-06-14-005 and EV-2026-06-14-006).
 
 ## Bootstrap Goal
 

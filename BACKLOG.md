@@ -93,3 +93,94 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
   - Title options finalized.
   - Publisher pitch and supporting materials drafted.
 - **Next action:** deferred until BL-006 accepted
+
+## [BL-011] Retrieve and integrate presentation assets
+- **Added:** 2026-06-14
+- **Problem:** Windows host has 11 presentations shared at `\\192.168.122.204\Presentations`; Fedora agent cannot authenticate to the share.
+- **Acceptance criteria:**
+  - SMB share mounted and files copied into project under a durable path.
+  - Duplicates resolved per Windows agent handoff rules.
+  - Presentations catalogued in StateDD state files and evidence log.
+  - Agent-swarm analysis slice created to develop courses/slides from the assets.
+- **Status:** retrieval, deduplication, extraction, and agent-swarm analysis complete; awaiting user review of course/slide maps
+- **Next action:** NA-17 (user review of maps)
+
+## [BL-012] Scrub canonical manuscript of visible editorial markup
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** Rendered Author's Note and other sections contain visible `* edit:` annotations and cleanup markup.
+- **Acceptance criteria:**
+  - No visible `* edit:`, `TODO`, or `VERIFY` scaffolding in rendered `/The-Last-Light`.
+  - Editorial decisions are either resolved in the text or moved to internal notes, not shown to readers.
+- **Next action:** NA-8
+
+## [BL-013] Redesign coverpage as a book landing page
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** The coverpage is a sparse Docsify cover; it does not clearly position the book for readers, educators, or publishers.
+- **Acceptance criteria:**
+  - Above-the-fold section states title, subtitle, promise, and primary/secondary CTAs.
+  - Includes audience paths (reader, teacher, professional, publisher) and trust signals.
+  - Looks credible as a serious book landing page on desktop and mobile.
+- **Next action:** NA-9
+
+## [BL-014] Add publisher/media package route
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** Flemish-market publisher materials exist in `flemish-market/` but are not discoverable from the public site.
+- **Acceptance criteria:**
+  - A `/publisher` or `/media` route exposes title options, sample chapters, author bio, and download/contact CTAs.
+  - Route is linked from the coverpage and/or README.
+- **Next action:** NA-10
+
+## [BL-015] Fix or retire Dutch (`/nl/`) route
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** `/nl/` displays English content and unstyled CTA links.
+- **Acceptance criteria:**
+  - Either `/nl/` renders a real Dutch translation or it shows a clean "coming soon" page.
+  - No unstyled buttons, no English body copy, no contradictory messaging.
+- **Next action:** NA-11
+
+## [BL-016] Improve 404 page
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** Unknown routes show a bare "404 - Not found" with no recovery path.
+- **Acceptance criteria:**
+  - 404 page contains a home link, a search prompt, and suggested starting chapters.
+- **Next action:** NA-12
+
+## [BL-017] Improve sidebar typography and truncation
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** Sidebar link labels are forced to ALL CAPS and heavily truncated, especially on mobile.
+- **Acceptance criteria:**
+  - Labels use sentence or title case.
+  - Chapter titles are readable without excessive truncation on desktop and mobile.
+- **Next action:** NA-13
+
+## [BL-018] Add author bio and trust signals
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** The site lacks author identity, endorsements, and institutional trust signals.
+- **Acceptance criteria:**
+  - Author bio/photo or byline appears on the site.
+  - Any available endorsements, affiliations, or media mentions are displayed.
+- **Next action:** NA-14
+
+## [BL-019] Fix mobile language switcher overlap
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** Fixed-position EN/NL switcher overlaps body text when scrolling on mobile.
+- **Acceptance criteria:**
+  - Switcher does not obscure readable text on 390–430 px wide viewports.
+- **Next action:** NA-15
+
+## [BL-020] Improve accessibility of icon-only links and language switcher
+- **Added:** 2026-06-14
+- **Source:** UI/UX audit (NA-7)
+- **Problem:** "View source on Github" link and the language switcher lack accessible names.
+- **Acceptance criteria:**
+  - Icon-only links have `aria-label` text.
+  - Language switcher has a clear accessible name describing its function.
+- **Next action:** NA-16

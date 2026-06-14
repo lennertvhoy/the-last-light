@@ -10,6 +10,15 @@ Every active item references a backlog ID in the form `### Pn [BL-XXX] ...`.
 
 ## Active Work
 
+### P0 [BL-011] Review agent-swarm course/slide maps and choose first build target
+- **Agent ID:** NA-17 (completed analysis; awaiting review)
+- **Scope:** User reviews `g.Presentations/workspaces/courses/COURSE_MAP.md` and `g.Presentations/workspaces/slides/SLIDE_MAP.md`. Choose the first course or deck to build, and identify any presentations that should be merged, archived, or removed.
+- **Exit:** User approves the maps or records edits; next coding-agent slice picks the chosen build target.
+- **Risk:** medium — interpretation of slide content without visuals
+- **Deliverables:**
+  - `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 proposed courses)
+  - `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 proposed decks)
+
 ### P1 [BL-001] Review and approve StateDD bootstrap baseline
 - **Agent ID:** NA-1
 - **Scope:** User reviews AGENTS.md, STATUS.md, PROJECT_STATE.yaml, PROJECT_DNA.yaml, PROJECT_ADAPTER.yaml, NEXT_ACTIONS.md, BACKLOG.md, WORKLOG.md.
@@ -43,3 +52,11 @@ Every active item references a backlog ID in the form `### Pn [BL-XXX] ...`.
 - **Exit:** High-risk factual claims grouped by chapter with action labels: verify, soften, remove, or keep internal.
 - **Risk:** low
 - **Blocked by:** NA-1 baseline acceptance
+
+### P6 [BL-012] Scrub visible editorial markup from canonical manuscript
+- **Agent ID:** NA-8
+- **Scope:** Remove visible `* edit:`, `TODO`, and `VERIFY` scaffolding from `The-Last-Light.md` before it is rendered on the site.
+- **Exit:** Rendered `/The-Last-Light` shows no editorial markup in Author's Note or Chapter 1; screenshots captured as evidence.
+- **Risk:** low
+- **Blocked by:** none — this is the recommended next implementation slice
+- **Recommended because:** highest-ROI fix identified by UI/UX audit; removes the strongest negative trust signal.

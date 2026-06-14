@@ -106,6 +106,84 @@ as_of: 2026-06-04T09:35:00+02:00
 Notes: The older The_Last_Light_Manuscript.docx remains in the v2 repo but is not treated as the active source. This evidence was merged from /home/ff/Documents/Projects/the-last-light-v2 on 2026-06-14.
 ```
 
+## EV-2026-06-14-006: Agent-swarm analysis produced course and slide maps
+
+```yaml
+ID: EV-2026-06-14-006
+Files:
+  - g.Presentations/workspaces/analysis/
+  - g.Presentations/workspaces/courses/COURSE_MAP.md
+  - g.Presentations/workspaces/slides/SLIDE_MAP.md
+Title: Agent swarm analyzed extracted presentations and proposed course/slide architecture
+Source/System: AgentSwarm | coder subagent
+Action: Launched 8 parallel coder subagents, one per extracted Markdown file, to produce structured analyses; then a lead synthesis subagent merged them into COURSE_MAP.md and SLIDE_MAP.md.
+Shows:
+  - 8 per-presentation analysis files exist
+  - COURSE_MAP.md lists 10 proposed courses with priorities, audiences, and dependencies
+  - SLIDE_MAP.md lists 14 proposed decks with quick-win and needs-visual-review flags
+  - cross-cutting themes mapped to The Last Light book themes
+  - merge/consolidation recommendations documented
+Proves:
+  - extracted assets are ready for downstream course/slide development
+  - a human-reviewable plan exists before building any new deck
+Type: docs-render-verification
+as_of: 2026-06-14T19:50:00+02:00
+Notes: Maps are based on extracted text only; visuals, diagrams, and speaker notes were not available to the swarm.
+```
+
+## EV-2026-06-14-005: Presentations retrieved, deduplicated, and catalogued
+
+```yaml
+ID: EV-2026-06-14-005
+Files:
+  - g.Presentations/originals/
+  - g.Presentations/curated/
+  - g.Presentations/CATALOG.md
+  - g.Presentations/CHECKSUMS.sha256
+  - g.Presentations/scripts/extract.py
+  - g.Presentations/extracted/
+Title: Windows presentation assets copied into project and prepared for agent analysis
+Source/System: cifs-utils | rsync | sha256sum | python-pptx | pdftotext
+Action: Mounted //192.168.122.204/Presentations with presentationshare credentials, copied 11 files preserving original tree, created deduplicated curated set of 8 files, generated catalog and checksums, extracted Markdown text from all curated assets.
+Shows:
+  - 11 presentation files copied to g.Presentations/originals/
+  - 8 curated files after deduplication
+  - sha256 checksums verify curated copies match originals
+  - extracted Markdown files exist for each curated asset
+  - deduplication decisions documented in CATALOG.md
+Proves:
+  - presentation assets are now durably stored in the project
+  - duplicates were resolved according to the Windows agent handoff rules
+  - assets are ready for agent-swarm course/slide development
+Type: source-data
+as_of: 2026-06-14T19:45:00+02:00
+Notes: Original folder structure preserved; related-format pairs and versioned pair kept in curated set pending content review.
+```
+
+## EV-2026-06-14-004: SMB share access attempt blocked by authentication failure
+
+```yaml
+ID: EV-2026-06-14-004
+Files:
+  - docs/evidence/2026-06-14-presentation-smb-access/HANDOFF_to_Windows_Agent.md
+  - docs/evidence/2026-06-14-presentation-smb-access/mount_attempt.log
+Title: Presentation SMB share reachable but not accessible
+Source/System: shell | cifs-utils | smbclient
+Action: Attempted to mount //192.168.122.204/Presentations from Fedora 44 using the credentials supplied by the user.
+Shows:
+  - share host is reachable via ICMP (TTL 128, ~0.34 ms RTT)
+  - SMB port 445 responds
+  - guest/anonymous access denied (NT_STATUS_ACCESS_DENIED)
+  - provided credentials failed SMB session setup (NT_STATUS_LOGON_FAILURE)
+  - repeated attempts resulted in NT_STATUS_ACCOUNT_LOCKED_OUT
+Proves:
+  - presentation retrieval is currently blocked on the Windows side, not the network path
+  - Windows agent intervention is required to unlock account and provide correct credentials or mount options
+Type: integration
+as_of: 2026-06-14T19:30:00+02:00
+Notes: Password/PIN value is intentionally omitted from this log for security. The Windows agent handoff document contains the request for corrected access details.
+```
+
 ## EV-2026-06-04-002: Dutch/Flemish sample gate draft verification (from the-last-light-v2)
 
 ```yaml
@@ -130,4 +208,42 @@ Proves:
 Type: source-data
 as_of: 2026-06-04T09:50:00+02:00
 Notes: This evidence was merged from /home/ff/Documents/Projects/the-last-light-v2 on 2026-06-14.
+```
+
+## EV-2026-06-14-005: UI/UX audit of The Last Light Docsify site
+
+```yaml
+ID: EV-2026-06-14-005
+Files:
+  - Evidence/01-ui-ux-audit-2026-06-14/01-coverpage-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/02-bookpage-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/03-chapter1-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/04-chapter1-scrolled-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/05-nl-coverpage-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/06-coverpage-mobile.png
+  - Evidence/01-ui-ux-audit-2026-06-14/07-bookpage-mobile.png
+  - Evidence/01-ui-ux-audit-2026-06-14/08-menu-mobile.png
+  - Evidence/01-ui-ux-audit-2026-06-14/10-sidebar-forced-open-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/11-404-page-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/12-public-live-coverpage-desktop.png
+  - Evidence/01-ui-ux-audit-2026-06-14/README.md
+  - docs/ui-ux/last-light-site-audit-2026-06-14.md
+Title: UI/UX audit of The Last Light Docsify site
+Source/System: Kimi WebBridge | Playwright viewport emulation
+Action: Inspected local and public site with desktop and mobile viewports; tested navigation, search, language switcher, and 404 behavior.
+Shows:
+  - site is structurally sound and responsive
+  - coverpage is clear but sparse
+  - search returns relevant results
+  - mobile menu is functional
+  - visible editorial markup in Author's Note
+  - Dutch route shows English content and unstyled CTAs
+  - 404 page is bare
+  - sidebar labels are truncated and all-caps
+Proves:
+  - the site is functional but not launch-ready as a book landing page
+  - the highest-ROI next slice is scrubbing visible editorial markup (BL-012 / NA-8)
+Type: docs-render-verification
+as_of: 2026-06-14T19:50:00+02:00
+Notes: 11 evidence files total. Mobile screenshots used Playwright because Kimi WebBridge cannot resize the user's real browser window.
 ```

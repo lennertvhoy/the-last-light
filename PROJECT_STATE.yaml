@@ -56,6 +56,42 @@ flemish_market_adaptation:
     - docs/evidence/2026-06-04-bootstrap-docx-audit/
     - docs/evidence/2026-06-04-dutch-sample-gate/
 
+presentations:
+  source_share: //192.168.122.204/Presentations
+  source_host: 192.168.122.204
+  source_path_on_windows: C:\Users\lenne\PresentationBackup
+  expected_count: 11
+  actual_count: 11
+  expected_formats:
+    - .ppt
+    - .pptx
+    - .pdf
+  destination_path: g.Presentations/
+  status: copied_and_deduplicated
+  blocker: null
+  deduplication_rules:
+    - exact_duplicate: AI-Driven Development.pdf appears three times (Desktop, Documents, Downloads); kept one copy from Documents
+    - older_version: "Digitale dubbelgangers_ wanneer AI zelf initiatief neemt.pptx" — kept Documents copy, excluded older Desktop/Presentaties copy from curated
+    - related_formats: AI-20251103_lenny_remix.pptx and .pdf kept as distinct assets for review
+    - versioned_pair: StateDD v2_... vs StateDD_ Een Project-OS... — both kept; v2 flagged as likely newer, base version kept as possibly distinct talk
+  curated_files: 8
+  originals_preserved: true
+  extracted_text: true
+  extraction_script: g.Presentations/scripts/extract.py
+  agent_swarm_analysis: true
+  agent_swarm_outputs:
+    - g.Presentations/workspaces/analysis/
+    - g.Presentations/workspaces/courses/COURSE_MAP.md
+    - g.Presentations/workspaces/slides/SLIDE_MAP.md
+  evidence:
+    - docs/evidence/2026-06-14-presentation-smb-access/
+    - g.Presentations/CATALOG.md
+    - g.Presentations/CHECKSUMS.sha256
+    - g.Presentations/workspaces/courses/COURSE_MAP.md
+    - g.Presentations/workspaces/slides/SLIDE_MAP.md
+  next_action_agent_id: NA-17
+  next_action: user review of COURSE_MAP.md and SLIDE_MAP.md
+
 site:
   generator: Docsify
   entry_point: index.html
@@ -67,6 +103,17 @@ site:
   language_switcher: true
   known_stale:
     - nl/ translation does not match canonical manuscript
+  audit:
+    status: completed_2026-06-14
+    report: docs/ui-ux/last-light-site-audit-2026-06-14.md
+    evidence: Evidence/01-ui-ux-audit-2026-06-14/
+    verdict: functional_not_launch_ready
+    top_blockers:
+      - visible editorial markup in rendered manuscript
+      - Dutch route broken/stale
+      - bare 404 page
+      - weak publisher/media path
+      - sidebar labels truncated and all-caps
 
 build:
   scripts:
@@ -120,8 +167,39 @@ risks:
     likelihood: possible
     impact: low
     mitigation: regenerate _sidebar.md with f.Scripts/generate-sidebar.py after heading edits
+  - id: R4
+    title: Presentation assets retrieved but not yet transformed into courses/slides
+    likelihood: confirmed
+    impact: medium
+    mitigation: Agent-swarm analysis slice (NA-7) will produce course and slide outlines; human review gates acceptance
+  - id: R5
+    title: StateDD versioned presentation pair may duplicate content
+    likelihood: possible
+    impact: low
+    mitigation: Keep both files in curated set; agent-swarm review will compare and recommend keep/archive/merge
+  - id: R6
+    title: Extracted text may miss images, diagrams, or speaker intent
+    likelihood: confirmed
+    impact: low
+    mitigation: Note limitation in extracted Markdown; retain original PPTX/PDF assets for visual reference
+  - id: R7
+    title: Visible editorial markup in published manuscript undermines trust
+    likelihood: confirmed
+    impact: high
+    mitigation: Scrub The-Last-Light.md of `* edit:`, TODO, and VERIFY markers before next render
+  - id: R8
+    title: Dutch route appears broken to visitors
+    likelihood: confirmed
+    impact: medium
+    mitigation: Hide or properly deprecate /nl/ until a real translation is ready
+  - id: R9
+    title: Site lacks publisher/media discovery path
+    likelihood: confirmed
+    impact: medium
+    mitigation: Add /publisher route and link it from coverpage (BL-014)
 
 unknowns:
   - exact word count of canonical manuscript
   - whether all existing GitHub workflow secrets/permissions remain valid
   - desired final disposition of legacy archive (keep vs. delete)
+  - which presentations map to which course modules or book chapters

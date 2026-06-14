@@ -4,6 +4,184 @@ Append-only history. Each entry records what changed, why, and what evidence exi
 
 ---
 
+## 2026-06-14 — UI/UX audit of The Last Light Docsify site
+
+**Scope:** Perform a browser-based UI/UX review of the local and public Docsify site, capture evidence, and update StateDD docs with findings and recommended next slice.
+
+**What changed:**
+- Started local Docsify server on port 3456.
+- Inspected desktop and mobile viewports using Kimi WebBridge and Playwright viewport emulation.
+- Captured 11 evidence screenshots in `Evidence/01-ui-ux-audit-2026-06-14/`.
+- Wrote full audit report at `docs/ui-ux/last-light-site-audit-2026-06-14.md`.
+- Updated `STATUS.md`, `PROJECT_STATE.yaml`, `BACKLOG.md`, `NEXT_ACTIONS.md`, `docs/EVIDENCE_LOG.md`.
+- Added backlog items BL-012 through BL-020 derived from audit findings.
+- Proposed NA-8 (BL-012) as the next implementation slice: scrub visible editorial markup from the canonical manuscript.
+
+**Evidence:**
+- `Evidence/01-ui-ux-audit-2026-06-14/README.md`
+- `docs/ui-ux/last-light-site-audit-2026-06-14.md`
+- `docs/EVIDENCE_LOG.md` EV-2026-06-14-005
+
+**Verification performed:**
+- Confirmed local server returns HTTP 200.
+- Confirmed public GitHub Pages site matches local build.
+- Confirmed search returns relevant results for "conscious delegation".
+- Confirmed mobile menu opens and content reflows at 390 px width.
+- Documented visible editorial markup, broken Dutch route, bare 404 page, and sidebar typography issues.
+
+**Remaining risks:**
+- Manuscript cleanup (BL-012) must be completed before the site can be promoted as a serious book landing page.
+- Dutch route (BL-015) and publisher path (BL-014) need user decisions.
+
+**Next action:** NA-8 — scrub visible editorial markup from `The-Last-Light.md`.
+
+---
+
+## 2026-06-14 — Complete presentation retrieval, agent-swarm analysis, and course/slide maps
+
+**Scope:** Finish the full pipeline from SMB retrieval through agent-swarm analysis to course/slide master maps for The Last Light presentation assets.
+
+**What changed:**
+- Mounted `//192.168.122.204/Presentations` using `presentationshare` credentials after Windows agent unlocked access.
+- Copied 11 files into `g.Presentations/originals/` preserving source tree.
+- Created `g.Presentations/curated/` with 8 deduplicated files:
+  - kept one `AI-Driven Development.pdf` (Documents copy)
+  - kept newer/larger `Digitale dubbelgangers_...` from Documents
+  - kept both related-format remix files
+  - kept both StateDD versions pending content review
+- Generated `g.Presentations/CATALOG.md`, `g.Presentations/CHECKSUMS.sha256`, and `g.Presentations/scripts/extract.py`.
+- Extracted Markdown text for all 8 curated assets into `g.Presentations/extracted/`.
+- Launched an AgentSwarm of 8 coder subagents, one per extracted file, producing `g.Presentations/workspaces/analysis/*.analysis.md`.
+- Delegated a synthesis subagent to merge analyses into:
+  - `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 proposed courses)
+  - `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 proposed decks)
+- Updated StateDD files:
+  - `STATUS.md` combined with concurrent UI/UX audit latest changes.
+  - `PROJECT_STATE.yaml` presentations section marked `copied_and_deduplicated` with swarm outputs and next action NA-17.
+  - `NEXT_ACTIONS.md` P0 [BL-011] agent ID corrected to NA-17 to avoid collision with UI/UX audit IDs.
+  - `BACKLOG.md` BL-011 status updated to analysis complete.
+  - `docs/EVIDENCE_LOG.md` entries EV-2026-06-14-005 and EV-2026-06-14-006 added.
+
+**Evidence:**
+- `g.Presentations/originals/`
+- `g.Presentations/curated/`
+- `g.Presentations/CATALOG.md`
+- `g.Presentations/CHECKSUMS.sha256`
+- `g.Presentations/extracted/`
+- `g.Presentations/workspaces/analysis/`
+- `g.Presentations/workspaces/courses/COURSE_MAP.md`
+- `g.Presentations/workspaces/slides/SLIDE_MAP.md`
+- `docs/EVIDENCE_LOG.md` entries EV-2026-06-14-005 and EV-2026-06-14-006
+
+**Verification performed:**
+- Confirmed SMB mount succeeded with new credentials.
+- Confirmed `rsync` copied 159,857,934 bytes without errors.
+- Verified curated file checksums match originals.
+- Confirmed extraction script produced Markdown for all 8 curated assets.
+- Confirmed 8 analysis files and 2 synthesis map files exist and are non-empty.
+- Re-ran `python3 scripts/check_state_docs.py --bootstrap-gate` — PASSED.
+
+**Remaining risks:**
+- Agent-swarm analysis based on extracted text only; visuals/diagrams may be missed.
+- StateDD versioned pair and related-format pairs need human content review.
+- Course/slide maps need user approval before building any deck.
+
+**Next action:** NA-17 — user reviews COURSE_MAP.md and SLIDE_MAP.md and chooses the first build target.
+
+---
+
+## 2026-06-14 — Retrieve, deduplicate, and prepare presentation assets for agent-swarm development
+
+**Scope:** Mount the corrected SMB share, copy 11 presentations into the project, apply deduplication rules, extract text, and prepare the StateDD workflow for course/slide development.
+
+**What changed:**
+- Mounted `//192.168.122.204/Presentations` using credentials for `presentationshare`.
+- Created `g.Presentations/` directory structure:
+  - `originals/` — exact mirror of the SMB share tree (11 files)
+  - `curated/` — deduplicated canonical set (8 files)
+  - `archive/older-versions/` — reserved for removed older copies
+  - `meta/` — Windows agent HANDOFF and MANIFEST
+  - `scripts/extract.py` — PPTX/PDF to Markdown extractor
+  - `extracted/` — Markdown text for all curated assets
+  - `workspaces/courses/` and `workspaces/slides/` — empty outputs directories
+  - `CATALOG.md` — inventory and deduplication decisions
+  - `CHECKSUMS.sha256` — integrity checksums
+- Applied deduplication rules:
+  - Kept one `AI-Driven Development.pdf` (Documents copy as canonical).
+  - Kept newer/larger `Documents/Digitale dubbelgangers_...`, excluded older Desktop/Presentaties copy from curated.
+  - Kept both `AI-20251103_lenny_remix.pptx` and `.pdf` as related formats.
+  - Kept both StateDD versions for content review; v2 flagged as likely newer.
+- Updated StateDD files:
+  - `STATUS.md` with retrieval completion.
+  - `PROJECT_STATE.yaml` presentations section now `copied_and_deduplicated`; blocker removed; risks R4-R6 updated/added.
+  - `NEXT_ACTIONS.md` P0 now NA-7 (agent-swarm analysis).
+  - `BACKLOG.md` BL-011 acceptance criteria expanded.
+  - `docs/EVIDENCE_LOG.md` entry EV-2026-06-14-005 added.
+
+**Evidence:**
+- `g.Presentations/originals/`
+- `g.Presentations/curated/`
+- `g.Presentations/CATALOG.md`
+- `g.Presentations/CHECKSUMS.sha256`
+- `g.Presentations/extracted/`
+- `docs/EVIDENCE_LOG.md` entry EV-2026-06-14-005
+
+**Verification performed:**
+- Confirmed SMB mount succeeded and all 11 files listed.
+- Confirmed `rsync` copied 159,857,934 bytes without errors.
+- Verified `curated/` file checksums match corresponding `originals/` checksums.
+- Confirmed `extract.py` produced Markdown for all 8 curated assets.
+- Re-ran `python3 scripts/check_state_docs.py --bootstrap-gate` — PASSED.
+
+**Remaining risks:**
+- Agent-swarm analysis depends on extracted text and may miss visuals.
+- StateDD versioned pair may duplicate content; needs review.
+- Related-format PDF/PPTX pairs may need consolidation.
+
+**Next action:** NA-7 — agent-swarm analysis of extracted presentations to produce course and slide maps.
+
+---
+
+## 2026-06-14 — Attempt to retrieve presentation assets from Windows SMB share
+
+**Scope:** Mount `\\192.168.122.204\Presentations`, copy the 11 presentations into the project, apply the Windows agent's deduplication rules, and prepare the StateDD workflow for course/slide development.
+
+**What changed:**
+- Created evidence directory `docs/evidence/2026-06-14-presentation-smb-access/`.
+- Wrote handoff request for the Windows agent: `HANDOFF_to_Windows_Agent.md`.
+- Recorded sanitized mount attempt log: `mount_attempt.log`.
+- Updated `STATUS.md` with the current blocker.
+- Updated `PROJECT_STATE.yaml` with a `presentations` section and risk R4.
+- Added backlog item `[BL-011] Retrieve and integrate presentation assets`.
+- Added active item `P0 [BL-011] Restore SMB access to Windows presentation share`.
+- Appended evidence entry `EV-2026-06-14-004` to `docs/EVIDENCE_LOG.md`.
+
+**What was NOT done:**
+- Files were not copied because SMB authentication failed and the attempted account was locked out.
+- Deduplication was not applied.
+- Agent-swarm slide/course analysis was not started.
+
+**Evidence:**
+- `docs/evidence/2026-06-14-presentation-smb-access/HANDOFF_to_Windows_Agent.md`
+- `docs/evidence/2026-06-14-presentation-smb-access/mount_attempt.log`
+- `docs/EVIDENCE_LOG.md` entry EV-2026-06-14-004
+
+**Verification performed:**
+- Confirmed share host reachable via ICMP.
+- Confirmed SMB port 445 responds.
+- Confirmed guest/anonymous access denied.
+- Confirmed supplied credentials fail with `NT_STATUS_LOGON_FAILURE`.
+- Confirmed repeated attempts resulted in `NT_STATUS_ACCOUNT_LOCKED_OUT`.
+- Re-ran `python3 scripts/check_state_docs.py --bootstrap-gate` — PASSED.
+
+**Remaining risks:**
+- SMB access blocked until Windows agent unlocks account and provides corrected credentials.
+- The 11 presentations remain on the Windows host only.
+
+**Next action:** NA-6 — Windows agent provides corrected credentials or mount options.
+
+---
+
 ## 2026-06-14 — Import latest manuscript and integrate StateDD workflow
 
 **Scope:** Update `the-last-light` to the latest author-ready manuscript from `ff-vault/` and overlay the StateDD v2 workflow.
