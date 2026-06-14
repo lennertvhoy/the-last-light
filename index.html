@@ -23,6 +23,32 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
   <link rel="stylesheet" href="portia-theme.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- AI-Driven Development prompt-copy site styles -->
+  <style>
+    .prompt-copy-btn {
+      background: var(--theme-color, #ea6f5a);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .prompt-copy-btn:hover {
+      opacity: 0.9;
+    }
+    .prompt-copy-feedback {
+      margin-left: 8px;
+      font-weight: bold;
+      color: var(--theme-color, #ea6f5a);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .prompt-copy-feedback.visible {
+      opacity: 1;
+    }
+  </style>
 </head>
 
 <body>
@@ -80,6 +106,11 @@
         nextText: 'Next →',
         crossChapter: true,
         crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: 'Kopieer',
+        successText: 'Gekopieerd!',
+        errorText: 'Fout bij kopiëren',
       },
       plugins: [
         function (hook, vm) {
@@ -154,6 +185,35 @@
             window.addEventListener('scroll', updateProgress, { passive: true });
             updateProgress();
           });
+        },
+        // Dutch prompt-copy buttons for the AI-Driven Development workshop page.
+        function (hook) {
+          function bindPromptCopyButtons() {
+            document.querySelectorAll('.prompt-copy-btn').forEach(function (btn) {
+              if (btn.dataset.bound) return;
+              btn.dataset.bound = 'true';
+              btn.addEventListener('click', function () {
+                var slug = btn.dataset.prompt;
+                var codeBlock = btn.parentElement.nextElementSibling;
+                while (codeBlock && codeBlock.tagName !== 'PRE') {
+                  codeBlock = codeBlock.nextElementSibling;
+                }
+                if (!codeBlock) return;
+                var text = codeBlock.textContent.trim();
+                navigator.clipboard.writeText(text).then(function () {
+                  var feedback = document.querySelector('.prompt-copy-feedback[data-prompt="' + slug + '"]');
+                  if (feedback) {
+                    feedback.classList.add('visible');
+                    setTimeout(function () { feedback.classList.remove('visible'); }, 2000);
+                  }
+                }).catch(function (err) {
+                  console.error('Copy failed', err);
+                  btn.textContent = 'Fout bij kopiëren';
+                });
+              });
+            });
+          }
+          hook.doneEach(bindPromptCopyButtons);
         },
       ],
     };

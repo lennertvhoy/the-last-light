@@ -229,7 +229,7 @@ risks:
     likelihood: confirmed
     impact: high
     status: mitigated_2026-06-14
-    mitigation: Scrubbed The-Last-Light.md of visible `* edit:` notes and inline AI-assistance scaffolding; preserved substantive concerns for author review in Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md.
+    mitigation: Scrubbed The-Last-Light.md of visible `* edit:` notes and inline AI-assistance scaffolding; preserved substantive concerns for author review in Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md. Verified locally and on public GitHub Pages after clearing browser storage/cache.
   - id: R8
     title: Dutch route appears broken to visitors
     likelihood: confirmed

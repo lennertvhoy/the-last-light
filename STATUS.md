@@ -3,7 +3,7 @@
 **Updated At:** 2026-06-14
 **Mode:** bootstrap
 **Repo:** `/home/ff/Documents/Projects/the-last-light` on branch `main`
-**Git HEAD:** `73b775d`
+**Git HEAD:** `4f0b616`
 
 ## Current Truth
 
@@ -21,6 +21,7 @@
 - Removed 8 internal author notes (`* edit:` comments and one inline AI-assistance disclosure) from the public Author's Note.
 - Preserved removed text and substantive concerns in `Evidence/02-editorial-markup-scrub-2026-06-14/03-removed-editorial-notes.md`.
 - Verified local Docsify render on `http://127.0.0.1:3456/` and confirmed no `* edit:`, `TODO:`, or `FIXME:` strings remain in the rendered page body.
+- Verified public GitHub Pages site on `https://lennertvhoy.github.io/the-last-light/` after clearing browser storage/cache; public render now matches the local clean render.
 - Captured before/after browser screenshots with Kimi WebBridge.
 - Dispositioned untracked directories: moved `docs/evidence/2026-06-14-presentation-smb-access/` into the new evidence folder; committed `g.Presentations/` in place; quarantined incomplete prompt-copy site work (`Evidence/03-prompt-copy-site/` and `docs/ai-driven-dev/`) because it belongs to BL-021/NA-18 and its status is unknown.
 - Updated StateDD files and evidence log (EV-2026-06-14-009).

@@ -8,7 +8,7 @@ je op slides kunt zetten. Klik op **Kopieer prompt** om de volledige tekst naar
 je klembord te kopiëren.
 
 
-> **Laatst gesynchroniseerd:** 2026-06-14T18:31:34Z  
+> **Laatst gesynchroniseerd:** 2026-06-14T18:37:39Z  
 > **Canonieke bron:** [`prompts/`](../../prompts/) in deze repo.
 
 ## Fase-navigatie
@@ -695,71 +695,3 @@ Deze ruimte is gereserveerd voor deelnemersprojecten die voortkomen uit de
 workshop. De eerste kandidaat is Caners StateDD-gebaseerd programma — details
 volgen zodra deze beschikbaar zijn.
 
-
-
-<style>
-.prompt-copy-btn {
-  background: var(--theme-color, #ea6f5a);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.prompt-copy-btn:hover {
-  opacity: 0.9;
-}
-.prompt-copy-feedback {
-  margin-left: 8px;
-  font-weight: bold;
-  color: var(--theme-color, #ea6f5a);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.prompt-copy-feedback.visible {
-  opacity: 1;
-}
-</style>
-
-<script>
-(function () {
-  function setupCopyButtons() {
-    document.querySelectorAll('.prompt-copy-btn').forEach(function (btn) {
-      if (btn.dataset.bound) return;
-      btn.dataset.bound = 'true';
-      btn.addEventListener('click', function () {
-        var slug = btn.dataset.prompt;
-        var codeBlock = btn.parentElement.nextElementSibling;
-        while (codeBlock && codeBlock.tagName !== 'PRE') {
-          codeBlock = codeBlock.nextElementSibling;
-        }
-        if (!codeBlock) return;
-        var text = codeBlock.textContent.replace(/^text
-?/, '').trim();
-        navigator.clipboard.writeText(text).then(function () {
-          var feedback = document.querySelector('.prompt-copy-feedback[data-prompt="' + slug + '"]');
-          if (feedback) {
-            feedback.classList.add('visible');
-            setTimeout(function () { feedback.classList.remove('visible'); }, 2000);
-          }
-        }).catch(function (err) {
-          console.error('Copy failed', err);
-          btn.textContent = 'Fout bij kopiëren';
-        });
-      });
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupCopyButtons);
-  } else {
-    setupCopyButtons();
-  }
-  // Docsify re-renders content on route changes; re-bind after each render.
-  if (window.$docsify && window.$docsify.plugins) {
-    window.$docsify.plugins.push(function (hook) {
-      hook.doneEach(setupCopyButtons);
-    });
-  }
-})();
-</script>
