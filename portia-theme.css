@@ -552,57 +552,69 @@ section.cover {
 }
 
 section.cover .cover-main {
-  max-width: 680px;
+  max-width: 720px;
+  padding: 2rem 1.25rem;
 }
 
 section.cover h1 {
   font-family: var(--mono);
   letter-spacing: -0.03em;
   font-weight: 700;
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--text-main);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.05;
 }
 
 section.cover h3 {
   color: var(--text-muted);
-  font-weight: 300;
-  font-style: italic;
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 1.35rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.4;
 }
 
 section.cover blockquote {
   border-left: none;
   background: none;
+  margin: 1.75rem 0;
 }
 
 section.cover blockquote p {
   color: var(--accent);
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   line-height: 1.5;
 }
 
 section.cover p {
   color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 /* Cover page CTA buttons */
+section.cover .cover-main>p:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
 section.cover .cover-main>p:last-child a {
   border: 1px solid var(--accent) !important;
   color: var(--text-main) !important;
   background: transparent !important;
   border-radius: 10px;
-  padding: 0.65rem 1.8rem !important;
+  padding: 0.75rem 2rem !important;
   font-size: 0.95rem;
   transition: all 0.25s ease;
   text-decoration: none !important;
   border-bottom: none !important;
 }
 
+/* Primary CTA: read the book */
 section.cover .cover-main>p:last-child a:first-child {
   background: var(--accent) !important;
   color: #fff !important;
@@ -616,22 +628,68 @@ section.cover .cover-main>p:last-child a:first-child:hover {
   box-shadow: 0 6px 24px var(--accent-glow);
 }
 
-section.cover .cover-main>p:last-child a:last-child:hover {
-  background: #8b83ff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px var(--accent-glow);
+/* Secondary CTA: view on GitHub */
+section.cover .cover-main>p:last-child a:last-child {
+  background: transparent !important;
+  color: var(--text-main) !important;
+  font-weight: 500;
+  border-color: var(--border-hover) !important;
 }
 
-section.cover .cover-main>p:last-child a:last-child {
-  background: var(--accent) !important;
-  color: #fff !important;
-  font-weight: 600;
+section.cover .cover-main>p:last-child a:last-child:hover {
+  background: var(--accent-soft) !important;
   border-color: var(--accent) !important;
+  transform: translateY(-2px);
 }
 
 /* Hide the broken image reference on cover */
 section.cover img[alt="The Last Light"] {
   display: none;
+}
+
+/* Cover mobile polish */
+@media (max-width: 640px) {
+  section.cover .cover-main {
+    padding: 1.5rem 1rem;
+  }
+
+  section.cover h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  section.cover h3 {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  section.cover blockquote {
+    margin: 1.25rem 0;
+  }
+
+  section.cover blockquote p {
+    font-size: 1.1rem;
+  }
+
+  section.cover p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  section.cover .cover-main>p:last-child {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  section.cover .cover-main>p:last-child a {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* The GitHub corner is oversized and distracting on small screens */
+  .github-corner {
+    display: none !important;
+  }
 }
 
 
@@ -721,23 +779,30 @@ html {
   }
 
   .markdown-section {
-    padding: 1.5rem 1.1rem 2.5rem;
+    padding: 1.5rem 1.1rem 5.5rem 3.6rem;
     font-size: 1rem;
   }
 
   .markdown-section h1 {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    word-break: break-word;
   }
 
   .markdown-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .sidebar-toggle {
     bottom: 16px !important;
     left: 16px !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .sidebar-toggle .sidebar-toggle-button {
+    width: 18px !important;
+    height: 12px !important;
   }
 }
 

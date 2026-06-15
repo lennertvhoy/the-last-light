@@ -14,5 +14,5 @@ This is a book about AI, agency, and conscious delegation — about knowing what
 
 ---
 
-[Start Reading](The-Last-Light.md)
+[Read the book](The-Last-Light.md)
 [View on GitHub](https://github.com/lennertvhoy/the-last-light)
