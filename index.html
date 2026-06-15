@@ -21,7 +21,7 @@
     content="An open-source book on AI, agency, and conscious delegation." />
 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" />
-  <link rel="stylesheet" href="portia-theme.css" />
+  <link rel="stylesheet" href="portia-theme.css?v=3" />
   <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- AI-Driven Development prompt-copy site styles -->
@@ -127,6 +127,25 @@
           });
 
           hook.doneEach(function () {
+            // Fix Docsify's auto-derived all-caps page title and sidebar link text
+            var sectionH1 = document.querySelector('.markdown-section h1');
+            if (sectionH1) {
+              var pageTitle = sectionH1.innerText.trim();
+              var siteName = 'The Last Light';
+              if (pageTitle && pageTitle !== siteName) {
+                document.title = pageTitle + ' — ' + siteName;
+              } else {
+                document.title = siteName;
+              }
+            }
+
+            document.querySelectorAll('.sidebar-nav li a').forEach(function (a) {
+              if (a.innerText === 'THE LAST LIGHT') {
+                a.innerText = 'The Last Light';
+              }
+              a.title = a.innerText;
+            });
+
             // Language Switcher injection
             var nav = document.querySelector('.app-nav');
             if (!nav) {

@@ -22,7 +22,7 @@
   --mono: 'JetBrains Mono', monospace;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --theme-color: #7c73ff;
-  --sidebar-width: 300px;
+  --sidebar-width: 340px;
 
   /* Catppuccin Mocha-inspired pastels */
   --cat-rosewater: #f5e0dc;
@@ -125,6 +125,9 @@ body.sticky,
   transition: all 0.15s ease;
   line-height: 1.45;
   display: block;
+  white-space: normal;
+  text-overflow: clip;
+  text-transform: none;
 }
 
 .sidebar ul li.active>a,
