@@ -33,12 +33,12 @@
 
 This is an **open intellectual project** — not just open-source code, but open-source ideas. Contributions, critiques, and forks are welcome.
 
-This repository now uses a **State Driven Development (StateDD)** workflow. Coding agents should start every session by reading `AGENTS.md`, `STATUS.md`, `PROJECT_STATE.yaml`, `PROJECT_DNA.yaml`, and `NEXT_ACTIONS.md`.
+This repository now uses **State-Centric Engineering** with the **StateSpec** portable specification. Coding agents should start every session by reading `AGENTS.md`, `STATUS.md`, `PROJECT_STATE.yaml`, `PROJECT_DNA.yaml`, and `NEXT_ACTIONS.md`.
 
 - 📖 [Project README](PROJECT_README.md) — full project documentation
 - 🤝 [Contributing Guide](CONTRIBUTING.md) — how to participate
 - ⚖️ [License](LICENSE) — MIT (code) + CC BY-SA 4.0 (content)
-- 🧭 [StateDD Contract](AGENTS.md) — agent operating rules
+- 🧭 [StateSpec Contract](AGENTS.md) — agent operating rules
 
 
 ---

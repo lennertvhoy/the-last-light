@@ -22,7 +22,7 @@ This manuscript is a work in progress. Rather than claiming certainty, the book 
 * [Project Description](#project-description)
 * [Repository Structure](#repository-structure)
 * [Getting Started: How to Read the Book](#getting-started-how-to-read-the-book)
-* [State Driven Development Workflow](#state-driven-development-workflow)
+* [State-Centric Engineering Workflow](#state-centric-engineering-workflow)
 * [Contributing](#contributing)
 * [Authors and Acknowledgments](#authors-and-acknowledgments)
 * [License](#license)
@@ -42,13 +42,13 @@ This manuscript is a work in progress. Rather than claiming certainty, the book 
 ├── f.Scripts/                     # Project-specific scripts
 │   ├── generate-sidebar.py        # Generate _sidebar.md from The-Last-Light.md
 │   └── combine-book.sh            # Create dated copies in e.Combined-Book/
-├── scripts/                       # StateDD hygiene and audit scripts
+├── scripts/                       # StateSpec hygiene and audit scripts
 │   ├── check_state_docs.py
 │   ├── statedd_doctor.py
 │   ├── statedd_audit.py
 │   └── statedd_handoff.py
-├── prompts/                       # StateDD prompt templates
-├── docs/                          # StateDD evidence and acceptance logs
+├── prompts/                       # StateSpec prompt templates
+├── docs/                          # StateSpec evidence and acceptance logs
 │   ├── EVIDENCE_LOG.md
 │   ├── ACCEPTANCE_FREEZES.md
 │   └── adr/
@@ -75,9 +75,9 @@ npx docsify serve .
 
 Then open http://localhost:3000.
 
-## State Driven Development Workflow
+## State-Centric Engineering Workflow
 
-This repository uses **State Driven Development (StateDD)** to keep project truth explicit and durable.
+This repository uses **State-Centric Engineering** and the **StateSpec** portable specification to keep project truth explicit and durable.
 
 Coding agents should start every session by reading:
 

@@ -1,4 +1,4 @@
-name: StateDD Validate
+name: StateSpec Validate
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         run: |
           python3 -m py_compile scripts/check_state_docs.py scripts/statedd_handoff.py scripts/statedd_audit.py scripts/statedd_doctor.py
 
-      - name: Validate StateDD docs
+      - name: Validate StateSpec docs
         run: |
           python3 scripts/check_state_docs.py
           python3 scripts/statedd_doctor.py

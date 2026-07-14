@@ -1,7 +1,7 @@
 # Getting Started In 5 Minutes
 
 Use this when you want the shortest safe path from an empty or inherited repo
-to a StateDD-guided coding-agent session.
+to a StateSpec-guided coding-agent session.
 
 For a beginner-friendly diagram and prompt map, see
 `docs/WORKFLOW_FOR_BEGINNERS.md`.

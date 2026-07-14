@@ -30,7 +30,7 @@ Every active item references a backlog ID in the form `### Pn [BL-XXX] ...`.
   - `g.Presentations/workspaces/courses/COURSE_MAP.md` (10 proposed courses)
   - `g.Presentations/workspaces/slides/SLIDE_MAP.md` (14 proposed decks)
 
-### P2 [BL-001] Review and approve StateDD bootstrap baseline
+### P2 [BL-001] Review and approve StateSpec bootstrap baseline
 - **Agent ID:** NA-1
 - **Scope:** User reviews AGENTS.md, STATUS.md, PROJECT_STATE.yaml, PROJECT_DNA.yaml, PROJECT_ADAPTER.yaml, NEXT_ACTIONS.md, BACKLOG.md, WORKLOG.md.
 - **Exit:** User confirms or requests edits; repo_mode updated to `operating` if accepted.

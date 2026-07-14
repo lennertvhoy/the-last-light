@@ -2455,7 +2455,7 @@ That is where we go next.
 
 
 
-# Chapter 14: State Driven Development
+# Chapter 14: State-Centric Engineering
 
 *Part III — Practice*
 
@@ -2485,19 +2485,19 @@ I want to tell you there is a version of this story where none of that happens. 
 
 What I can offer you is something more practical than elimination. I can offer you a way to make interruptions cost less.
 
-State Driven Development is the practice of treating your attention as the most limited resource you have. Not your time. Your attention. More precisely: your capacity to hold a coherent, loaded mental model across the conditions of real work — the notifications, the fatigue, the student in the doorway, the tool that offers to finish your thought before you have fully thought it.
+State-Centric Engineering is the practice of treating your attention as the most limited resource you have. Not your time. Your attention. More precisely: your capacity to hold a coherent, loaded mental model across the conditions of real work — the notifications, the fatigue, the student in the doorway, the tool that offers to finish your thought before you have fully thought it.
 
 In Chapter 8 we talked about state as the soul of agency — continuity, memory under pressure, identity across interruption [^98^]. We talked about Epictetus's discipline of assent, about Cowan's four chunks of working memory, about the time it takes to recover from an interruption — research suggests this can be substantial [^99^][^3^]. That was the theory. This chapter is the practice. State is not mystical. It is a practical capacity that can be built, protected, and recovered.
 
 ---
 
-## What State Driven Development Means
+## What State-Centric Engineering Means
 
 I borrowed the name from software development. In state-driven programming, a system's behavior is determined by its current state and the transitions between states. A door can be open or closed. An order can be pending, shipped, or delivered. The system always knows where it is, and it only accepts certain actions in certain states.
 
 Your mind works the same way, except you do not usually program it deliberately. You let external events trigger state transitions at random. A notification arrives, and your state shifts from deep work to reactive mode — not because you chose the transition, but because the stimulus found the gate unguarded.
 
-State Driven Development means becoming the programmer of your own attention. It means designing your work so that you know what state you are in, you protect the transitions that matter, and you build recovery protocols for when the system crashes.
+State-Centric Engineering means becoming the programmer of your own attention. It means designing your work so that you know what state you are in, you protect the transitions that matter, and you build recovery protocols for when the system crashes.
 
 This is not productivity culture. I am not offering you morning routines of billionaires or the seven habits of highly effective people. I am offering you a systems approach to a finite resource, grounded in what we know about working memory, attention residue, and the specific challenges of working with AI.
 
@@ -2635,7 +2635,7 @@ Physical movement helps too. If state has collapsed completely, I take a five-mi
 
 I want to be honest about what this looks like in real life, because frameworks are easy and execution is hard.
 
-I follow the State Driven Development framework maybe sixty percent of the time. The other forty percent, I am as fragmented as anyone else. I check my phone during deep-state blocks. I let Slack stay open "just in case." I ask Claude for answers when I should be asking for questions. I skip the pre-work ritual because I am "in a hurry" and then spend twenty minutes wondering what I was doing.
+I follow the State-Centric Engineering framework maybe sixty percent of the time. The other forty percent, I am as fragmented as anyone else. I check my phone during deep-state blocks. I let Slack stay open "just in case." I ask Claude for answers when I should be asking for questions. I skip the pre-work ritual because I am "in a hurry" and then spend twenty minutes wondering what I was doing.
 
 The phone-in-another-room rule works about eighty percent of the days I try it. The other twenty percent, I retrieve it within the first hour and check something unnecessary. When I notice this — when I catch myself scrolling after retrieving the phone for a legitimate reason — I do not berate myself. I note it, return the phone, and resume. The framework is not a moral code. It is a technical system. Systems have failure modes.
 
@@ -2651,7 +2651,7 @@ What I can say is this: the days when I follow the framework produce better work
 
 In Chapter 8, we established the theoretical foundation. State is the loaded mental model — continuity, memory under pressure, identity across interruption [^98^]. We looked at the cognitive architecture: four chunks of working memory, the significant time cost of recovering from interruptions, attention residue that compounds across switches [^99^][^3^]. We examined Epictetus's discipline of assent — the gate between external stimulus and internal acceptance [^98^].
 
-State Driven Development is that theory translated into practice. Every practice in this chapter is an application of something we established in Chapter 8:
+State-Centric Engineering is that theory translated into practice. Every practice in this chapter is an application of something we established in Chapter 8:
 
 - Single-tasking protects the four chunks from competition.
 - Time-blocking structures the discipline of assent across your day.
@@ -7511,4 +7511,3 @@ Before citing any source from this guide:
 
 
 \newpage
-

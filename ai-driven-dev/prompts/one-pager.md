@@ -1,6 +1,6 @@
 # AI-Driven Development — Workshop Prompten — Printbare versie
 
-**Laatst gesynchroniseerd:** 2026-06-14T18:37:39Z
+**Laatst gesynchroniseerd:** 2026-07-14T21:43:41Z
 
 ## Snelle link-lijst
 
@@ -80,7 +80,7 @@ Ask only the minimum strategic questions needed:
 terminal-gebaseerde agent.
 **GUI:** plak in de chat van Kimi IDE, GitHub Copilot Chat, Cursor, OpenCode
 GUI, etc.
-De tekst is identiek; beide tracks leiden tot dezelfde StateDD-artefacten.
+De tekst is identiek; beide tracks leiden tot dezelfde StateSpec-artefacten.
 
 
 ```text
@@ -275,7 +275,7 @@ is tool-agnostisch; het claim-ledger is het belangrijkste onderdeel.
 # Evidence README Template
 
 Copy this into every evidence folder as `README.md`. Replace placeholders with
-real values. The claim ledger is the core of executable StateDD.
+real values. The claim ledger is the core of executable StateSpec.
 
 ```markdown
 # Evidence: <slice-title>
@@ -456,14 +456,14 @@ Paste-ready CTO wording
 
 **Fase:** Override / Governance
 
-**Wanneer gebruik je dit?** Gebruik dit wanneer de menselijke product owner expliciet een StateDD-regel overschrijft.
+**Wanneer gebruik je dit?** Gebruik dit wanneer de menselijke product owner expliciet een StateSpec-regel overschrijft.
 
 **CLI vs GUI** **CLI/GUI:** plak de override-vraag in de chat en eis dat de agent het
 expliciet opneemt in evidence README en final handoff.
 
 
 ```text
-StateDD rules are mandatory defaults, but the human product owner may explicitly
+StateSpec rules are mandatory defaults, but the human product owner may explicitly
 override a workflow step. The agent must respect a clear human override unless
 the requested action is destructive, illegal, unsafe, unrecoverable, or would
 corrupt project truth.

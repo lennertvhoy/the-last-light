@@ -4,9 +4,14 @@ initialized_on: 2026-06-14
 last_updated: 2026-06-14
 ---
 
-# The Last Light — State Driven Development Contract
+# The Last Light — State-Centric Engineering Contract
 
 **Purpose:** Stable operating contract for *The Last Light* book project: an open-source manuscript published via Docsify and maintained with explicit state, evidence, and short active queues.
+
+Public terminology uses **Stateware** for the category,
+**State-Centric Engineering** for the method, and **StateSpec** for the portable
+specification. Existing `statedd-*` filenames, workflow IDs, schema/version
+values, and historical artifacts remain compatibility identifiers.
 
 This repository supports two modes:
 - `bootstrap` for discovery and baseline creation
@@ -41,7 +46,7 @@ These rules apply in all modes:
 
 ## Human Override Rule — Strong Defaults, Not a Prison
 
-StateDD rules are mandatory defaults, but the human product owner may explicitly
+StateSpec rules are mandatory defaults, but the human product owner may explicitly
 override a workflow step. The agent must respect a clear human override unless
 the requested action is destructive, illegal, unsafe, unrecoverable, or would
 corrupt project truth.

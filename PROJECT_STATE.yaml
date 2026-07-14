@@ -1,8 +1,20 @@
 ---
 # PROJECT_STATE.yaml — The Last Light
 # Structured current truth. Update only when truth changes.
-updated_at: 2026-06-14
+updated_at: 2026-07-14
 mode: bootstrap
+
+terminology:
+  status: observed
+  public_category: Stateware
+  engineering_method: State-Centric Engineering
+  portable_specification: StateSpec
+  legacy_public_name: StateDD
+  compatibility:
+    - statedd-prefixed workflow, scripts, schemas, and paths remain valid
+    - presentation filenames and third-party program names remain unchanged
+    - historical sources and evidence retain the terminology used when created
+  decision: docs/adr/0002-stateware-public-naming.md
 
 repo:
   path: /home/ff/Documents/Projects/the-last-light
@@ -117,7 +129,7 @@ ai_driven_dev_rework:
     - g.Presentations/workspaces/ai-driven-dev-rework/INTEGRATED_ACTION_PLAN.md
     - g.Presentations/workspaces/ai-driven-dev-rework/DESIGN_DECISIONS.md
   key_decisions:
-    - hybrid CLI/GUI track: developers default to CLI, non-developers to GUI, same StateDD artifacts
+    - hybrid CLI/GUI track: developers default to CLI, non-developers to GUI, same StateSpec artifacts
     - prompt-copy website to be built on user's existing preferred site (do not rebuild from scratch)
     - 10 screenshot moments tied to canonical prompts
     - Caner StateDD program tracked as community artifact

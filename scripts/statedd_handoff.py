@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Print a read-only StateDD handoff snapshot."""
+"""Print a read-only StateSpec handoff snapshot."""
 
 from __future__ import annotations
 
@@ -87,7 +87,7 @@ def print_list(items: list[str], empty: str = "not found") -> None:
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Print a read-only StateDD handoff snapshot")
+    parser = argparse.ArgumentParser(description="Print a read-only StateSpec handoff snapshot")
     parser.add_argument("--repo", default=str(ROOT), help="Repo root to inspect")
     parser.add_argument(
         "--test-command",
@@ -122,7 +122,7 @@ def main(argv: list[str] | None = None) -> int:
     worktree = "clean" if not short_status.strip() else "dirty"
     changed_files = git_changed_files(repo)
 
-    print("# StateDD Handoff Snapshot")
+    print("# StateSpec Handoff Snapshot")
     print()
     print(f"Generated: {now}")
     print()
@@ -174,7 +174,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.run_audit:
         print()
-        print("## StateDD Audit")
+        print("## StateSpec Audit")
         print()
         audit_script = repo / "scripts" / "statedd_audit.py"
         if audit_script.exists():

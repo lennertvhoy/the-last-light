@@ -11,7 +11,7 @@
 - The previous 35-chapter split-file manuscript has been archived under `archive/legacy-manuscript/`.
 - The Docsify site (`index.html`, `_coverpage.md`, `_sidebar.md`) has been updated to serve the new manuscript.
 - The Dutch translation (`nl/`) remains available but is stale; warnings have been added to `nl/README.md` and `nl/_coverpage.md`.
-- State Driven Development (StateDD) workflow has been integrated: `AGENTS.md`, state files, `docs/`, `scripts/`, `prompts/`, `.github/ISSUE_TEMPLATE/`, and `statedd-validate.yml`.
+- State-Centric Engineering with StateSpec has been integrated: `AGENTS.md`, state files, `docs/`, `scripts/`, `prompts/`, `.github/ISSUE_TEMPLATE/`, and the legacy-named `statedd-validate.yml` workflow.
 - Dutch/Flemish-market adaptation workspace merged from `the-last-light-v2` into `flemish-market/` (not canonical).
 - UI/UX audit completed; site is functional but not yet launch-ready as a book landing page.
 
@@ -24,11 +24,11 @@
 - Verified public GitHub Pages site on `https://lennertvhoy.github.io/the-last-light/` after clearing browser storage/cache; public render now matches the local clean render.
 - Captured before/after browser screenshots with Kimi WebBridge.
 - Dispositioned untracked directories: moved `docs/evidence/2026-06-14-presentation-smb-access/` into the new evidence folder; committed `g.Presentations/` in place; quarantined incomplete prompt-copy site work (`Evidence/03-prompt-copy-site/` and `docs/ai-driven-dev/`) because it belongs to BL-021/NA-18 and its status is unknown.
-- Updated StateDD files and evidence log (EV-2026-06-14-009).
+- Updated StateSpec files and evidence log (EV-2026-06-14-009).
 
 ## Bootstrap Goal
 
-Establish a truthful operating baseline for The Last Light project and transition to `operating` mode once the user accepts the new manuscript + StateDD setup.
+Establish a truthful operating baseline for The Last Light project and transition to `operating` mode once the user accepts the new manuscript + StateSpec setup.
 
 ## Next Step
 

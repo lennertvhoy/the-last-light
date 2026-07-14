@@ -4,6 +4,23 @@ Append-only history. Each entry records what changed, why, and what evidence exi
 
 ---
 
+## 2026-07-14 — Stateware public naming migration
+
+- Adopted Stateware as the category, State-Centric Engineering as the method,
+  and StateSpec as the public portable-specification name.
+- Renamed the current manuscript's Chapter 14 and published navigation from
+  “State Driven Development” to “State-Centric Engineering”; synchronized the
+  current combined manuscript copies.
+- Updated current workflow, prompt, beginner-guide, and validation output copy
+  from StateDD to StateSpec.
+- Preserved `statedd-*` machine identifiers, schema/version values,
+  presentation titles and filenames, third-party program names, historical
+  source captures, archived material, and evidence as compatibility/history.
+- Recorded the migration boundary in
+  `docs/adr/0002-stateware-public-naming.md`.
+
+---
+
 ## 2026-06-14 — Scrub visible editorial markup from canonical manuscript (NA-8 / BL-012)
 
 **Scope:** Remove reader-visible editorial scaffolding from `The-Last-Light.md` and verify the rendered Docsify site no longer exposes internal editing notes.

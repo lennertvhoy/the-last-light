@@ -8,7 +8,7 @@ je op slides kunt zetten. Klik op **Kopieer prompt** om de volledige tekst naar
 je klembord te kopiëren.
 
 
-> **Laatst gesynchroniseerd:** 2026-06-14T18:37:39Z  
+> **Laatst gesynchroniseerd:** 2026-07-14T21:43:41Z
 > **Canonieke bron:** [`prompts/`](../../prompts/) in deze repo.
 
 ## Fase-navigatie
@@ -99,10 +99,10 @@ Ask only the minimum strategic questions needed:
 terminal-gebaseerde agent.
 **GUI:** plak in de chat van Kimi IDE, GitHub Copilot Chat, Cursor, OpenCode
 GUI, etc.
-De tekst is identiek; beide tracks leiden tot dezelfde StateDD-artefacten.
+De tekst is identiek; beide tracks leiden tot dezelfde StateSpec-artefacten.
 
 
-> **Kopieer-tip:** Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateDD-bestanden leest.
+> **Kopieer-tip:** Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateSpec-bestanden leest.
 
 <p><button class="prompt-copy-btn" data-prompt="start">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="start">Gekopieerd!</span></p>
 
@@ -319,7 +319,7 @@ is tool-agnostisch; het claim-ledger is het belangrijkste onderdeel.
 # Evidence README Template
 
 Copy this into every evidence folder as `README.md`. Replace placeholders with
-real values. The claim ledger is the core of executable StateDD.
+real values. The claim ledger is the core of executable StateSpec.
 
 ```markdown
 # Evidence: <slice-title>
@@ -517,7 +517,7 @@ Paste-ready CTO wording
 **Slug:** `override` · **Fase:** Override / Governance
 **Screenshot-momenten:** 10
 
-**Wanneer gebruik je dit?** Gebruik dit wanneer de menselijke product owner expliciet een StateDD-regel overschrijft.
+**Wanneer gebruik je dit?** Gebruik dit wanneer de menselijke product owner expliciet een StateSpec-regel overschrijft.
 
 **CLI vs GUI** **CLI/GUI:** plak de override-vraag in de chat en eis dat de agent het
 expliciet opneemt in evidence README en final handoff.
@@ -528,7 +528,7 @@ expliciet opneemt in evidence README en final handoff.
 <p><button class="prompt-copy-btn" data-prompt="override">Kopieer prompt</button> <span class="prompt-copy-feedback" data-prompt="override">Gekopieerd!</span></p>
 
 ````text
-StateDD rules are mandatory defaults, but the human product owner may explicitly
+StateSpec rules are mandatory defaults, but the human product owner may explicitly
 override a workflow step. The agent must respect a clear human override unless
 the requested action is destructive, illegal, unsafe, unrecoverable, or would
 corrupt project truth.

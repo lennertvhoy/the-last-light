@@ -1,7 +1,7 @@
 # Evidence README Template
 
 Copy this into every evidence folder as `README.md`. Replace placeholders with
-real values. The claim ledger is the core of executable StateDD.
+real values. The claim ledger is the core of executable StateSpec.
 
 ```markdown
 # Evidence: <slice-title>

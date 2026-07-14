@@ -20,7 +20,7 @@
   - [Chapter 11: The Map](/The-Last-Light.md#chapter-11-the-map)
   - [Chapter 12: Cognitive Homesteading](/The-Last-Light.md#chapter-12-cognitive-homesteading)
   - [Chapter 13 — Verification](/The-Last-Light.md#chapter-13-verification)
-  - [Chapter 14: State Driven Development](/The-Last-Light.md#chapter-14-state-driven-development)
+  - [Chapter 14: State-Centric Engineering](/The-Last-Light.md#chapter-14-state-centric-engineering)
   - [Chapter 15 — Course Design and Professional Integration](/The-Last-Light.md#chapter-15-course-design-and-professional-integration)
   - [Interlude II: Love and Simulation](/The-Last-Light.md#interlude-ii-love-and-simulation)
   - [Chapter 16 — The Successor Environment](/The-Last-Light.md#chapter-16-the-successor-environment)

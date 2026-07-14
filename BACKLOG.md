@@ -6,9 +6,9 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
 
 ---
 
-## [BL-001] Complete StateDD bootstrap and transition to operating mode
+## [BL-001] Complete StateSpec bootstrap and transition to operating mode
 - **Added:** 2026-06-14
-- **Problem:** The project needs a truthful StateDD baseline before entering operating mode.
+- **Problem:** The project needs a truthful StateSpec baseline before entering operating mode.
 - **Acceptance criteria:**
   - All contract files accurately reflect the project (book manuscript, Docsify site, archived legacy content).
   - Evidence log contains real entries with durable artifact paths.
@@ -100,7 +100,7 @@ Strategic roadmap with stable backlog IDs. Do not close items here; move them to
 - **Acceptance criteria:**
   - SMB share mounted and files copied into project under a durable path.
   - Duplicates resolved per Windows agent handoff rules.
-  - Presentations catalogued in StateDD state files and evidence log.
+  - Presentations catalogued in StateSpec state files and evidence log.
   - Agent-swarm analysis slice created to develop courses/slides from the assets.
 - **Status:** retrieval, deduplication, extraction, and agent-swarm analysis complete; awaiting user review of course/slide maps
 - **Next action:** NA-17 (user review of maps)

@@ -6,8 +6,15 @@ short_name: the-last-light
 purpose: >-
   Publish and evolve an open-source book — "The Last Light: How to Stay Human
   When Everything Can Be Outsourced" — as a Docsify static site, with the
-  manuscript stored as Markdown and developed using a State Driven Development
+  manuscript stored as Markdown and developed using a State-Centric Engineering
   workflow.
+
+terminology:
+  category: Stateware
+  engineering_method: State-Centric Engineering
+  portable_specification: StateSpec
+  legacy_alias: StateDD
+  compatibility_policy: preserve_machine_identifiers_until_versioned_migration
 
 principles:
   - explicit_state_over_implicit_knowledge
@@ -42,7 +49,7 @@ topology:
       description: Scripts, CI, and quality checks
       components:
         - f.Scripts/ (project-specific helpers)
-        - scripts/ (StateDD hygiene and audit helpers)
+        - scripts/ (StateSpec hygiene and audit helpers)
         - .github/workflows/ (build, lint, test, translate, statedd-validate)
         - package.json (docsify-cli, markdownlint-cli)
 

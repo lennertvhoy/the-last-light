@@ -1,4 +1,4 @@
-last_synced: '2026-06-14T18:37:39Z'
+last_synced: '2026-07-14T21:43:41Z'
 site_path: /#/ai-driven-dev/prompts
 prompt_source_dir: prompts
 prompt_source_link: ../../prompts
@@ -72,10 +72,10 @@ prompts:
 
     GUI, etc.
 
-    De tekst is identiek; beide tracks leiden tot dezelfde StateDD-artefacten.
+    De tekst is identiek; beide tracks leiden tot dezelfde StateSpec-artefacten.
 
     '
-  copy_tip: Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateDD-bestanden
+  copy_tip: Plak de prompt voor je eerste code-verzoek, zodat de agent eerst de StateSpec-bestanden
     leest.
   slide_moments:
   - B
@@ -213,7 +213,7 @@ prompts:
   phase: governance
   source: AGENTS.md
   source_section: Human Override Rule
-  when: Gebruik dit wanneer de menselijke product owner expliciet een StateDD-regel
+  when: Gebruik dit wanneer de menselijke product owner expliciet een StateSpec-regel
     overschrijft.
   cli_gui: '**CLI/GUI:** plak de override-vraag in de chat en eis dat de agent het
 

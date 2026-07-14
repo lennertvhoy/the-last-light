@@ -143,7 +143,7 @@ def render_readme(index: dict[str, Any], prompts: list[PromptMeta], phase_map: d
         "",
         ui["home_intro"],
         "",
-        f"> **{ui['sync_warning']}:** {synced}  ",
+        f"> **{ui['sync_warning']}:** {synced}",
         f"> **{ui['source_note']}:** [`{source_dir}/`]({source_link}/) in deze repo.",
         "",
         "## Fase-navigatie",
